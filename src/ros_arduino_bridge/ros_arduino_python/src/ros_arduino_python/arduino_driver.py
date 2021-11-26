@@ -38,7 +38,7 @@ class Arduino:
     N_ANALOG_PORTS = 6
     N_DIGITAL_PORTS = 12
 
-    def __init__(self, port="/dev/ttyUSB0", baudrate=57600, timeout=0.5, motors_reversed=False):
+    def __init__(self, port="/dev/ttyACM0", baudrate=115200, timeout=0.5, motors_reversed=False):
 
         self.PID_RATE = 30 # Do not change this!  It is a fixed property of the Arduino PID controller.
         self.PID_INTERVAL = 1000 / 30
@@ -265,8 +265,8 @@ class Arduino:
 
     def get_encoder_counts(self):
         values = self.execute_array('e')
-        if len(values) != 2:
-            print "Encoder count was not 2"
+        if len(values) != 3:
+            print "Encoder count was not 3"
             raise SerialException
             return None
         else:
@@ -279,28 +279,30 @@ class Arduino:
         '''
         return self.execute_ack('r')
 
-    def drive(self, right, left):
+    def drive(self, right, left, back):
         ''' Speeds are given in encoder ticks per PID interval
         '''
         if self.motors_reversed:
             left, right = -left, -right
-        return self.execute_ack('m %d %d' %(right, left))
+        return self.execute_ack('m %d %d %d' %(right, left, back))
 
-    def drive_m_per_s(self, right, left):
+    def drive_m_per_s(self, right, left, back):
         ''' Set the motor speeds in meters per second.
         '''
         left_revs_per_second = float(left) / (self.wheel_diameter * PI)
         right_revs_per_second = float(right) / (self.wheel_diameter * PI)
+        back_revs_per_second = float(back) / (self.wheel_diameter * PI)
 
         left_ticks_per_loop = int(left_revs_per_second * self.encoder_resolution * self.PID_INTERVAL * self.gear_reduction)
         right_ticks_per_loop  = int(right_revs_per_second * self.encoder_resolution * self.PID_INTERVAL * self.gear_reduction)
+        back_ticks_per_loop  = int(back_revs_per_second * self.encoder_resolution * self.PID_INTERVAL * self.gear_reduction)
 
-        self.drive(right_ticks_per_loop , left_ticks_per_loop )
+        self.drive(right_ticks_per_loop , left_ticks_per_loop, back_ticks_per_loop)
 
     def stop(self):
         ''' Stop both motors.
         '''
-        self.drive(0, 0)
+        self.drive(0, 0, 0)
 
     def analog_read(self, pin):
         return self.execute('a %d' %pin)
@@ -356,7 +358,7 @@ if __name__ == "__main__":
     else:
         portName = "COM43" # Windows style COM port.
 
-    baudRate = 57600
+    baudRate = 115200
 
     myArduino = Arduino(port=portName, baudrate=baudRate, timeout=0.5)
     myArduino.connect()

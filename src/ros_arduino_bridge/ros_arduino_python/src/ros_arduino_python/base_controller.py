@@ -72,13 +72,16 @@ class BaseController:
         # Internal data        
         self.enc_left = None            # encoder readings
         self.enc_right = None
+        self.enc_back = None
         self.x = 0                      # position in xy plane
         self.y = 0
         self.th = 0                     # rotation in radians
         self.v_left = 0
         self.v_right = 0
+        self.v_back = 0
         self.v_des_left = 0             # cmd_vel setpoint
         self.v_des_right = 0
+        self.v_des_back = 0
         self.last_cmd_vel = now
 
         # Subscriptions
@@ -122,7 +125,7 @@ class BaseController:
         if now > self.t_next:
             # Read the encoders
             try:
-                left_enc, right_enc = self.arduino.get_encoder_counts()
+                left_enc, right_enc, back_enc = self.arduino.get_encoder_counts()
             except:
                 self.bad_encoder_count += 1
                 rospy.logerr("Encoder exception count: " + str(self.bad_encoder_count))
@@ -136,14 +139,17 @@ class BaseController:
             if self.enc_left == None:
                 dright = 0
                 dleft = 0
+                dback = 0
             else:
                 dright = (right_enc - self.enc_right) / self.ticks_per_meter
                 dleft = (left_enc - self.enc_left) / self.ticks_per_meter
+                dback = (back_enc - self.enc_left) / self.ticks_per_meter
 
             self.enc_right = right_enc
             self.enc_left = left_enc
+            self.enc_back = back_enc
             
-            dxy_ave = (dright + dleft) / 2.0
+            dxy_ave = (dright + dleft) / 2.0 * 0.866
             dth = (dright - dleft) / self.wheel_track
             vxy = dxy_ave / dt
             vth = dth / dt
@@ -189,6 +195,7 @@ class BaseController:
             if now > (self.last_cmd_vel + rospy.Duration(self.timeout)):
                 self.v_des_left = 0
                 self.v_des_right = 0
+                self.v_des_back = 0
                 
             if self.v_left < self.v_des_left:
                 self.v_left += self.max_accel
@@ -208,15 +215,24 @@ class BaseController:
                 if self.v_right < self.v_des_right:
                     self.v_right = self.v_des_right
             
+            if self.v_back < self.v_des_back:
+                self.v_back += self.max_accel
+                if self.v_back > self.v_des_back:
+                    self.v_back = self.v_des_back
+            else:
+                self.v_back -= self.max_accel
+                if self.v_back < self.v_des_back:
+                    self.v_back = self.v_des_back
+            
             # Set motor speeds in encoder ticks per PID loop
             if not self.stopped:
-                self.arduino.drive(self.v_left, self.v_right)
+                self.arduino.drive(self.v_left, self.v_right, self.v_back)
                 
             self.t_next = now + self.t_delta
             
     def stop(self):
         self.stopped = True
-        self.arduino.drive(0, 0)
+        self.arduino.drive(0, 0, 0)
             
     def cmdVelCallback(self, req):
         # Handle velocity-based movement requests
@@ -229,16 +245,20 @@ class BaseController:
             # Turn in place
             right = th * self.wheel_track  * self.gear_reduction / 2.0
             left = -right
+            back = left
         elif th == 0:
             # Pure forward/backward motion
             left = right = x
+            back = 0
         else:
             # Rotation about a point in space
             left = x - th * self.wheel_track  * self.gear_reduction / 2.0
             right = x + th * self.wheel_track  * self.gear_reduction / 2.0
+            back = 0
             
         self.v_des_left = int(left * self.ticks_per_meter / self.arduino.PID_RATE)
         self.v_des_right = int(right * self.ticks_per_meter / self.arduino.PID_RATE)
+        self.v_des_back = int(back * self.ticks_per_meter / self.arduino.PID_RATE)
         
 
         
