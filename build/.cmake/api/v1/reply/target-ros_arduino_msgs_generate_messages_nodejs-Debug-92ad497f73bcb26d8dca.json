@@ -1,0 +1,304 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"include",
+			"generate_messages",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"/home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs/cmake/ros_arduino_msgs-genmsg.cmake",
+			"/opt/ros/noetic/share/genmsg/cmake/genmsg-extras.cmake",
+			"ros_arduino_bridge/ros_arduino_msgs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 24,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 307,
+				"parent" : 1
+			},
+			{
+				"file" : 0,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 530,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 547,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 541,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 545,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 543,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 539,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 557,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 732,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 553,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 537,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 549,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 555,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 559,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 551,
+				"parent" : 3
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "_ros_arduino_msgs_generate_messages_check_deps_DigitalSetDirection::@195aba161705c0ab5c72"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "_ros_arduino_msgs_generate_messages_check_deps_ArduinoConstants::@195aba161705c0ab5c72"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "_ros_arduino_msgs_generate_messages_check_deps_SensorState::@195aba161705c0ab5c72"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "_ros_arduino_msgs_generate_messages_check_deps_Digital::@195aba161705c0ab5c72"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "_ros_arduino_msgs_generate_messages_check_deps_Analog::@195aba161705c0ab5c72"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "_ros_arduino_msgs_generate_messages_check_deps_AnalogWrite::@195aba161705c0ab5c72"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "std_msgs_generate_messages_nodejs::@195aba161705c0ab5c72"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "_ros_arduino_msgs_generate_messages_check_deps_ServoRead::@195aba161705c0ab5c72"
+		},
+		{
+			"backtrace" : 13,
+			"id" : "_ros_arduino_msgs_generate_messages_check_deps_AnalogFloat::@195aba161705c0ab5c72"
+		},
+		{
+			"backtrace" : 14,
+			"id" : "_ros_arduino_msgs_generate_messages_check_deps_DigitalWrite::@195aba161705c0ab5c72"
+		},
+		{
+			"backtrace" : 15,
+			"id" : "_ros_arduino_msgs_generate_messages_check_deps_ServoWrite::@195aba161705c0ab5c72"
+		},
+		{
+			"backtrace" : 16,
+			"id" : "_ros_arduino_msgs_generate_messages_check_deps_AnalogRead::@195aba161705c0ab5c72"
+		},
+		{
+			"backtrace" : 17,
+			"id" : "_ros_arduino_msgs_generate_messages_check_deps_DigitalRead::@195aba161705c0ab5c72"
+		}
+	],
+	"id" : "ros_arduino_msgs_generate_messages_nodejs::@195aba161705c0ab5c72",
+	"name" : "ros_arduino_msgs_generate_messages_nodejs",
+	"paths" : 
+	{
+		"build" : "ros_arduino_bridge/ros_arduino_msgs",
+		"source" : "ros_arduino_bridge/ros_arduino_msgs"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_nodejs",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_nodejs.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/ros_arduino_msgs/msg/AnalogFloat.js.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/ros_arduino_msgs/msg/Analog.js.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/ros_arduino_msgs/msg/ArduinoConstants.js.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/ros_arduino_msgs/msg/Digital.js.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/ros_arduino_msgs/msg/SensorState.js.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/ros_arduino_msgs/srv/DigitalSetDirection.js.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/ros_arduino_msgs/srv/DigitalWrite.js.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/ros_arduino_msgs/srv/DigitalRead.js.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/ros_arduino_msgs/srv/ServoRead.js.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/ros_arduino_msgs/srv/ServoWrite.js.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/ros_arduino_msgs/srv/AnalogWrite.js.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/ros_arduino_msgs/srv/AnalogRead.js.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}
