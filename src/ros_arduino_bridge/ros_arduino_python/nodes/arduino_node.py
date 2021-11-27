@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
     A ROS Node for the Arduino microcontroller
@@ -26,7 +26,8 @@ from ros_arduino_msgs.srv import *
 from ros_arduino_python.base_controller import BaseController
 from geometry_msgs.msg import Twist
 import os, time
-import thread
+# import _thread
+import threading
 from serial.serialutil import SerialException
 
 class ArduinoROS():
@@ -40,9 +41,9 @@ class ArduinoROS():
         rospy.on_shutdown(self.shutdown)
 
         self.port = rospy.get_param("~port", "/dev/ttyACM0")
-        self.baud = int(rospy.get_param("~baud", 57600))
-        self.timeout = rospy.get_param("~timeout", 0.5)
-        self.base_frame = rospy.get_param("~base_frame", 'base_link')
+        self.baud = int(rospy.get_param("~baud", 115200))
+        self.timeout = rospy.get_param("~timeout", 1)
+        self.base_frame = rospy.get_param("~base_frame", 'base_footprint')
         self.motors_reversed = rospy.get_param("~motors_reversed", False)
         # Overall loop rate: should be faster than fastest sensor rate
         self.rate = int(rospy.get_param("~rate", 50))
@@ -99,14 +100,16 @@ class ArduinoROS():
         rospy.loginfo("Connected to Arduino on port " + self.port + " at " + str(self.baud) + " baud")
 
         # Reserve a thread lock
-        mutex = thread.allocate_lock()
+        # mutex = _thread.allocate_lock()
+        mutex = threading.RLock()
 
         # Initialize any sensors
         self.mySensors = list()
 
         sensor_params = rospy.get_param("~sensors", dict({}))
 
-        for name, params in sensor_params.iteritems():
+        # for name, params in sensor_params.iteritems():
+        for name, params in sensor_params.items():
             # Set the direction to input if not specified
             try:
                 params['direction']
@@ -149,9 +152,11 @@ class ArduinoROS():
                 mutex.release()
 
             if self.use_base_controller:
+                # print("arduino_node use_base_controller_before")
                 mutex.acquire()
                 self.myBaseController.poll()
                 mutex.release()
+                # print("arduino_node use_base_controller_after")
 
             # Publish all sensor values on a single topic for convenience
             now = rospy.Time.now()

@@ -1,8 +1,8 @@
-# Install script for directory: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_python
+# Install script for directory: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_python
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/lostm/文档/arduino_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/robot/Documents/arduino_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,33 +38,33 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_python/catkin_generated/installspace/ros_arduino_python.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_python/catkin_generated/installspace/ros_arduino_python.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_arduino_python/cmake" TYPE FILE FILES
-    "/home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_python/catkin_generated/installspace/ros_arduino_pythonConfig.cmake"
-    "/home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_python/catkin_generated/installspace/ros_arduino_pythonConfig-version.cmake"
+    "/home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_python/catkin_generated/installspace/ros_arduino_pythonConfig.cmake"
+    "/home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_python/catkin_generated/installspace/ros_arduino_pythonConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_arduino_python" TYPE FILE FILES "/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_python/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_arduino_python" TYPE FILE FILES "/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_python/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_python/catkin_generated/safe_execute_install.cmake")
+  include("/home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_python/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_arduino_python" TYPE DIRECTORY FILES "/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_python/config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_arduino_python" TYPE DIRECTORY FILES "/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_python/config")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_arduino_python" TYPE DIRECTORY FILES "/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_python/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_arduino_python" TYPE DIRECTORY FILES "/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_python/launch")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_arduino_python" TYPE DIRECTORY FILES "/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_python/nodes")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_arduino_python" TYPE DIRECTORY FILES "/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_python/nodes")
 endif()
 

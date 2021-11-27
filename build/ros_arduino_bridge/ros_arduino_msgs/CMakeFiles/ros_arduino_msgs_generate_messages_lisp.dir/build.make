@@ -43,107 +43,107 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lostm/文档/arduino_ws/src
+CMAKE_SOURCE_DIR = /home/robot/Documents/arduino_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lostm/文档/arduino_ws/build
+CMAKE_BINARY_DIR = /home/robot/Documents/arduino_ws/build
 
 # Utility rule file for ros_arduino_msgs_generate_messages_lisp.
 
 # Include the progress variables for this target.
 include ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp.dir/progress.make
 
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/AnalogFloat.lisp
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Analog.lisp
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/ArduinoConstants.lisp
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Digital.lisp
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/SensorState.lisp
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalSetDirection.lisp
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalWrite.lisp
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalRead.lisp
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/ServoRead.lisp
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/ServoWrite.lisp
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/AnalogWrite.lisp
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/AnalogRead.lisp
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/AnalogFloat.lisp
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Analog.lisp
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/ArduinoConstants.lisp
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Digital.lisp
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/SensorState.lisp
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalSetDirection.lisp
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalWrite.lisp
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalRead.lisp
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/ServoRead.lisp
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/ServoWrite.lisp
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/AnalogWrite.lisp
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/AnalogRead.lisp
 
 
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/AnalogFloat.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/AnalogFloat.lisp: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/AnalogFloat.msg
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/AnalogFloat.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from ros_arduino_msgs/AnalogFloat.msg"
-	cd /home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/AnalogFloat.msg -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/AnalogFloat.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/AnalogFloat.lisp: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/AnalogFloat.msg
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/AnalogFloat.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from ros_arduino_msgs/AnalogFloat.msg"
+	cd /home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/AnalogFloat.msg -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg
 
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Analog.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Analog.lisp: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/Analog.msg
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Analog.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from ros_arduino_msgs/Analog.msg"
-	cd /home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/Analog.msg -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Analog.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Analog.lisp: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/Analog.msg
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Analog.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from ros_arduino_msgs/Analog.msg"
+	cd /home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/Analog.msg -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg
 
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/ArduinoConstants.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/ArduinoConstants.lisp: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/ArduinoConstants.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from ros_arduino_msgs/ArduinoConstants.msg"
-	cd /home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/ArduinoConstants.msg -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/ArduinoConstants.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/ArduinoConstants.lisp: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/ArduinoConstants.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from ros_arduino_msgs/ArduinoConstants.msg"
+	cd /home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/ArduinoConstants.msg -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg
 
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Digital.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Digital.lisp: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/Digital.msg
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Digital.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from ros_arduino_msgs/Digital.msg"
-	cd /home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/Digital.msg -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Digital.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Digital.lisp: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/Digital.msg
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Digital.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from ros_arduino_msgs/Digital.msg"
+	cd /home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/Digital.msg -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg
 
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/SensorState.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/SensorState.lisp: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/SensorState.msg
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/SensorState.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Lisp code from ros_arduino_msgs/SensorState.msg"
-	cd /home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/SensorState.msg -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/SensorState.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/SensorState.lisp: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/SensorState.msg
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/SensorState.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Lisp code from ros_arduino_msgs/SensorState.msg"
+	cd /home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/SensorState.msg -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg
 
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalSetDirection.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalSetDirection.lisp: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalSetDirection.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Lisp code from ros_arduino_msgs/DigitalSetDirection.srv"
-	cd /home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalSetDirection.srv -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalSetDirection.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalSetDirection.lisp: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalSetDirection.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Lisp code from ros_arduino_msgs/DigitalSetDirection.srv"
+	cd /home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalSetDirection.srv -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv
 
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalWrite.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalWrite.lisp: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalWrite.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Lisp code from ros_arduino_msgs/DigitalWrite.srv"
-	cd /home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalWrite.srv -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalWrite.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalWrite.lisp: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalWrite.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Lisp code from ros_arduino_msgs/DigitalWrite.srv"
+	cd /home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalWrite.srv -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv
 
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalRead.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalRead.lisp: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalRead.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Lisp code from ros_arduino_msgs/DigitalRead.srv"
-	cd /home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalRead.srv -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalRead.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalRead.lisp: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalRead.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Lisp code from ros_arduino_msgs/DigitalRead.srv"
+	cd /home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalRead.srv -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv
 
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/ServoRead.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/ServoRead.lisp: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/ServoRead.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Lisp code from ros_arduino_msgs/ServoRead.srv"
-	cd /home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/ServoRead.srv -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/ServoRead.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/ServoRead.lisp: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/ServoRead.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Lisp code from ros_arduino_msgs/ServoRead.srv"
+	cd /home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/ServoRead.srv -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv
 
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/ServoWrite.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/ServoWrite.lisp: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/ServoWrite.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating Lisp code from ros_arduino_msgs/ServoWrite.srv"
-	cd /home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/ServoWrite.srv -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/ServoWrite.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/ServoWrite.lisp: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/ServoWrite.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating Lisp code from ros_arduino_msgs/ServoWrite.srv"
+	cd /home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/ServoWrite.srv -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv
 
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/AnalogWrite.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/AnalogWrite.lisp: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/AnalogWrite.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating Lisp code from ros_arduino_msgs/AnalogWrite.srv"
-	cd /home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/AnalogWrite.srv -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/AnalogWrite.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/AnalogWrite.lisp: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/AnalogWrite.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating Lisp code from ros_arduino_msgs/AnalogWrite.srv"
+	cd /home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/AnalogWrite.srv -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv
 
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/AnalogRead.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/AnalogRead.lisp: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/AnalogRead.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating Lisp code from ros_arduino_msgs/AnalogRead.srv"
-	cd /home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/AnalogRead.srv -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/AnalogRead.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/AnalogRead.lisp: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/AnalogRead.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating Lisp code from ros_arduino_msgs/AnalogRead.srv"
+	cd /home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/AnalogRead.srv -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv
 
 ros_arduino_msgs_generate_messages_lisp: ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp
-ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/AnalogFloat.lisp
-ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Analog.lisp
-ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/ArduinoConstants.lisp
-ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Digital.lisp
-ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/SensorState.lisp
-ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalSetDirection.lisp
-ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalWrite.lisp
-ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalRead.lisp
-ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/ServoRead.lisp
-ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/ServoWrite.lisp
-ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/AnalogWrite.lisp
-ros_arduino_msgs_generate_messages_lisp: /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/AnalogRead.lisp
+ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/AnalogFloat.lisp
+ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Analog.lisp
+ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/ArduinoConstants.lisp
+ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Digital.lisp
+ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/SensorState.lisp
+ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalSetDirection.lisp
+ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalWrite.lisp
+ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/DigitalRead.lisp
+ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/ServoRead.lisp
+ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/ServoWrite.lisp
+ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/AnalogWrite.lisp
+ros_arduino_msgs_generate_messages_lisp: /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/AnalogRead.lisp
 ros_arduino_msgs_generate_messages_lisp: ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp.dir/build.make
 
 .PHONY : ros_arduino_msgs_generate_messages_lisp
@@ -154,10 +154,10 @@ ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_message
 .PHONY : ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp.dir/build
 
 ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp.dir/clean:
-	cd /home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && $(CMAKE_COMMAND) -P CMakeFiles/ros_arduino_msgs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && $(CMAKE_COMMAND) -P CMakeFiles/ros_arduino_msgs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp.dir/clean
 
 ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp.dir/depend:
-	cd /home/lostm/文档/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lostm/文档/arduino_ws/src /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs /home/lostm/文档/arduino_ws/build /home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs /home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robot/Documents/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robot/Documents/arduino_ws/src /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs /home/robot/Documents/arduino_ws/build /home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs /home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp.dir/depend
 

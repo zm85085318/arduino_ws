@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "ros_arduino_python"
-PROJECT_SPACE_DIR = "/home/lostm/文档/arduino_ws/install"
+PROJECT_SPACE_DIR = "/home/robot/Documents/arduino_ws/install"
 PROJECT_VERSION = "0.2.0"

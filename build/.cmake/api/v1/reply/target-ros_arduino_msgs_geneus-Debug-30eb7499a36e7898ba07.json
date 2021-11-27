@@ -1,0 +1,69 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"include",
+			"generate_messages",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"/home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs/cmake/ros_arduino_msgs-genmsg.cmake",
+			"/opt/ros/noetic/share/genmsg/cmake/genmsg-extras.cmake",
+			"ros_arduino_bridge/ros_arduino_msgs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 24,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 307,
+				"parent" : 1
+			},
+			{
+				"file" : 0,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 320,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 321,
+				"parent" : 3
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "ros_arduino_msgs_generate_messages_eus::@195aba161705c0ab5c72"
+		}
+	],
+	"id" : "ros_arduino_msgs_geneus::@195aba161705c0ab5c72",
+	"name" : "ros_arduino_msgs_geneus",
+	"paths" : 
+	{
+		"build" : "ros_arduino_bridge/ros_arduino_msgs",
+		"source" : "ros_arduino_bridge/ros_arduino_msgs"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

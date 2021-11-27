@@ -1,4 +1,4 @@
-prefix=/home/lostm/文档/arduino_ws/devel
+prefix=/home/robot/Documents/arduino_ws/devel
 
 Name: ros_arduino_firmware
 Description: Description of ros_arduino_firmware

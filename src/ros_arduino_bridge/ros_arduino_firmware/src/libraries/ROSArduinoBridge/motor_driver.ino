@@ -124,10 +124,10 @@ void setMotorSpeed(int i, int spd) {
 
   if (i == LEFT) {
     if (reverse == 0) {
-      digitalWrite(LEFT_DIR, LOW);
+      digitalWrite(LEFT_DIR, HIGH);
     }
     else if (reverse == 1) {
-      digitalWrite(LEFT_DIR, HIGH);
+      digitalWrite(LEFT_DIR, LOW);
     }
     analogWrite(LEFT_PWM, spd);
   }

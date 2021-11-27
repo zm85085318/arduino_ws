@@ -43,126 +43,126 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lostm/文档/arduino_ws/src
+CMAKE_SOURCE_DIR = /home/robot/Documents/arduino_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lostm/文档/arduino_ws/build
+CMAKE_BINARY_DIR = /home/robot/Documents/arduino_ws/build
 
 # Utility rule file for ros_arduino_msgs_generate_messages_cpp.
 
 # Include the progress variables for this target.
 include ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp.dir/progress.make
 
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/AnalogFloat.h
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/Analog.h
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/ArduinoConstants.h
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/Digital.h
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/SensorState.h
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/DigitalSetDirection.h
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/DigitalWrite.h
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/DigitalRead.h
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/ServoRead.h
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/ServoWrite.h
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/AnalogWrite.h
-ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/AnalogRead.h
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogFloat.h
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/Analog.h
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/ArduinoConstants.h
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/Digital.h
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/SensorState.h
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/DigitalSetDirection.h
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/DigitalWrite.h
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/DigitalRead.h
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/ServoRead.h
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/ServoWrite.h
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogWrite.h
+ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogRead.h
 
 
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/AnalogFloat.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/AnalogFloat.h: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/AnalogFloat.msg
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/AnalogFloat.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/AnalogFloat.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from ros_arduino_msgs/AnalogFloat.msg"
-	cd /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/lostm/文档/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/AnalogFloat.msg -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogFloat.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogFloat.h: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/AnalogFloat.msg
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogFloat.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogFloat.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from ros_arduino_msgs/AnalogFloat.msg"
+	cd /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/AnalogFloat.msg -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/Analog.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/Analog.h: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/Analog.msg
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/Analog.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/Analog.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from ros_arduino_msgs/Analog.msg"
-	cd /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/lostm/文档/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/Analog.msg -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/Analog.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/Analog.h: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/Analog.msg
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/Analog.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/Analog.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from ros_arduino_msgs/Analog.msg"
+	cd /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/Analog.msg -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/ArduinoConstants.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/ArduinoConstants.h: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/ArduinoConstants.msg
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/ArduinoConstants.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from ros_arduino_msgs/ArduinoConstants.msg"
-	cd /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/lostm/文档/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/ArduinoConstants.msg -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/ArduinoConstants.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/ArduinoConstants.h: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/ArduinoConstants.msg
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/ArduinoConstants.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from ros_arduino_msgs/ArduinoConstants.msg"
+	cd /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/ArduinoConstants.msg -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/Digital.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/Digital.h: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/Digital.msg
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/Digital.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/Digital.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from ros_arduino_msgs/Digital.msg"
-	cd /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/lostm/文档/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/Digital.msg -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/Digital.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/Digital.h: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/Digital.msg
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/Digital.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/Digital.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from ros_arduino_msgs/Digital.msg"
+	cd /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/Digital.msg -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/SensorState.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/SensorState.h: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/SensorState.msg
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/SensorState.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/SensorState.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from ros_arduino_msgs/SensorState.msg"
-	cd /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/lostm/文档/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/SensorState.msg -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/SensorState.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/SensorState.h: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/SensorState.msg
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/SensorState.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/SensorState.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from ros_arduino_msgs/SensorState.msg"
+	cd /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg/SensorState.msg -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/DigitalSetDirection.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/DigitalSetDirection.h: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalSetDirection.srv
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/DigitalSetDirection.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/DigitalSetDirection.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from ros_arduino_msgs/DigitalSetDirection.srv"
-	cd /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/lostm/文档/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalSetDirection.srv -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/DigitalSetDirection.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/DigitalSetDirection.h: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalSetDirection.srv
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/DigitalSetDirection.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/DigitalSetDirection.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from ros_arduino_msgs/DigitalSetDirection.srv"
+	cd /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalSetDirection.srv -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/DigitalWrite.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/DigitalWrite.h: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalWrite.srv
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/DigitalWrite.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/DigitalWrite.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from ros_arduino_msgs/DigitalWrite.srv"
-	cd /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/lostm/文档/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalWrite.srv -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/DigitalWrite.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/DigitalWrite.h: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalWrite.srv
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/DigitalWrite.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/DigitalWrite.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from ros_arduino_msgs/DigitalWrite.srv"
+	cd /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalWrite.srv -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/DigitalRead.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/DigitalRead.h: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalRead.srv
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/DigitalRead.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/DigitalRead.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating C++ code from ros_arduino_msgs/DigitalRead.srv"
-	cd /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/lostm/文档/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalRead.srv -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/DigitalRead.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/DigitalRead.h: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalRead.srv
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/DigitalRead.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/DigitalRead.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating C++ code from ros_arduino_msgs/DigitalRead.srv"
+	cd /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/DigitalRead.srv -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/ServoRead.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/ServoRead.h: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/ServoRead.srv
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/ServoRead.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/ServoRead.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating C++ code from ros_arduino_msgs/ServoRead.srv"
-	cd /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/lostm/文档/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/ServoRead.srv -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/ServoRead.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/ServoRead.h: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/ServoRead.srv
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/ServoRead.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/ServoRead.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating C++ code from ros_arduino_msgs/ServoRead.srv"
+	cd /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/ServoRead.srv -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/ServoWrite.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/ServoWrite.h: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/ServoWrite.srv
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/ServoWrite.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/ServoWrite.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating C++ code from ros_arduino_msgs/ServoWrite.srv"
-	cd /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/lostm/文档/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/ServoWrite.srv -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/ServoWrite.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/ServoWrite.h: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/ServoWrite.srv
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/ServoWrite.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/ServoWrite.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating C++ code from ros_arduino_msgs/ServoWrite.srv"
+	cd /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/ServoWrite.srv -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/AnalogWrite.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/AnalogWrite.h: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/AnalogWrite.srv
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/AnalogWrite.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/AnalogWrite.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating C++ code from ros_arduino_msgs/AnalogWrite.srv"
-	cd /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/lostm/文档/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/AnalogWrite.srv -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogWrite.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogWrite.h: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/AnalogWrite.srv
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogWrite.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogWrite.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating C++ code from ros_arduino_msgs/AnalogWrite.srv"
+	cd /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/AnalogWrite.srv -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/AnalogRead.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/AnalogRead.h: /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/AnalogRead.srv
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/AnalogRead.h: /opt/ros/noetic/share/gencpp/msg.h.template
-/home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/AnalogRead.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating C++ code from ros_arduino_msgs/AnalogRead.srv"
-	cd /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/lostm/文档/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/AnalogRead.srv -Iros_arduino_msgs:/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogRead.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogRead.h: /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/AnalogRead.srv
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogRead.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogRead.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating C++ code from ros_arduino_msgs/AnalogRead.srv"
+	cd /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/srv/AnalogRead.srv -Iros_arduino_msgs:/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p ros_arduino_msgs -o /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 ros_arduino_msgs_generate_messages_cpp: ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp
-ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/AnalogFloat.h
-ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/Analog.h
-ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/ArduinoConstants.h
-ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/Digital.h
-ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/SensorState.h
-ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/DigitalSetDirection.h
-ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/DigitalWrite.h
-ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/DigitalRead.h
-ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/ServoRead.h
-ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/ServoWrite.h
-ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/AnalogWrite.h
-ros_arduino_msgs_generate_messages_cpp: /home/lostm/文档/arduino_ws/devel/include/ros_arduino_msgs/AnalogRead.h
+ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogFloat.h
+ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/Analog.h
+ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/ArduinoConstants.h
+ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/Digital.h
+ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/SensorState.h
+ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/DigitalSetDirection.h
+ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/DigitalWrite.h
+ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/DigitalRead.h
+ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/ServoRead.h
+ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/ServoWrite.h
+ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogWrite.h
+ros_arduino_msgs_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogRead.h
 ros_arduino_msgs_generate_messages_cpp: ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp.dir/build.make
 
 .PHONY : ros_arduino_msgs_generate_messages_cpp
@@ -173,10 +173,10 @@ ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_message
 .PHONY : ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp.dir/build
 
 ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp.dir/clean:
-	cd /home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && $(CMAKE_COMMAND) -P CMakeFiles/ros_arduino_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs && $(CMAKE_COMMAND) -P CMakeFiles/ros_arduino_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp.dir/clean
 
 ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp.dir/depend:
-	cd /home/lostm/文档/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lostm/文档/arduino_ws/src /home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs /home/lostm/文档/arduino_ws/build /home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs /home/lostm/文档/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robot/Documents/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robot/Documents/arduino_ws/src /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_msgs /home/robot/Documents/arduino_ws/build /home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs /home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_cpp.dir/depend
 

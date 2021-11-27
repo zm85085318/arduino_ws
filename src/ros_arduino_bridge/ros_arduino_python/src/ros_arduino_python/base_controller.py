@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
     A base controller class for the Arduino microcontroller
@@ -23,6 +23,7 @@
 import roslib; roslib.load_manifest('ros_arduino_python')
 import rospy
 import os
+import time
 
 from math import sin, cos, pi
 from geometry_msgs.msg import Quaternion, Twist, Pose
@@ -125,7 +126,11 @@ class BaseController:
         if now > self.t_next:
             # Read the encoders
             try:
-                left_enc, right_enc, back_enc = self.arduino.get_encoder_counts()
+                time.sleep(1) #Attention: this code is very important!!!
+                values = self.arduino.get_encoder_counts()
+                left_enc = values[0]
+                right_enc = values[1]
+                back_enc = values[2]
             except:
                 self.bad_encoder_count += 1
                 rospy.logerr("Encoder exception count: " + str(self.bad_encoder_count))
@@ -245,7 +250,7 @@ class BaseController:
             # Turn in place
             right = th * self.wheel_track  * self.gear_reduction / 2.0
             left = -right
-            back = left
+            back = right
         elif th == 0:
             # Pure forward/backward motion
             left = right = x
