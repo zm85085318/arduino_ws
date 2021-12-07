@@ -18,5 +18,75 @@
   "directory": "/home/robot/Documents/arduino_ws/build/gtest/googletest",
   "command": "/usr/bin/c++  -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgtest_EXPORTS -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest  -g -fPIC   -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++11 -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /usr/src/googletest/googletest/src/gtest-all.cc",
   "file": "/usr/src/googletest/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/home/robot/Documents/arduino_ws/build/rplidar_ros",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/include -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/src -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o -c /home/robot/Documents/arduino_ws/src/rplidar_ros/src/client.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/rplidar_ros/src/client.cpp"
+},
+{
+  "directory": "/home/robot/Documents/arduino_ws/build/rplidar_ros",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/include -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/src -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/src/node.cpp.o -c /home/robot/Documents/arduino_ws/src/rplidar_ros/src/node.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/rplidar_ros/src/node.cpp"
+},
+{
+  "directory": "/home/robot/Documents/arduino_ws/build/rplidar_ros",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/include -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/src -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o -c /home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp"
+},
+{
+  "directory": "/home/robot/Documents/arduino_ws/build/rplidar_ros",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/include -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/src -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_socket.cpp.o -c /home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/arch/linux/net_socket.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/arch/linux/net_socket.cpp"
+},
+{
+  "directory": "/home/robot/Documents/arduino_ws/build/rplidar_ros",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/include -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/src -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o -c /home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/arch/linux/timer.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/arch/linux/timer.cpp"
+},
+{
+  "directory": "/home/robot/Documents/arduino_ws/build/rplidar_ros",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/include -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/src -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/hal/thread.cpp.o -c /home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/hal/thread.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/hal/thread.cpp"
+},
+{
+  "directory": "/home/robot/Documents/arduino_ws/build/rplidar_ros",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/include -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/src -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.o -c /home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/rplidar_driver.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/rplidar_driver.cpp"
+},
+{
+  "directory": "/home/robot/Documents/arduino_ws/build/rplidar_ros",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/include -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/src -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/sl_crc.cpp.o -c /home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/sl_crc.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/sl_crc.cpp"
+},
+{
+  "directory": "/home/robot/Documents/arduino_ws/build/rplidar_ros",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/include -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/src -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/sl_lidar_driver.cpp.o -c /home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp"
+},
+{
+  "directory": "/home/robot/Documents/arduino_ws/build/rplidar_ros",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/include -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/src -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/sl_serial_channel.cpp.o -c /home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/sl_serial_channel.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/sl_serial_channel.cpp"
+},
+{
+  "directory": "/home/robot/Documents/arduino_ws/build/rplidar_ros",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/include -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/src -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/sl_tcp_channel.cpp.o -c /home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/sl_tcp_channel.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/sl_tcp_channel.cpp"
+},
+{
+  "directory": "/home/robot/Documents/arduino_ws/build/rplidar_ros",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/include -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/src -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/sl_udp_channel.cpp.o -c /home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/sl_udp_channel.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/rplidar_ros/sdk/src/sl_udp_channel.cpp"
+},
+{
+  "directory": "/home/robot/Documents/arduino_ws/build/usb_cam",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"usb_cam\\\" -Dusb_cam_EXPORTS -I/home/robot/Documents/arduino_ws/src/usb_cam/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g -fPIC   -o CMakeFiles/usb_cam.dir/src/usb_cam.cpp.o -c /home/robot/Documents/arduino_ws/src/usb_cam/src/usb_cam.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/usb_cam/src/usb_cam.cpp"
+},
+{
+  "directory": "/home/robot/Documents/arduino_ws/build/usb_cam",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"usb_cam\\\" -I/home/robot/Documents/arduino_ws/src/usb_cam/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/usb_cam_node.dir/nodes/usb_cam_node.cpp.o -c /home/robot/Documents/arduino_ws/src/usb_cam/nodes/usb_cam_node.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/usb_cam/nodes/usb_cam_node.cpp"
 }
 ]

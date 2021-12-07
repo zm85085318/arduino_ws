@@ -63,7 +63,7 @@ void resetEncoder(int i) {
   if (i == LEFT) {
     left_count = 0L;
     return;
-  } else if(i == RIGHT){
+  } else if (i == RIGHT) {
     right_count = 0L;
     return;
   } else {
@@ -74,11 +74,11 @@ void resetEncoder(int i) {
 
 #elif defined ARDUINO_MY_COUNTER
 //target: achieve the interrupt counting
-//1. 定义计数器
+//1. define counters
 volatile long left_count = 0L;
 volatile long right_count = 0L;
 volatile long back_count = 0L;
-//2. 初始化
+//2. initilization
 void initEncoder() {
   pinMode(LEFT_A, INPUT);
   pinMode(LEFT_B, INPUT);
@@ -86,44 +86,74 @@ void initEncoder() {
   pinMode(RIGHT_B, INPUT);
   pinMode(BACK_A, INPUT);
   pinMode(BACK_B, INPUT);
-  attachPinChangeInterrupt(digitalPinToPinChangeInterrupt(LEFT_A), leftEncoderEventA, RISING);
-  attachPinChangeInterrupt(digitalPinToPinChangeInterrupt(RIGHT_A), rightEncoderEventA, RISING);
-  attachPinChangeInterrupt(digitalPinToPinChangeInterrupt(BACK_A), backEncoderEventA, RISING);
+  attachPinChangeInterrupt(digitalPinToPinChangeInterrupt(LEFT_A), leftEncoderEventA, CHANGE);
+  attachPinChangeInterrupt(digitalPinToPinChangeInterrupt(RIGHT_A), rightEncoderEventA, CHANGE);
+  attachPinChangeInterrupt(digitalPinToPinChangeInterrupt(BACK_A), backEncoderEventA, CHANGE);
 }
-//3. 编写中断的回调函数
+//3. callback functions
 void leftEncoderEventA() {
-  if (digitalRead(LEFT_B) == HIGH) {
-    left_count++;
+  if (digitalRead(LEFT_A) == HIGH) {
+    if (digitalRead(LEFT_B) == HIGH) {
+      left_count++;
+    }
+    else {
+      left_count--;
+    }
   }
   else {
-    left_count--;
+    if (digitalRead(LEFT_B) == LOW) {
+      left_count++;
+    }
+    else {
+      left_count--;
+    }
   }
 }
 void rightEncoderEventA() {
-  if (digitalRead(RIGHT_B) == HIGH) {
-    right_count++;
+  if (digitalRead(RIGHT_A) == HIGH) {
+    if (digitalRead(RIGHT_B) == HIGH) {
+      right_count++;
+    }
+    else {
+      right_count--;
+    }
   }
   else {
-    right_count--;
+    if (digitalRead(RIGHT_B) == LOW) {
+      right_count++;
+    }
+    else {
+      right_count--;
+    }
   }
 }
 void backEncoderEventA() {
-  if (digitalRead(BACK_B) == HIGH) {
-    back_count++;
+  if (digitalRead(BACK_A) == HIGH) {
+    if (digitalRead(BACK_B) == HIGH) {
+      back_count++;
+    }
+    else {
+      back_count--;
+    }
   }
   else {
-    back_count--;
+    if (digitalRead(BACK_B) == LOW) {
+      back_count++;
+    }
+    else {
+      back_count--;
+    }
   }
 }
 //4. 实现编码器数据读出和清零
 long readEncoder(int i) {
-  if (i == LEFT){ 
+  if (i == LEFT) {
     return left_count;
   }
-  else if (i == RIGHT){
+  else if (i == RIGHT) {
     return right_count;
   }
-  else{
+  else {
     return back_count;
   }
 }

@@ -148,16 +148,28 @@ class BaseController:
             else:
                 dright = (right_enc - self.enc_right) / self.ticks_per_meter
                 dleft = (left_enc - self.enc_left) / self.ticks_per_meter
-                dback = (back_enc - self.enc_left) / self.ticks_per_meter
+                dback = (back_enc - self.enc_back) / self.ticks_per_meter
 
             self.enc_right = right_enc
             self.enc_left = left_enc
             self.enc_back = back_enc
             
-            dxy_ave = (dright + dleft) / 2.0 * 0.866
-            dth = (dright - dleft) / self.wheel_track
+            '''
+            Odometer function part
+            '''
+            dxy_ave = ((0.5 * dright) + (0.5 * dleft)) / 2.0
+            # dth = (dright - dleft) / self.wheel_track
+            print("dxy_ave is: ")
+            print(dxy_ave)
+            dth = dback / self.wheel_track
+            print('dleft, dright, dback is :')
+            print(dleft)
+            print(dright)
+            print(dback)
             vxy = dxy_ave / dt
             vth = dth / dt
+            print("vth is: ")
+            print(vth)
                 
             if (dxy_ave != 0):
                 dx = cos(dth) * dxy_ave
@@ -248,18 +260,25 @@ class BaseController:
 
         if x == 0:
             # Turn in place
-            right = th * self.wheel_track  * self.gear_reduction / 2.0
-            left = -right
+            # right = th * self.wheel_track  * self.gear_reduction / 2.0
+            # left = -right
+            # back = right
+            right = -th * self.wheel_track
+            left = right
             back = right
         elif th == 0:
             # Pure forward/backward motion
-            left = right = x
+            left =  x * 0.866
+            right = x * (-0.866)
             back = 0
         else:
             # Rotation about a point in space
-            left = x - th * self.wheel_track  * self.gear_reduction / 2.0
-            right = x + th * self.wheel_track  * self.gear_reduction / 2.0
-            back = 0
+            # left = x - th * self.wheel_track  * self.gear_reduction / 2.0
+            # right = x + th * self.wheel_track  * self.gear_reduction / 2.0
+            # back = 0
+            left =  0.866 * x + self.wheel_track * th
+            right = -0.866 * x + self.wheel_track * th
+            back = -self.wheel_track * th
             
         self.v_des_left = int(left * self.ticks_per_meter / self.arduino.PID_RATE)
         self.v_des_right = int(right * self.ticks_per_meter / self.arduino.PID_RATE)

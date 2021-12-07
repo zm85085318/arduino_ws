@@ -1,0 +1,8 @@
+prefix=/home/robot/Documents/arduino_ws/devel
+
+Name: jetson_nano_csi_cam
+Description: Description of jetson_nano_csi_cam
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: gscam

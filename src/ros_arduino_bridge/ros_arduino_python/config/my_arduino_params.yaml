@@ -19,16 +19,16 @@ base_frame: base_footprint
 # === Robot drivetrain parameters
 wheel_diameter: 0.058
 # wheel_track: 0.2969
-wheel_track: 0.23
-encoder_resolution: 26928 # CPR 360 * 74.8 reducting rate
-#gear_reduction: 1.0
+wheel_track: 0.115
+encoder_resolution: 26 # CPR 13 * 74.8 *2 reducting rate
+gear_reduction: 74.8
 #motors_reversed: True
 
 # === PID parameters
-Kp: 100
-Kd: 100
-Ki: 2
-Ko: 20000
+Kp: 8
+Kd: 2
+Ki: 0
+Ko: 50
 accel_limit: 1.0
 
 # === Sensor definitions.  Examples only - edit for your robot.

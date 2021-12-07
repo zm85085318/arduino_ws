@@ -135,6 +135,9 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_firmware/cmake_install.cmake")
   include("/home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_python/cmake_install.cmake")
   include("/home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_msgs/cmake_install.cmake")
+  include("/home/robot/Documents/arduino_ws/build/rplidar_ros/cmake_install.cmake")
+  include("/home/robot/Documents/arduino_ws/build/usb_cam/cmake_install.cmake")
+  include("/home/robot/Documents/arduino_ws/build/mycar_start/cmake_install.cmake")
 
 endif()
 
