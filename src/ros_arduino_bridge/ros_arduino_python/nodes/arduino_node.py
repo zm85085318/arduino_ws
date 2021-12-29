@@ -42,7 +42,7 @@ class ArduinoROS():
 
         self.port = rospy.get_param("~port", "/dev/ttyACM0")
         self.baud = int(rospy.get_param("~baud", 115200))
-        self.timeout = rospy.get_param("~timeout", 1)
+        self.timeout = rospy.get_param("~timeout", 0.1)
         self.base_frame = rospy.get_param("~base_frame", 'base_footprint')
         self.motors_reversed = rospy.get_param("~motors_reversed", False)
         # Overall loop rate: should be faster than fastest sensor rate
@@ -152,11 +152,9 @@ class ArduinoROS():
                 mutex.release()
 
             if self.use_base_controller:
-                # print("arduino_node use_base_controller_before")
                 mutex.acquire()
                 self.myBaseController.poll()
                 mutex.release()
-                # print("arduino_node use_base_controller_after")
 
             # Publish all sensor values on a single topic for convenience
             now = rospy.Time.now()
@@ -174,7 +172,6 @@ class ArduinoROS():
                     pass
 
                 self.t_next_sensors = now + self.t_delta_sensors
-
             r.sleep()
 
     # Service callback functions

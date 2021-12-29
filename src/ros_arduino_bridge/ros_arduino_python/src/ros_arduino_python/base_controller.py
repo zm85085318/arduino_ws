@@ -134,9 +134,8 @@ class BaseController:
         if now > self.t_next:
             # Read the encoders
             try:
-                time.sleep(1) #Attention: this code is very important!!!
                 values = self.arduino.get_encoder_counts()
-                left_enc = values[0]
+                left_enc = -values[0]
                 right_enc = values[1]
                 back_enc = values[2]
             except:
@@ -167,8 +166,8 @@ class BaseController:
             '''
             dxy_ave = ((0.5 * dright) + (0.5 * dleft)) / 2.0
             # dth = (dright - dleft) / self.wheel_track
-            # print("dxy_ave is: ")
-            # print(dxy_ave)
+            #print("dxy_ave is: ")
+            #print(dxy_ave)
             dth = dback / self.wheel_track
             # print('dleft, dright, dback is :')
             # print(dleft)

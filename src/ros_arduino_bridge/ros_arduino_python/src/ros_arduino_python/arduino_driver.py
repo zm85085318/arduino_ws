@@ -39,7 +39,7 @@ class Arduino:
     N_ANALOG_PORTS = 6
     N_DIGITAL_PORTS = 12
 
-    def __init__(self, port="/dev/ttyACM0", baudrate=115200, timeout=1, motors_reversed=False):
+    def __init__(self, port="/dev/ttyACM0", baudrate=115200, timeout=0.1, motors_reversed=False):
 
         self.PID_RATE = 30 # Do not change this!  It is a fixed property of the Arduino PID controller.
         self.PID_INTERVAL = 1000 / 30
@@ -160,12 +160,11 @@ class Arduino:
         except:
             pass
 
+
         ntries = 1
         attempts = 0
 
         try:
-            print("cmd: ")
-            print(cmd)
             self.port.write((cmd + '\r').encode("utf8"))
             value = self.recv(self.timeout)
             while (attempts < ntries) and (value == '' or value == 'Invalid Command' or value == None):
@@ -229,7 +228,6 @@ class Arduino:
         ''' Thread safe execution of "cmd" on the Arduino returning True if response is ACK.
         '''
         self.mutex.acquire()
-
         try:
             # self.port.flushInput()
             self.port.reset_input_buffer()
