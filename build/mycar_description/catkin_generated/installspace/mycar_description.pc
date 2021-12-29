@@ -1,0 +1,8 @@
+prefix=/home/robot/Documents/arduino_ws/install
+
+Name: mycar_description
+Description: Description of mycar_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

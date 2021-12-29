@@ -57,7 +57,15 @@ class BaseController:
         self.setup_pid(pid_params)
             
         # How many encoder ticks are there per meter?
-        self.ticks_per_meter = self.encoder_resolution * self.gear_reduction  / (self.wheel_diameter * pi)
+        print("encoder resolution: ")
+        print(self.encoder_resolution)
+        print("gear_reduction: " )
+        print(self.gear_reduction)
+        print("wheel_diameter: ")
+        print(self.wheel_diameter)
+        print("pi is: ")
+        print(pi)
+        self.ticks_per_meter = (self.encoder_resolution * self.gear_reduction)  / (self.wheel_diameter * pi)
         
         # What is the maximum acceleration we will tolerate when changing wheel speeds?
         self.max_accel = self.accel_limit * self.ticks_per_meter / self.rate
@@ -159,17 +167,17 @@ class BaseController:
             '''
             dxy_ave = ((0.5 * dright) + (0.5 * dleft)) / 2.0
             # dth = (dright - dleft) / self.wheel_track
-            print("dxy_ave is: ")
-            print(dxy_ave)
+            # print("dxy_ave is: ")
+            # print(dxy_ave)
             dth = dback / self.wheel_track
-            print('dleft, dright, dback is :')
-            print(dleft)
-            print(dright)
-            print(dback)
+            # print('dleft, dright, dback is :')
+            # print(dleft)
+            # print(dright)
+            # print(dback)
             vxy = dxy_ave / dt
             vth = dth / dt
-            print("vth is: ")
-            print(vth)
+            # print("vth is: ")
+            # print(vth)
                 
             if (dxy_ave != 0):
                 dx = cos(dth) * dxy_ave
@@ -263,22 +271,22 @@ class BaseController:
             # right = th * self.wheel_track  * self.gear_reduction / 2.0
             # left = -right
             # back = right
-            right = -th * self.wheel_track
+            right = th * self.wheel_track
             left = right
             back = right
         elif th == 0:
             # Pure forward/backward motion
-            left =  x * 0.866
-            right = x * (-0.866)
+            left =  x * (-0.866)
+            right = x * 0.866
             back = 0
         else:
             # Rotation about a point in space
             # left = x - th * self.wheel_track  * self.gear_reduction / 2.0
             # right = x + th * self.wheel_track  * self.gear_reduction / 2.0
             # back = 0
-            left =  0.866 * x + self.wheel_track * th
-            right = -0.866 * x + self.wheel_track * th
-            back = -self.wheel_track * th
+            left =  -0.866 * x + self.wheel_track * th
+            right = 0.866 * x + self.wheel_track * th
+            back = self.wheel_track * th
             
         self.v_des_left = int(left * self.ticks_per_meter / self.arduino.PID_RATE)
         self.v_des_right = int(right * self.ticks_per_meter / self.arduino.PID_RATE)

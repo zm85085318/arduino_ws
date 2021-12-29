@@ -101,7 +101,7 @@ class ArduinoROS():
 
         # Reserve a thread lock
         # mutex = _thread.allocate_lock()
-        mutex = threading.RLock()
+        mutex = threading.Lock()
 
         # Initialize any sensors
         self.mySensors = list()

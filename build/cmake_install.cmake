@@ -138,6 +138,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/robot/Documents/arduino_ws/build/rplidar_ros/cmake_install.cmake")
   include("/home/robot/Documents/arduino_ws/build/usb_cam/cmake_install.cmake")
   include("/home/robot/Documents/arduino_ws/build/mycar_start/cmake_install.cmake")
+  include("/home/robot/Documents/arduino_ws/build/nav/cmake_install.cmake")
+  include("/home/robot/Documents/arduino_ws/build/mycar_description/cmake_install.cmake")
 
 endif()
 

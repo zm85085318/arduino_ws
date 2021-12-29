@@ -53,7 +53,7 @@ class Arduino:
         self.motors_reversed = motors_reversed
         # Keep things thread safe
         # self.mutex = _thread.allocate_lock()
-        self.mutex = threading.RLock()
+        self.mutex = threading.Lock()
 
         # An array to cache analog sensor readings
         self.analog_sensor_cache = [None] * self.N_ANALOG_PORTS
@@ -164,9 +164,11 @@ class Arduino:
         attempts = 0
 
         try:
+            print("cmd: ")
+            print(cmd)
             self.port.write((cmd + '\r').encode("utf8"))
             value = self.recv(self.timeout)
-            while attempts < ntries and (value == '' or value == 'Invalid Command' or value == None):
+            while (attempts < ntries) and (value == '' or value == 'Invalid Command' or value == None):
                 try:
                     # self.port.flushInput()
                     self.port.reset_input_buffer()
@@ -200,7 +202,7 @@ class Arduino:
         try:
             self.port.write((cmd + '\r').encode("utf8"))
             values = self.recv_array()
-            while attempts < ntries and (values == '' or values == 'Invalid Command' or values == [] or values == None):
+            while (attempts < ntries) and (values == '' or values == 'Invalid Command' or values == [] or values == None):
                 try:
                     # self.port.flushInput()
                     self.port.reset_input_buffer()
@@ -240,7 +242,7 @@ class Arduino:
         try:
             self.port.write((cmd + '\r').encode("utf8"))
             ack = self.recv(self.timeout)
-            while attempts < ntries and (ack == '' or ack == 'Invalid Command' or ack == None):
+            while (attempts < ntries) and (ack == '' or ack == 'Invalid Command' or ack == None):
                 try:
                     # self.port.flushInput()
                     self.port.reset_input_buffer()
@@ -269,7 +271,7 @@ class Arduino:
         ''' Get the current baud rate on the serial port.
         '''
         try:
-            return int(self.execute('b'));
+            return int(self.execute('b'))
         except:
             return None
 
@@ -313,7 +315,7 @@ class Arduino:
         self.drive(right_ticks_per_loop , left_ticks_per_loop, back_ticks_per_loop)
 
     def stop(self):
-        ''' Stop both motors.
+        ''' Stop all motors.
         '''
         self.drive(0, 0, 0)
 

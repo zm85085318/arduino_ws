@@ -124,29 +124,29 @@ void setMotorSpeed(int i, int spd) {
 
   if (i == LEFT) {
     if (reverse == 0) {
-      digitalWrite(LEFT_DIR, HIGH);
+      digitalWrite(LEFT_DIR, LOW);
     }
     else if (reverse == 1) {
-      digitalWrite(LEFT_DIR, LOW);
+      digitalWrite(LEFT_DIR, HIGH);
     }
     analogWrite(LEFT_PWM, spd);
   }
   else if (i == RIGHT) {
     if (reverse == 0) {
-      digitalWrite(RIGHT_DIR, HIGH);
+      digitalWrite(RIGHT_DIR, LOW);
     }
     else if (reverse == 1) {
-      digitalWrite(RIGHT_DIR, LOW);
+      digitalWrite(RIGHT_DIR, HIGH);
     }
     analogWrite(RIGHT_PWM, spd);
   }
 
   else { /*if (i == BACK) //no need for condition*/
     if (reverse == 0) {
-      digitalWrite(BACK_DIR, HIGH);
+      digitalWrite(BACK_DIR, LOW);
     }
     else if (reverse == 1) {
-      digitalWrite(BACK_DIR, LOW);
+      digitalWrite(BACK_DIR, HIGH);
     }
     analogWrite(BACK_PWM, spd);
   }
