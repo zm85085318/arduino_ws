@@ -154,7 +154,7 @@ class BaseController:
                 dback = 0
             else:
                 dright = (right_enc - self.enc_right) / self.ticks_per_meter
-                dleft = (left_enc - self.enc_left) / self.ticks_per_meter
+                dleft = -(left_enc - self.enc_left) / self.ticks_per_meter
                 dback = (back_enc - self.enc_back) / self.ticks_per_meter
 
             self.enc_right = right_enc
@@ -164,11 +164,12 @@ class BaseController:
             '''
             Odometer function part
             '''
-            dxy_ave = ((0.5 * dright) + (0.5 * dleft)) / 2.0
+            dxy_ave = 0.57735 * (dright - dleft)
             # dth = (dright - dleft) / self.wheel_track
             #print("dxy_ave is: ")
             #print(dxy_ave)
-            dth = dback / self.wheel_track
+            # dth = dback / self.wheel_track
+            dth = (dright + dleft + dback) / (3 * self.wheel_track)
             # print('dleft, dright, dback is :')
             # print(dleft)
             # print(dright)
@@ -285,11 +286,13 @@ class BaseController:
             # back = 0
             left =  -0.866 * x + self.wheel_track * th
             right = 0.866 * x + self.wheel_track * th
-            back = self.wheel_track * th
-            
+            back = self.wheel_track * th  
+        
+
         self.v_des_left = int(left * self.ticks_per_meter / self.arduino.PID_RATE)
         self.v_des_right = int(right * self.ticks_per_meter / self.arduino.PID_RATE)
         self.v_des_back = int(back * self.ticks_per_meter / self.arduino.PID_RATE)
+            
         
 
         

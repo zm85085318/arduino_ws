@@ -1,0 +1,8 @@
+prefix=/home/robot/Documents/arduino_ws/devel
+
+Name: cv_bridge_tutorial_pkg
+Description: Description of cv_bridge_tutorial_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

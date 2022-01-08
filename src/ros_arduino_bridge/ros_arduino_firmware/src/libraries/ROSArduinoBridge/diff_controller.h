@@ -137,9 +137,9 @@ void doPID_param(SetPointInfo * p, int t_Kp, int t_Ki, int t_Kd, int t_Ko) {
   long output;
   int input;
 
-  //Perror = p->TargetTicksPerFrame - (p->Encoder - p->PrevEnc);
+  Perror = p->TargetTicksPerFrame - (p->Encoder - p->PrevEnc);
   input = p->Encoder - p->PrevEnc;
-  Perror = p->TargetTicksPerFrame - input;
+//  Perror = p->TargetTicksPerFrame - input;
 //  Serial.println(input);
 
 
@@ -202,5 +202,4 @@ void updatePID() {
   /* Set the motor speeds accordingly */
   //  setMotorSpeeds(leftPID.output, rightPID.output);
   setThreeMotorSpeeds(leftPID.output, rightPID.output, backPID.output);
-  //setThreeMotorSpeeds(leftPID.TargetTicksPerFrame, rightPID.TargetTicksPerFrame, backPID.TargetTicksPerFrame);
 }

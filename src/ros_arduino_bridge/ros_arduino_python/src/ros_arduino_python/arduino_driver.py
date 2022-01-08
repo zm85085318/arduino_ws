@@ -349,7 +349,7 @@ class Arduino:
             connected to the General Purpose I/O line pinId for a distance,
             and returns the range in cm.  Sonar distance resolution is integer based.
         '''
-        return self.execute('p %d' %pin);
+        return self.execute('p %d' %pin)
 
 #    def get_maxez1(self, triggerPin, outputPin):
 #        ''' The maxez1 command queries a Maxbotix MaxSonar-EZ1 sonar

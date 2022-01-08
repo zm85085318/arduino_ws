@@ -4,7 +4,7 @@
       <param name="base_frame" value="base_footprint"/><!--底盘坐标系-->
       <param name="odom_frame" value="odom"/> <!--里程计坐标系-->
       <param name="map_update_interval" value="5.0"/>
-      <param name="maxUrange" value="16.0"/>
+      <param name="maxUrange" value="12.0"/>
       <param name="sigma" value="0.05"/>
       <param name="kernelSize" value="1"/>
       <param name="lstep" value="0.05"/>
@@ -13,11 +13,12 @@
       <param name="lsigma" value="0.075"/>
       <param name="ogain" value="3.0"/>
       <param name="lskip" value="0"/>
+      <param name="minimumScore" value="100"/>
       <param name="srr" value="0.1"/>
       <param name="srt" value="0.2"/>
       <param name="str" value="0.1"/>
       <param name="stt" value="0.2"/>
-      <param name="linearUpdate" value="1.0"/>
+      <param name="linearUpdate" value="0.2"/>
       <param name="angularUpdate" value="0.5"/>
       <param name="temporalUpdate" value="3.0"/>
       <param name="resampleThreshold" value="0.5"/>

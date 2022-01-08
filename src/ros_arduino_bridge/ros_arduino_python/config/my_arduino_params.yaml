@@ -19,7 +19,7 @@ base_frame: base_footprint
 # === Robot drivetrain parameters
 wheel_diameter: 0.058
 # wheel_track: 0.2969
-wheel_track: 0.115
+wheel_track: 0.11
 encoder_resolution: 26 # CPR 13 * 74.8 *2 reducting rate
 gear_reduction: 74.8
 #motors_reversed: True
