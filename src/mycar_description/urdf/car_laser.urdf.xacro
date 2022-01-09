@@ -11,8 +11,8 @@
     <xacro:property name="joint_support_z" value="${base_length / 2 + support_length / 2}" />
 
     <xacro:property name="joint_laser_x" value="-0.03" />
-    <xacro:property name="joint_laser_y" value="-0.03" />
-    <xacro:property name="joint_laser_z" value="${support_length / 2 + laser_length / 2 + 0.26}" />
+    <xacro:property name="joint_laser_y" value="0.0" />
+    <xacro:property name="joint_laser_z" value="${support_length / 2 + laser_length / 2}" />
 
     <link name="support">
         <visual>

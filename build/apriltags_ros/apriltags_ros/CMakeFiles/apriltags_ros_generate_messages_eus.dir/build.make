@@ -61,21 +61,21 @@ apriltags_ros/apriltags_ros/CMakeFiles/apriltags_ros_generate_messages_eus: /hom
 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetection.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetection.l: /home/robot/Documents/arduino_ws/src/apriltags_ros/apriltags_ros/msg/AprilTagDetection.msg
 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetection.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
-/home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetection.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetection.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetection.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetection.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetection.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetection.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from apriltags_ros/AprilTagDetection.msg"
 	cd /home/robot/Documents/arduino_ws/build/apriltags_ros/apriltags_ros && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/robot/Documents/arduino_ws/src/apriltags_ros/apriltags_ros/msg/AprilTagDetection.msg -Iapriltags_ros:/home/robot/Documents/arduino_ws/src/apriltags_ros/apriltags_ros/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p apriltags_ros -o /home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg
 
 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetectionArray.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetectionArray.l: /home/robot/Documents/arduino_ws/src/apriltags_ros/apriltags_ros/msg/AprilTagDetectionArray.msg
 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetectionArray.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
-/home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetectionArray.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetectionArray.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetectionArray.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetectionArray.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetectionArray.l: /home/robot/Documents/arduino_ws/src/apriltags_ros/apriltags_ros/msg/AprilTagDetection.msg
 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetectionArray.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetectionArray.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from apriltags_ros/AprilTagDetectionArray.msg"
 	cd /home/robot/Documents/arduino_ws/build/apriltags_ros/apriltags_ros && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/robot/Documents/arduino_ws/src/apriltags_ros/apriltags_ros/msg/AprilTagDetectionArray.msg -Iapriltags_ros:/home/robot/Documents/arduino_ws/src/apriltags_ros/apriltags_ros/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p apriltags_ros -o /home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg
 
