@@ -5,7 +5,7 @@ local_costmap:
   #膨胀半径，扩展在碰撞区域以外的代价区域，使得机器人规划路径避开障碍物
   inflation_radius: 0.1
   #代价比例系数，越大则代价值越小
-  cost_scaling_factor: 2.0
+  cost_scaling_factor: 3.0
 
   update_frequency: 10.0 #代价地图更新频率
   publish_frequency: 10.0 #代价地图的发布频率
