@@ -46,7 +46,7 @@ DWAPlannerROS:
 
 # Forward Simulation Parameters
 
-  sim_time: 2.0    # 1.7
+  sim_time: 1.7    # 1.7
 
   sim_granularity: 0.05
 

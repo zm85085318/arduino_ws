@@ -90,6 +90,11 @@
   "file": "/home/robot/Documents/arduino_ws/src/apriltags_ros/apriltags/src/UnionFindSimple.cc"
 },
 {
+  "directory": "/home/robot/Documents/arduino_ws/build/distanceangle",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"distanceangle\\\" -I/home/robot/Documents/arduino_ws/devel/include -I/home/robot/Documents/arduino_ws/src/distanceangle/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/distanceangle.dir/src/distance_angle.cpp.o -c /home/robot/Documents/arduino_ws/src/distanceangle/src/distance_angle.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/distanceangle/src/distance_angle.cpp"
+},
+{
   "directory": "/home/robot/Documents/arduino_ws/build/cv_bridge_tutorial_pkg",
   "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"cv_bridge_tutorial_pkg\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/opencv4  -g   -o CMakeFiles/sample_cv_bridge_node.dir/src/sample_cv_bridge_node.cpp.o -c /home/robot/Documents/arduino_ws/src/cv_bridge_tutorial_pkg/src/sample_cv_bridge_node.cpp",
   "file": "/home/robot/Documents/arduino_ws/src/cv_bridge_tutorial_pkg/src/sample_cv_bridge_node.cpp"
@@ -168,6 +173,31 @@
   "directory": "/home/robot/Documents/arduino_ws/build/apriltags_ros/apriltags_ros",
   "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"apriltags_ros\\\" -Dapriltag_detector_EXPORTS -I/home/robot/Documents/arduino_ws/devel/include -I/home/robot/Documents/arduino_ws/src/apriltags_ros/apriltags_ros/include -I/usr/include/eigen3 -I/home/robot/Documents/arduino_ws/src/apriltags_ros/apriltags/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/opencv4  -g -fPIC   -o CMakeFiles/apriltag_detector.dir/src/apriltag_detector.cpp.o -c /home/robot/Documents/arduino_ws/src/apriltags_ros/apriltags_ros/src/apriltag_detector.cpp",
   "file": "/home/robot/Documents/arduino_ws/src/apriltags_ros/apriltags_ros/src/apriltag_detector.cpp"
+},
+{
+  "directory": "/home/robot/Documents/arduino_ws/build/rr_auto_dock",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rr_auto_dock\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 -isystem /home/robot/Documents/arduino_ws/src/rr_auto_dock/BEFORE -isystem /home/robot/Documents/arduino_ws/devel/include -isystem /usr/include/opencv4  -g   -std=c++11 -std=c++11 -o CMakeFiles/create_marker.dir/src/create_marker.cpp.o -c /home/robot/Documents/arduino_ws/src/rr_auto_dock/src/create_marker.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/rr_auto_dock/src/create_marker.cpp"
+},
+{
+  "directory": "/home/robot/Documents/arduino_ws/build/rr_auto_dock",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rr_auto_dock\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 -isystem /home/robot/Documents/arduino_ws/src/rr_auto_dock/BEFORE -isystem /home/robot/Documents/arduino_ws/devel/include -isystem /usr/include/opencv4  -g   -std=c++11 -std=c++11 -o CMakeFiles/image_sub_node.dir/src/image_sub_node.cpp.o -c /home/robot/Documents/arduino_ws/src/rr_auto_dock/src/image_sub_node.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/rr_auto_dock/src/image_sub_node.cpp"
+},
+{
+  "directory": "/home/robot/Documents/arduino_ws/build/rr_auto_dock",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rr_auto_dock\\\" -Dimage_sub_nodelet_EXPORTS -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 -I/usr/include/opencv4 -isystem /home/robot/Documents/arduino_ws/src/rr_auto_dock/BEFORE -isystem /home/robot/Documents/arduino_ws/devel/include  -g -fPIC   -std=c++11 -std=c++11 -o CMakeFiles/image_sub_nodelet.dir/src/image_sub_nodelet.cpp.o -c /home/robot/Documents/arduino_ws/src/rr_auto_dock/src/image_sub_nodelet.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/rr_auto_dock/src/image_sub_nodelet.cpp"
+},
+{
+  "directory": "/home/robot/Documents/arduino_ws/build/rr_auto_dock",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rr_auto_dock\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 -isystem /home/robot/Documents/arduino_ws/src/rr_auto_dock/BEFORE -isystem /home/robot/Documents/arduino_ws/devel/include -isystem /usr/include/opencv4 -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest  -g   -std=c++11 -std=c++11 -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/aruco_images_test.dir/test/aruco_images_test.cpp.o -c /home/robot/Documents/arduino_ws/src/rr_auto_dock/test/aruco_images_test.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/rr_auto_dock/test/aruco_images_test.cpp"
+},
+{
+  "directory": "/home/robot/Documents/arduino_ws/build/rr_auto_dock",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rr_auto_dock\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 -isystem /home/robot/Documents/arduino_ws/src/rr_auto_dock/BEFORE -isystem /home/robot/Documents/arduino_ws/devel/include -isystem /usr/include/opencv4  -g   -std=c++11 -std=c++11 -o CMakeFiles/aruco_detect.dir/src/aruco_detect.cpp.o -c /home/robot/Documents/arduino_ws/src/rr_auto_dock/src/aruco_detect.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/rr_auto_dock/src/aruco_detect.cpp"
 },
 {
   "directory": "/home/robot/Documents/arduino_ws/build/usb_cam",

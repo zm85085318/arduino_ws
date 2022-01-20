@@ -22,7 +22,7 @@
     <joint name="camera2base" type="fixed">
         <parent link="base_link" />
         <child link="camera" />
-        <origin xyz="${joint_camera_x} ${joint_camera_y} ${joint_camera_z}" rpy="0 0 0" />
+        <origin xyz="${joint_camera_x} ${joint_camera_y} ${joint_camera_z}" rpy="-1.309 0 -1.57" />
     </joint>
 
 </robot>

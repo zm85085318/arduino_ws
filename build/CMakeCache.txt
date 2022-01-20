@@ -379,6 +379,9 @@ UBUNTU:BOOL=TRUE
 UBUNTU_FOCAL:BOOL=TRUE
 
 //Path to a file.
+_file_name:FILEPATH=/home/robot/Documents/arduino_ws/src/rr_auto_dock/test/aruco_images.test
+
+//Path to a file.
 _gmock_INCLUDES:FILEPATH=/usr/src/googletest/googlemock/include/gmock/gmock.h
 
 //Path to a file.
@@ -426,6 +429,15 @@ apriltags_ros_BINARY_DIR:STATIC=/home/robot/Documents/arduino_ws/build/apriltags
 //Value Computed by CMake
 apriltags_ros_SOURCE_DIR:STATIC=/home/robot/Documents/arduino_ws/src/apriltags_ros/apriltags_ros
 
+//The directory containing a CMake configuration file for ar_track_alvar_msgs.
+ar_track_alvar_msgs_DIR:PATH=ar_track_alvar_msgs_DIR-NOTFOUND
+
+//Value Computed by CMake
+auto_docking_BINARY_DIR:STATIC=/home/robot/Documents/arduino_ws/build/auto_docking
+
+//Value Computed by CMake
+auto_docking_SOURCE_DIR:STATIC=/home/robot/Documents/arduino_ws/src/auto_docking
+
 //Value Computed by CMake
 autodock_controller_BINARY_DIR:STATIC=/home/robot/Documents/arduino_ws/build/autodock_controller
 
@@ -470,6 +482,12 @@ diagnostic_msgs_DIR:PATH=/opt/ros/noetic/share/diagnostic_msgs/cmake
 
 //The directory containing a CMake configuration file for diagnostic_updater.
 diagnostic_updater_DIR:PATH=/opt/ros/noetic/share/diagnostic_updater/cmake
+
+//Value Computed by CMake
+distanceangle_BINARY_DIR:STATIC=/home/robot/Documents/arduino_ws/build/distanceangle
+
+//Value Computed by CMake
+distanceangle_SOURCE_DIR:STATIC=/home/robot/Documents/arduino_ws/src/distanceangle
 
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/noetic/share/dynamic_reconfigure/cmake
@@ -556,6 +574,9 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
+//Dependencies for the target
+image_sub_nodelet_LIB_DEPENDS:STATIC=general;/opt/ros/noetic/lib/libtf.so;general;/usr/lib/liborocos-kdl.so;general;/usr/lib/liborocos-kdl.so;general;/opt/ros/noetic/lib/libtf2_ros.so;general;/opt/ros/noetic/lib/libactionlib.so;general;/opt/ros/noetic/lib/libtf2.so;general;/opt/ros/noetic/lib/libimage_transport.so;general;/opt/ros/noetic/lib/libmessage_filters.so;general;/opt/ros/noetic/lib/libcv_bridge.so;general;/usr/lib/aarch64-linux-gnu/libopencv_calib3d.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_dnn.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_features2d.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_flann.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_highgui.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_ml.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_objdetect.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_photo.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_stitching.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_video.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_videoio.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_aruco.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_bgsegm.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_bioinspired.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_ccalib.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_datasets.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_dnn_objdetect.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_dnn_superres.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_dpm.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_face.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_freetype.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_fuzzy.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_hdf.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_hfs.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_img_hash.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_line_descriptor.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_optflow.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_phase_unwrapping.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_plot.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_quality.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_reg.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_rgbd.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_saliency.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_shape.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_stereo.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_structured_light.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_superres.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_surface_matching.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_text.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_tracking.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_videostab.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_viz.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_ximgproc.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_xobjdetect.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_xphoto.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_core.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_imgproc.so.4.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.4.2.0;general;/opt/ros/noetic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/noetic/lib/libnodeletlib.so;general;/opt/ros/noetic/lib/libbondcpp.so;general;/usr/lib/aarch64-linux-gnu/libuuid.so;general;/opt/ros/noetic/lib/libclass_loader.so;general;/usr/lib/aarch64-linux-gnu/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/noetic/lib/libroslib.so;general;/opt/ros/noetic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython3.8.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;
+
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/noetic/share/image_transport/cmake
 
@@ -578,7 +599,7 @@ jetson_nano_csi_cam_BINARY_DIR:STATIC=/home/robot/Documents/arduino_ws/build/jet
 jetson_nano_csi_cam_SOURCE_DIR:STATIC=/home/robot/Documents/arduino_ws/src/jetson_nano_csi_cam_ros
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/noetic/lib/libbondcpp.so
+lib:FILEPATH=/opt/ros/noetic/lib/libxmlrpcpp.so
 
 //The directory containing a CMake configuration file for map_server.
 map_server_DIR:PATH=/opt/ros/noetic/share/map_server/cmake
@@ -676,7 +697,8 @@ ros_arduino_msgs_SOURCE_DIR:STATIC=/home/robot/Documents/arduino_ws/src/ros_ardu
 //Value Computed by CMake
 ros_arduino_python_BINARY_DIR:STATIC=/home/robot/Documents/arduino_ws/build/ros_arduino_bridge/ros_arduino_python
 
-ros_arduino_python_DIR:PATH=
+//The directory containing a CMake configuration file for ros_arduino_python.
+ros_arduino_python_DIR:PATH=/home/robot/Documents/arduino_ws/devel/share/ros_arduino_python/cmake
 
 //Value Computed by CMake
 ros_arduino_python_SOURCE_DIR:STATIC=/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_python
@@ -720,16 +742,26 @@ rospack_DIR:PATH=/opt/ros/noetic/share/rospack/cmake
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/noetic/share/rospy/cmake
 
+//The directory containing a CMake configuration file for rostest.
+rostest_DIR:PATH=/opt/ros/noetic/share/rostest/cmake
+
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/noetic/share/rostime/cmake
 
 //Value Computed by CMake
 rplidar_ros_BINARY_DIR:STATIC=/home/robot/Documents/arduino_ws/build/rplidar_ros
 
-rplidar_ros_DIR:PATH=
+//The directory containing a CMake configuration file for rplidar_ros.
+rplidar_ros_DIR:PATH=/home/robot/Documents/arduino_ws/devel/share/rplidar_ros/cmake
 
 //Value Computed by CMake
 rplidar_ros_SOURCE_DIR:STATIC=/home/robot/Documents/arduino_ws/src/rplidar_ros
+
+//Value Computed by CMake
+rr_auto_dock_BINARY_DIR:STATIC=/home/robot/Documents/arduino_ws/build/rr_auto_dock
+
+//Value Computed by CMake
+rr_auto_dock_SOURCE_DIR:STATIC=/home/robot/Documents/arduino_ws/src/rr_auto_dock
 
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/noetic/share/sensor_msgs/cmake
@@ -745,6 +777,9 @@ std_srvs_DIR:PATH=/opt/ros/noetic/share/std_srvs/cmake
 
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/noetic/share/tf2/cmake
+
+//The directory containing a CMake configuration file for tf2_geometry_msgs.
+tf2_geometry_msgs_DIR:PATH=/opt/ros/noetic/share/tf2_geometry_msgs/cmake
 
 //The directory containing a CMake configuration file for tf2_msgs.
 tf2_msgs_DIR:PATH=/opt/ros/noetic/share/tf2_msgs/cmake
@@ -775,6 +810,9 @@ usb_cam_LIB_DEPENDS:STATIC=general;avcodec;general;swscale;general;/opt/ros/noet
 
 //Value Computed by CMake
 usb_cam_SOURCE_DIR:STATIC=/home/robot/Documents/arduino_ws/src/usb_cam
+
+//The directory containing a CMake configuration file for visualization_msgs.
+visualization_msgs_DIR:PATH=/opt/ros/noetic/share/visualization_msgs/cmake
 
 //The directory containing a CMake configuration file for xacro.
 xacro_DIR:PATH=/opt/ros/noetic/share/xacro/cmake
@@ -930,7 +968,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=18
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

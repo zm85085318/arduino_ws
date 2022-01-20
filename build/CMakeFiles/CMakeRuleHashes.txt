@@ -1,6 +1,7 @@
 # Hashes of file build rules.
 df7c1044f01842555b530f9a55f77d6e /home/robot/Documents/arduino_ws/devel/include/apriltags_ros/AprilTagDetection.h
 38a9e8939a7a30c8849502ec2fa22979 /home/robot/Documents/arduino_ws/devel/include/apriltags_ros/AprilTagDetectionArray.h
+fd54f0eca7f09e71af4c8802329a2500 /home/robot/Documents/arduino_ws/devel/include/distanceangle/DistanceAngle.h
 21d86d2a828b5d87436ef764de66c142 /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/Analog.h
 84807922ac9f1627ede97b74cf1e6a7d /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogFloat.h
 16a1b863b8fed302d3368306d4e7d20c /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/AnalogRead.h
@@ -13,9 +14,12 @@ a159c2b68cd2e8ff5e5af309299caec2 /home/robot/Documents/arduino_ws/devel/include/
 4c9c2fc7f12f5913a890d12fe58c4348 /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/SensorState.h
 681a3e6422e9a8fb91501f30b9fbe2d1 /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/ServoRead.h
 97688c46779d9d936a5f5835295cd696 /home/robot/Documents/arduino_ws/devel/include/ros_arduino_msgs/ServoWrite.h
+f4a073db3789db58fa4693f97b0fe6e2 /home/robot/Documents/arduino_ws/devel/include/rr_auto_dock/DetectorParamsConfig.h
 ae95efce7fd6318dac968f1b115c39d8 /home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/apriltags_ros/msg/_AprilTagDetection.py
 0783cccdfb7323dfe8e0708f8f5a4f62 /home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/apriltags_ros/msg/_AprilTagDetectionArray.py
 a681299600a747a4c019176cc3e7c167 /home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/apriltags_ros/msg/__init__.py
+5dea92e0e3dcd0aeebb58ec529dec09d /home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/distanceangle/msg/_DistanceAngle.py
+cb31960d8daa1bda6e87756f26f57297 /home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/distanceangle/msg/__init__.py
 7d3199cb77cd66d71378a2b1f203f61e /home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/ros_arduino_msgs/msg/_Analog.py
 0f9335eb31b36bff926ad1af547ce7d4 /home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/ros_arduino_msgs/msg/_AnalogFloat.py
 98c4467b6d902383bf870b5c88f412fd /home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/ros_arduino_msgs/msg/_ArduinoConstants.py
@@ -32,6 +36,7 @@ eb33edebf49e513dd7da64427aa4a65a /home/robot/Documents/arduino_ws/devel/lib/pyth
 884b680210010e96754b56e2eb1667ab /home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/ros_arduino_msgs/srv/__init__.py
 1e8e7150d75e5a44720df2653321fde7 /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/apriltags_ros/msg/AprilTagDetection.lisp
 7bf6b7444de277415213af4d1cf36f01 /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/apriltags_ros/msg/AprilTagDetectionArray.lisp
+576217e63a4272abd84087e0905be3ec /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/distanceangle/msg/DistanceAngle.lisp
 fd1921730295a4de9e18b1afd628a593 /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/Analog.lisp
 399daeb870022d661620255f44f61126 /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/AnalogFloat.lisp
 af826b0a693996396f161bfe943df730 /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/msg/ArduinoConstants.lisp
@@ -46,6 +51,7 @@ a966a226c8dd208b3f3960ae8f3fc250 /home/robot/Documents/arduino_ws/devel/share/co
 c256f7044523d406bf0c8e0a9b751796 /home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/ros_arduino_msgs/srv/ServoWrite.lisp
 951c505e4cbd569f57fd819ac68e778d /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/apriltags_ros/msg/AprilTagDetection.js
 a6d8885bb2d0d157124e7a5af3ac2278 /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/apriltags_ros/msg/AprilTagDetectionArray.js
+2012bf2786cf54cc3f42d1cd59964fa1 /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/distanceangle/msg/DistanceAngle.js
 f75080b469648e92eaec6ea2729c23f8 /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/ros_arduino_msgs/msg/Analog.js
 b7649e3c0c47ca0d3d1c0d5497f8326f /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/ros_arduino_msgs/msg/AnalogFloat.js
 bcbc9cbb16c6c1d0ca1819f144e0347e /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/ros_arduino_msgs/msg/ArduinoConstants.js
@@ -61,6 +67,8 @@ f64eddc461ab770fce0d46be7424d603 /home/robot/Documents/arduino_ws/devel/share/ge
 508a9c83182a6f6388b4e16bef11a8a9 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/manifest.l
 267a51a0c7849f59ed533fd6814f5ea9 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetection.l
 f3948f748b28d6fc4371836bfba4cc13 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/apriltags_ros/msg/AprilTagDetectionArray.l
+6e65269397c043cef1c864fd6fa8d8a5 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/distanceangle/manifest.l
+55411185e5cc54683e0f20d1f5c578c4 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/distanceangle/msg/DistanceAngle.l
 af1cc00a0b2f2284c3c450e839cf7350 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/ros_arduino_msgs/manifest.l
 577b39083e41a1609fe8cc64570d4666 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/ros_arduino_msgs/msg/Analog.l
 da13a5ac30127b7df0aa5a221bc23c96 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/ros_arduino_msgs/msg/AnalogFloat.l
@@ -75,13 +83,19 @@ f67023519960b425539f9595031b2d75 /home/robot/Documents/arduino_ws/devel/share/ro
 88dc3dfa7d757f256535517a019f468c /home/robot/Documents/arduino_ws/devel/share/roseus/ros/ros_arduino_msgs/srv/ServoRead.l
 73ff0f2d1e635f26a8abc0401114ce70 /home/robot/Documents/arduino_ws/devel/share/roseus/ros/ros_arduino_msgs/srv/ServoWrite.l
 1ac54548aec473075134cea68a868b82 CMakeFiles/clean_test_results
-8aacdb6dab5a05a316a0ee47339edd14 apriltags_ros/apriltags_ros/CMakeFiles/_apriltags_ros_generate_messages_check_deps_AprilTagDetection
-115b847af0c16f4e8a53875b79f20205 apriltags_ros/apriltags_ros/CMakeFiles/_apriltags_ros_generate_messages_check_deps_AprilTagDetectionArray
+4212f032dd6d326251ccb3224e12e3a6 apriltags_ros/apriltags_ros/CMakeFiles/_apriltags_ros_generate_messages_check_deps_AprilTagDetection
+d828c4f8e2e501824d0005db4c17c8bd apriltags_ros/apriltags_ros/CMakeFiles/_apriltags_ros_generate_messages_check_deps_AprilTagDetectionArray
 a3ab70c2d77a0d4ab14ffab35dbfa7aa apriltags_ros/apriltags_ros/CMakeFiles/apriltags_ros_generate_messages_cpp
 a3ab70c2d77a0d4ab14ffab35dbfa7aa apriltags_ros/apriltags_ros/CMakeFiles/apriltags_ros_generate_messages_eus
 a3ab70c2d77a0d4ab14ffab35dbfa7aa apriltags_ros/apriltags_ros/CMakeFiles/apriltags_ros_generate_messages_lisp
 a3ab70c2d77a0d4ab14ffab35dbfa7aa apriltags_ros/apriltags_ros/CMakeFiles/apriltags_ros_generate_messages_nodejs
 a3ab70c2d77a0d4ab14ffab35dbfa7aa apriltags_ros/apriltags_ros/CMakeFiles/apriltags_ros_generate_messages_py
+1702106eff294e0fcd3d1a61cb4ebeea distanceangle/CMakeFiles/_distanceangle_generate_messages_check_deps_DistanceAngle
+bfe0db566bb34c74be3384d9dfe36a45 distanceangle/CMakeFiles/distanceangle_generate_messages_cpp
+bfe0db566bb34c74be3384d9dfe36a45 distanceangle/CMakeFiles/distanceangle_generate_messages_eus
+bfe0db566bb34c74be3384d9dfe36a45 distanceangle/CMakeFiles/distanceangle_generate_messages_lisp
+bfe0db566bb34c74be3384d9dfe36a45 distanceangle/CMakeFiles/distanceangle_generate_messages_nodejs
+bfe0db566bb34c74be3384d9dfe36a45 distanceangle/CMakeFiles/distanceangle_generate_messages_py
 dc83489ae422fb2377af68a1eee52554 ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/_ros_arduino_msgs_generate_messages_check_deps_Analog
 e23a01b2c3551636d47f655b14601ec6 ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/_ros_arduino_msgs_generate_messages_check_deps_AnalogFloat
 95039b6186879cea6b20c154c0032200 ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/_ros_arduino_msgs_generate_messages_check_deps_AnalogRead
@@ -99,3 +113,7 @@ ec392370b8693fe2635d698f25d8bd47 ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/
 8e2be909a0e75c8cd85e2cd3e0320aee ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp
 8e2be909a0e75c8cd85e2cd3e0320aee ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_nodejs
 8e2be909a0e75c8cd85e2cd3e0320aee ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_py
+06118333f60b2778748d71a61b261f35 rr_auto_dock/CMakeFiles/_run_tests_rr_auto_dock_rostest_test_aruco_images.test
+ea099ca168e9acc120993e4caa1e17d0 rr_auto_dock/CMakeFiles/clean_test_results_rr_auto_dock
+cf2f14a54317d6447e9e02028f56d3b2 rr_auto_dock/CMakeFiles/rr_auto_dock_gencfg
+06118333f60b2778748d71a61b261f35 rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test
