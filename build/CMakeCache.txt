@@ -444,6 +444,12 @@ autodock_controller_BINARY_DIR:STATIC=/home/robot/Documents/arduino_ws/build/aut
 //Value Computed by CMake
 autodock_controller_SOURCE_DIR:STATIC=/home/robot/Documents/arduino_ws/src/autodock_controller
 
+//Value Computed by CMake
+behavior_tree_BINARY_DIR:STATIC=/home/robot/Documents/arduino_ws/build/behavior_tree
+
+//Value Computed by CMake
+behavior_tree_SOURCE_DIR:STATIC=/home/robot/Documents/arduino_ws/src/behavior_tree
+
 //The directory containing a CMake configuration file for bond.
 bond_DIR:PATH=/opt/ros/noetic/share/bond/cmake
 
@@ -458,6 +464,12 @@ camera_info_manager_DIR:PATH=/opt/ros/noetic/share/camera_info_manager/cmake
 
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/noetic/share/catkin/cmake
+
+//The directory containing a CMake configuration file for catkin_package.
+catkin_package_DIR:PATH=catkin_package_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for catkin_python_setup.
+catkin_python_setup_DIR:PATH=catkin_python_setup_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for class_loader.
 class_loader_DIR:PATH=/opt/ros/noetic/share/class_loader/cmake
@@ -488,6 +500,12 @@ distanceangle_BINARY_DIR:STATIC=/home/robot/Documents/arduino_ws/build/distancea
 
 //Value Computed by CMake
 distanceangle_SOURCE_DIR:STATIC=/home/robot/Documents/arduino_ws/src/distanceangle
+
+//Value Computed by CMake
+dockingrobot_BINARY_DIR:STATIC=/home/robot/Documents/arduino_ws/build/dockingrobot
+
+//Value Computed by CMake
+dockingrobot_SOURCE_DIR:STATIC=/home/robot/Documents/arduino_ws/src/dockingrobot
 
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/noetic/share/dynamic_reconfigure/cmake
@@ -968,7 +986,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=18
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=17
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

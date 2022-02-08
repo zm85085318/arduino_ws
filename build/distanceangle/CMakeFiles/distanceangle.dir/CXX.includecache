@@ -23,6 +23,8 @@ ros/message_operations.h
 -
 
 /home/robot/Documents/arduino_ws/src/distanceangle/src/distance_angle.cpp
+string
+/home/robot/Documents/arduino_ws/src/distanceangle/src/string
 ros/ros.h
 -
 std_msgs/Float64.h

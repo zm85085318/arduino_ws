@@ -8,7 +8,7 @@
         <rosparam file="$(find nav)/param/base_local_planner_params.yaml" command="load" />
     </node> -->
 
-    <node pkg="move_base" type="move_base" respawn="false" name="move_base_node" output="screen">
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base_node">
     <param name="footprint_padding" value="0.01" />
     <param name="controller_frequency" value="10.0" />
     <param name="controller_patience" value="10.0" />

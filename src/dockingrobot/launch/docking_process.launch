@@ -1,0 +1,4 @@
+<launch>
+    <node name="docking_process" pkg="dockingrobot" type="docking_modified" output="screen"/>
+    <!-- <node name="docking_process" pkg="dockingrobot" type="docking" output="screen"/> -->
+</launch>

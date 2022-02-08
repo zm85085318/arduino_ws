@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PATH='/opt/ros/noetic/bin:/home/robot/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/bin:/home/robot/.local/bin:/home/robot/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/bin:/home/robot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+export PATH='/opt/ros/noetic/bin:/home/robot/.vscode-server/bin/5554b12acf27056905806867f251c859323ff7e9/bin/remote-cli:/home/robot/.local/bin:/home/robot/.vscode-server/bin/5554b12acf27056905806867f251c859323ff7e9/bin:/home/robot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'

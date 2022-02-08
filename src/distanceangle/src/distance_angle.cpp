@@ -1,15 +1,21 @@
+#include "string"
 #include <ros/ros.h>
 #include "std_msgs/Float64.h"
 #include "tf2_msgs/TFMessage.h"
 #include "distanceangle/DistanceAngle.h"
+
+
 #define flags 1
 #define PI 3.14
 
+using namespace std;
 
 ros::Publisher OdomAngle_pub;
 ros::Publisher DistanceAngle_pub;
 distanceangle::DistanceAngle marker;
 //float chassis {0.05};
+
+string desiredTag = "fiducial_102";
 
 class MarkerParameters
 {
@@ -23,6 +29,8 @@ public:
     float Yaw;
     float Pitch;
     float Roll;
+    
+    
     
     void ComputeOdomAngle(const tf2_msgs::TFMessage& robot, int i){
 
@@ -118,7 +126,8 @@ void odomangleCallback(const tf2_msgs::TFMessage robot)
   }
 
 
-  if ((robot.transforms[0].header.frame_id == "camera")&&(robot.transforms[0].child_frame_id == "fiducial_102")) //I should define the frames above!
+  // if ((robot.transforms[0].header.frame_id == "camera")&&(robot.transforms[0].child_frame_id == "fiducial_102")) //I should define the frames above!
+  if ((robot.transforms[0].header.frame_id == "camera")&&(robot.transforms[0].child_frame_id == desiredTag))
  {
 
         ARmarker.Computedistangle(robot,i);
@@ -128,7 +137,7 @@ void odomangleCallback(const tf2_msgs::TFMessage robot)
 	ARmarker.CopytoMarker(marker);   
  }
 
-    ROS_INFO("Distance: [%f], angle: [%f], orientation: [%f]", marker.distance, marker.angle, marker.orientation);
+    // ROS_INFO("Distance: [%f], angle: [%f], orientation: [%f]", marker.distance, marker.angle, marker.orientation);
 
     DistanceAngle_pub.publish(marker);
     

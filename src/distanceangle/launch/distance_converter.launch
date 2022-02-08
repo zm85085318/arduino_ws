@@ -1,0 +1,3 @@
+<launch>
+    <node name="distance_angle" pkg="distanceangle" type="distanceangle" output="screen"/>
+</launch>

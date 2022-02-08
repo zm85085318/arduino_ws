@@ -56,29 +56,6 @@ CMAKE_BINARY_DIR = /home/robot/Documents/arduino_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -91,6 +68,18 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -100,28 +89,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -134,6 +101,39 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,6 +168,396 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+rr_auto_dock/CMakeFiles/aruco_detect.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/aruco_detect.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/aruco_detect.dir/rule
+
+# Convenience name for target.
+aruco_detect: rr_auto_dock/CMakeFiles/aruco_detect.dir/rule
+
+.PHONY : aruco_detect
+
+# fast build rule for target.
+aruco_detect/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/aruco_detect.dir/build.make rr_auto_dock/CMakeFiles/aruco_detect.dir/build
+.PHONY : aruco_detect/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_eus: rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_eus
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_eus/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_eus/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_gencfg: rr_auto_dock/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+
+.PHONY : dynamic_reconfigure_gencfg
+
+# fast build rule for target.
+dynamic_reconfigure_gencfg/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make rr_auto_dock/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
+.PHONY : dynamic_reconfigure_gencfg/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/nodelet_generate_messages_cpp.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_cpp: rr_auto_dock/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+
+.PHONY : nodelet_generate_messages_cpp
+
+# fast build rule for target.
+nodelet_generate_messages_cpp/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make rr_auto_dock/CMakeFiles/nodelet_generate_messages_cpp.dir/build
+.PHONY : nodelet_generate_messages_cpp/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_nodejs: rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : visualization_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+visualization_msgs_generate_messages_nodejs/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build
+.PHONY : visualization_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_cpp: rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : visualization_msgs_generate_messages_cpp
+
+# fast build rule for target.
+visualization_msgs_generate_messages_cpp/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
+.PHONY : visualization_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_eus: rr_auto_dock/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+
+.PHONY : actionlib_generate_messages_eus
+
+# fast build rule for target.
+actionlib_generate_messages_eus/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/actionlib_generate_messages_eus.dir/build.make rr_auto_dock/CMakeFiles/actionlib_generate_messages_eus.dir/build
+.PHONY : actionlib_generate_messages_eus/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_cpp: rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_cpp/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+.PHONY : actionlib_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_eus: rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
+
+.PHONY : visualization_msgs_generate_messages_eus
+
+# fast build rule for target.
+visualization_msgs_generate_messages_eus/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
+.PHONY : visualization_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_nodejs: rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+tf2_msgs_generate_messages_nodejs/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+.PHONY : tf2_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/tf_generate_messages_eus.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/tf_generate_messages_eus.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/tf_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_eus: rr_auto_dock/CMakeFiles/tf_generate_messages_eus.dir/rule
+
+.PHONY : tf_generate_messages_eus
+
+# fast build rule for target.
+tf_generate_messages_eus/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/tf_generate_messages_eus.dir/build.make rr_auto_dock/CMakeFiles/tf_generate_messages_eus.dir/build
+.PHONY : tf_generate_messages_eus/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_py: rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_py
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_py/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+.PHONY : actionlib_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_cpp: rr_auto_dock/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+
+.PHONY : actionlib_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_generate_messages_cpp/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make rr_auto_dock/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+.PHONY : actionlib_generate_messages_cpp/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/actionlib_generate_messages_py.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/actionlib_generate_messages_py.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_py: rr_auto_dock/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+.PHONY : actionlib_generate_messages_py
+
+# fast build rule for target.
+actionlib_generate_messages_py/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/actionlib_generate_messages_py.dir/build.make rr_auto_dock/CMakeFiles/actionlib_generate_messages_py.dir/build
+.PHONY : actionlib_generate_messages_py/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/tf_generate_messages_cpp.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/tf_generate_messages_cpp.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/tf_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_cpp: rr_auto_dock/CMakeFiles/tf_generate_messages_cpp.dir/rule
+
+.PHONY : tf_generate_messages_cpp
+
+# fast build rule for target.
+tf_generate_messages_cpp/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/tf_generate_messages_cpp.dir/build.make rr_auto_dock/CMakeFiles/tf_generate_messages_cpp.dir/build
+.PHONY : tf_generate_messages_cpp/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_lisp: rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : visualization_msgs_generate_messages_lisp
+
+# fast build rule for target.
+visualization_msgs_generate_messages_lisp/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
+.PHONY : visualization_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/rr_auto_dock_gencfg.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/rr_auto_dock_gencfg.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/rr_auto_dock_gencfg.dir/rule
+
+# Convenience name for target.
+rr_auto_dock_gencfg: rr_auto_dock/CMakeFiles/rr_auto_dock_gencfg.dir/rule
+
+.PHONY : rr_auto_dock_gencfg
+
+# fast build rule for target.
+rr_auto_dock_gencfg/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/rr_auto_dock_gencfg.dir/build.make rr_auto_dock/CMakeFiles/rr_auto_dock_gencfg.dir/build
+.PHONY : rr_auto_dock_gencfg/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_nodejs: rr_auto_dock/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+
+.PHONY : tf_generate_messages_nodejs
+
+# fast build rule for target.
+tf_generate_messages_nodejs/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/tf_generate_messages_nodejs.dir/build.make rr_auto_dock/CMakeFiles/tf_generate_messages_nodejs.dir/build
+.PHONY : tf_generate_messages_nodejs/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_lisp: rr_auto_dock/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+
+.PHONY : actionlib_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_generate_messages_lisp/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make rr_auto_dock/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+.PHONY : actionlib_generate_messages_lisp/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_py: rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+
+.PHONY : visualization_msgs_generate_messages_py
+
+# fast build rule for target.
+visualization_msgs_generate_messages_py/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
+.PHONY : visualization_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_nodejs: rr_auto_dock/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+
+.PHONY : actionlib_generate_messages_nodejs
+
+# fast build rule for target.
+actionlib_generate_messages_nodejs/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make rr_auto_dock/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+.PHONY : actionlib_generate_messages_nodejs/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/nodelet_generate_messages_eus.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_eus: rr_auto_dock/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+
+.PHONY : nodelet_generate_messages_eus
+
+# fast build rule for target.
+nodelet_generate_messages_eus/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/nodelet_generate_messages_eus.dir/build.make rr_auto_dock/CMakeFiles/nodelet_generate_messages_eus.dir/build
+.PHONY : nodelet_generate_messages_eus/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/aruco_images_test.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/aruco_images_test.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/aruco_images_test.dir/rule
+
+# Convenience name for target.
+aruco_images_test: rr_auto_dock/CMakeFiles/aruco_images_test.dir/rule
+
+.PHONY : aruco_images_test
+
+# fast build rule for target.
+aruco_images_test/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/aruco_images_test.dir/build.make rr_auto_dock/CMakeFiles/aruco_images_test.dir/build
+.PHONY : aruco_images_test/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/tf_generate_messages_lisp.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/tf_generate_messages_lisp.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/tf_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_lisp: rr_auto_dock/CMakeFiles/tf_generate_messages_lisp.dir/rule
+
+.PHONY : tf_generate_messages_lisp
+
+# fast build rule for target.
+tf_generate_messages_lisp/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/tf_generate_messages_lisp.dir/build.make rr_auto_dock/CMakeFiles/tf_generate_messages_lisp.dir/build
+.PHONY : tf_generate_messages_lisp/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_lisp: rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_lisp
+
+# fast build rule for target.
+tf2_msgs_generate_messages_lisp/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
+.PHONY : tf2_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_cpp: rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_cpp
+
+# fast build rule for target.
+tf2_msgs_generate_messages_cpp/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+.PHONY : tf2_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
 rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
 	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
 .PHONY : rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
@@ -183,19 +573,274 @@ dynamic_reconfigure_generate_messages_lisp/fast:
 .PHONY : dynamic_reconfigure_generate_messages_lisp/fast
 
 # Convenience name for target.
-rr_auto_dock/CMakeFiles/create_marker.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/create_marker.dir/rule
-.PHONY : rr_auto_dock/CMakeFiles/create_marker.dir/rule
+rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-create_marker: rr_auto_dock/CMakeFiles/create_marker.dir/rule
+actionlib_msgs_generate_messages_nodejs: rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
 
-.PHONY : create_marker
+.PHONY : actionlib_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-create_marker/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/create_marker.dir/build.make rr_auto_dock/CMakeFiles/create_marker.dir/build
-.PHONY : create_marker/fast
+actionlib_msgs_generate_messages_nodejs/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
+.PHONY : actionlib_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/tf_generate_messages_py.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/tf_generate_messages_py.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/tf_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_py: rr_auto_dock/CMakeFiles/tf_generate_messages_py.dir/rule
+
+.PHONY : tf_generate_messages_py
+
+# fast build rule for target.
+tf_generate_messages_py/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/tf_generate_messages_py.dir/build.make rr_auto_dock/CMakeFiles/tf_generate_messages_py.dir/build
+.PHONY : tf_generate_messages_py/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_lisp: rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_lisp/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+.PHONY : actionlib_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_eus: rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_eus
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_eus/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make rr_auto_dock/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
+.PHONY : actionlib_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_py: rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_py
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_py/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_py/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/nodelet_generate_messages_lisp.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_lisp: rr_auto_dock/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
+
+.PHONY : nodelet_generate_messages_lisp
+
+# fast build rule for target.
+nodelet_generate_messages_lisp/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make rr_auto_dock/CMakeFiles/nodelet_generate_messages_lisp.dir/build
+.PHONY : nodelet_generate_messages_lisp/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_nodejs: rr_auto_dock/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+
+.PHONY : nodelet_generate_messages_nodejs
+
+# fast build rule for target.
+nodelet_generate_messages_nodejs/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make rr_auto_dock/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
+.PHONY : nodelet_generate_messages_nodejs/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/rule
+
+# Convenience name for target.
+run_tests_rr_auto_dock_rostest: rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/rule
+
+.PHONY : run_tests_rr_auto_dock_rostest
+
+# fast build rule for target.
+run_tests_rr_auto_dock_rostest/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/build.make rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/build
+.PHONY : run_tests_rr_auto_dock_rostest/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock.dir/rule
+
+# Convenience name for target.
+run_tests_rr_auto_dock: rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock.dir/rule
+
+.PHONY : run_tests_rr_auto_dock
+
+# fast build rule for target.
+run_tests_rr_auto_dock/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock.dir/build.make rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock.dir/build
+.PHONY : run_tests_rr_auto_dock/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/nodelet_generate_messages_py.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/nodelet_generate_messages_py.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/nodelet_generate_messages_py.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_py: rr_auto_dock/CMakeFiles/nodelet_generate_messages_py.dir/rule
+
+.PHONY : nodelet_generate_messages_py
+
+# fast build rule for target.
+nodelet_generate_messages_py/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/nodelet_generate_messages_py.dir/build.make rr_auto_dock/CMakeFiles/nodelet_generate_messages_py.dir/build
+.PHONY : nodelet_generate_messages_py/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_cpp: rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_cpp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_cpp/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/_run_tests_rr_auto_dock.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/_run_tests_rr_auto_dock.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/_run_tests_rr_auto_dock.dir/rule
+
+# Convenience name for target.
+_run_tests_rr_auto_dock: rr_auto_dock/CMakeFiles/_run_tests_rr_auto_dock.dir/rule
+
+.PHONY : _run_tests_rr_auto_dock
+
+# fast build rule for target.
+_run_tests_rr_auto_dock/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/_run_tests_rr_auto_dock.dir/build.make rr_auto_dock/CMakeFiles/_run_tests_rr_auto_dock.dir/build
+.PHONY : _run_tests_rr_auto_dock/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_nodejs: rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_nodejs
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_nodejs/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_py: rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_py
+
+# fast build rule for target.
+tf2_msgs_generate_messages_py/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+.PHONY : tf2_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/bond_generate_messages_cpp.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/bond_generate_messages_cpp.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/bond_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+bond_generate_messages_cpp: rr_auto_dock/CMakeFiles/bond_generate_messages_cpp.dir/rule
+
+.PHONY : bond_generate_messages_cpp
+
+# fast build rule for target.
+bond_generate_messages_cpp/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/bond_generate_messages_cpp.dir/build.make rr_auto_dock/CMakeFiles/bond_generate_messages_cpp.dir/build
+.PHONY : bond_generate_messages_cpp/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/bond_generate_messages_eus.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/bond_generate_messages_eus.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/bond_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+bond_generate_messages_eus: rr_auto_dock/CMakeFiles/bond_generate_messages_eus.dir/rule
+
+.PHONY : bond_generate_messages_eus
+
+# fast build rule for target.
+bond_generate_messages_eus/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/bond_generate_messages_eus.dir/build.make rr_auto_dock/CMakeFiles/bond_generate_messages_eus.dir/build
+.PHONY : bond_generate_messages_eus/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/bond_generate_messages_lisp.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/bond_generate_messages_lisp.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/bond_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+bond_generate_messages_lisp: rr_auto_dock/CMakeFiles/bond_generate_messages_lisp.dir/rule
+
+.PHONY : bond_generate_messages_lisp
+
+# fast build rule for target.
+bond_generate_messages_lisp/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/bond_generate_messages_lisp.dir/build.make rr_auto_dock/CMakeFiles/bond_generate_messages_lisp.dir/build
+.PHONY : bond_generate_messages_lisp/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_eus: rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_eus
+
+# fast build rule for target.
+tf2_msgs_generate_messages_eus/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make rr_auto_dock/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+.PHONY : tf2_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 rr_auto_dock/CMakeFiles/image_sub_node.dir/rule:
@@ -228,229 +873,34 @@ image_sub_nodelet/fast:
 .PHONY : image_sub_nodelet/fast
 
 # Convenience name for target.
-rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock.dir/rule
-.PHONY : rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock.dir/rule
+rr_auto_dock/CMakeFiles/create_marker.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/create_marker.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/create_marker.dir/rule
 
 # Convenience name for target.
-run_tests_rr_auto_dock: rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock.dir/rule
+create_marker: rr_auto_dock/CMakeFiles/create_marker.dir/rule
 
-.PHONY : run_tests_rr_auto_dock
+.PHONY : create_marker
 
 # fast build rule for target.
-run_tests_rr_auto_dock/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock.dir/build.make rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock.dir/build
-.PHONY : run_tests_rr_auto_dock/fast
+create_marker/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/create_marker.dir/build.make rr_auto_dock/CMakeFiles/create_marker.dir/build
+.PHONY : create_marker/fast
 
 # Convenience name for target.
-rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/rule
-.PHONY : rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/rule
+rr_auto_dock/CMakeFiles/bond_generate_messages_nodejs.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/bond_generate_messages_nodejs.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/bond_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-run_tests_rr_auto_dock_rostest_test_aruco_images.test: rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/rule
+bond_generate_messages_nodejs: rr_auto_dock/CMakeFiles/bond_generate_messages_nodejs.dir/rule
 
-.PHONY : run_tests_rr_auto_dock_rostest_test_aruco_images.test
+.PHONY : bond_generate_messages_nodejs
 
 # fast build rule for target.
-run_tests_rr_auto_dock_rostest_test_aruco_images.test/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/build.make rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/build
-.PHONY : run_tests_rr_auto_dock_rostest_test_aruco_images.test/fast
-
-# Convenience name for target.
-rr_auto_dock/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-.PHONY : rr_auto_dock/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_gencfg: rr_auto_dock/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-.PHONY : dynamic_reconfigure_gencfg
-
-# fast build rule for target.
-dynamic_reconfigure_gencfg/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make rr_auto_dock/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
-.PHONY : dynamic_reconfigure_gencfg/fast
-
-# Convenience name for target.
-rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-.PHONY : rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_eus: rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_eus
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_eus/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_eus/fast
-
-# Convenience name for target.
-rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_py: rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_py
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
-
-# Convenience name for target.
-rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/rule
-.PHONY : rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/rule
-
-# Convenience name for target.
-run_tests_rr_auto_dock_rostest: rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/rule
-
-.PHONY : run_tests_rr_auto_dock_rostest
-
-# fast build rule for target.
-run_tests_rr_auto_dock_rostest/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/build.make rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/build
-.PHONY : run_tests_rr_auto_dock_rostest/fast
-
-# Convenience name for target.
-rr_auto_dock/CMakeFiles/aruco_images_test.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/aruco_images_test.dir/rule
-.PHONY : rr_auto_dock/CMakeFiles/aruco_images_test.dir/rule
-
-# Convenience name for target.
-aruco_images_test: rr_auto_dock/CMakeFiles/aruco_images_test.dir/rule
-
-.PHONY : aruco_images_test
-
-# fast build rule for target.
-aruco_images_test/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/aruco_images_test.dir/build.make rr_auto_dock/CMakeFiles/aruco_images_test.dir/build
-.PHONY : aruco_images_test/fast
-
-# Convenience name for target.
-rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-.PHONY : rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_eus: rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_eus
-
-# fast build rule for target.
-visualization_msgs_generate_messages_eus/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
-.PHONY : visualization_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-rr_auto_dock/CMakeFiles/rr_auto_dock_gencfg.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/rr_auto_dock_gencfg.dir/rule
-.PHONY : rr_auto_dock/CMakeFiles/rr_auto_dock_gencfg.dir/rule
-
-# Convenience name for target.
-rr_auto_dock_gencfg: rr_auto_dock/CMakeFiles/rr_auto_dock_gencfg.dir/rule
-
-.PHONY : rr_auto_dock_gencfg
-
-# fast build rule for target.
-rr_auto_dock_gencfg/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/rr_auto_dock_gencfg.dir/build.make rr_auto_dock/CMakeFiles/rr_auto_dock_gencfg.dir/build
-.PHONY : rr_auto_dock_gencfg/fast
-
-# Convenience name for target.
-rr_auto_dock/CMakeFiles/aruco_detect.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/aruco_detect.dir/rule
-.PHONY : rr_auto_dock/CMakeFiles/aruco_detect.dir/rule
-
-# Convenience name for target.
-aruco_detect: rr_auto_dock/CMakeFiles/aruco_detect.dir/rule
-
-.PHONY : aruco_detect
-
-# fast build rule for target.
-aruco_detect/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/aruco_detect.dir/build.make rr_auto_dock/CMakeFiles/aruco_detect.dir/build
-.PHONY : aruco_detect/fast
-
-# Convenience name for target.
-rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-.PHONY : rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_nodejs: rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_nodejs/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
-
-# Convenience name for target.
-rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-.PHONY : rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_lisp: rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_lisp
-
-# fast build rule for target.
-visualization_msgs_generate_messages_lisp/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
-.PHONY : visualization_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-.PHONY : rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_cpp: rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_cpp
-
-# fast build rule for target.
-visualization_msgs_generate_messages_cpp/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
-.PHONY : visualization_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-rr_auto_dock/CMakeFiles/clean_test_results_rr_auto_dock.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/clean_test_results_rr_auto_dock.dir/rule
-.PHONY : rr_auto_dock/CMakeFiles/clean_test_results_rr_auto_dock.dir/rule
-
-# Convenience name for target.
-clean_test_results_rr_auto_dock: rr_auto_dock/CMakeFiles/clean_test_results_rr_auto_dock.dir/rule
-
-.PHONY : clean_test_results_rr_auto_dock
-
-# fast build rule for target.
-clean_test_results_rr_auto_dock/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/clean_test_results_rr_auto_dock.dir/build.make rr_auto_dock/CMakeFiles/clean_test_results_rr_auto_dock.dir/build
-.PHONY : clean_test_results_rr_auto_dock/fast
-
-# Convenience name for target.
-rr_auto_dock/CMakeFiles/_run_tests_rr_auto_dock.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/_run_tests_rr_auto_dock.dir/rule
-.PHONY : rr_auto_dock/CMakeFiles/_run_tests_rr_auto_dock.dir/rule
-
-# Convenience name for target.
-_run_tests_rr_auto_dock: rr_auto_dock/CMakeFiles/_run_tests_rr_auto_dock.dir/rule
-
-.PHONY : _run_tests_rr_auto_dock
-
-# fast build rule for target.
-_run_tests_rr_auto_dock/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/_run_tests_rr_auto_dock.dir/build.make rr_auto_dock/CMakeFiles/_run_tests_rr_auto_dock.dir/build
-.PHONY : _run_tests_rr_auto_dock/fast
+bond_generate_messages_nodejs/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/bond_generate_messages_nodejs.dir/build.make rr_auto_dock/CMakeFiles/bond_generate_messages_nodejs.dir/build
+.PHONY : bond_generate_messages_nodejs/fast
 
 # Convenience name for target.
 rr_auto_dock/CMakeFiles/_run_tests_rr_auto_dock_rostest.dir/rule:
@@ -468,6 +918,36 @@ _run_tests_rr_auto_dock_rostest/fast:
 .PHONY : _run_tests_rr_auto_dock_rostest/fast
 
 # Convenience name for target.
+rr_auto_dock/CMakeFiles/bond_generate_messages_py.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/bond_generate_messages_py.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/bond_generate_messages_py.dir/rule
+
+# Convenience name for target.
+bond_generate_messages_py: rr_auto_dock/CMakeFiles/bond_generate_messages_py.dir/rule
+
+.PHONY : bond_generate_messages_py
+
+# fast build rule for target.
+bond_generate_messages_py/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/bond_generate_messages_py.dir/build.make rr_auto_dock/CMakeFiles/bond_generate_messages_py.dir/build
+.PHONY : bond_generate_messages_py/fast
+
+# Convenience name for target.
+rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/rule
+
+# Convenience name for target.
+run_tests_rr_auto_dock_rostest_test_aruco_images.test: rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/rule
+
+.PHONY : run_tests_rr_auto_dock_rostest_test_aruco_images.test
+
+# fast build rule for target.
+run_tests_rr_auto_dock_rostest_test_aruco_images.test/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/build.make rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/build
+.PHONY : run_tests_rr_auto_dock_rostest_test_aruco_images.test/fast
+
+# Convenience name for target.
 rr_auto_dock/CMakeFiles/_run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/rule:
 	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/_run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/rule
 .PHONY : rr_auto_dock/CMakeFiles/_run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/rule
@@ -483,49 +963,19 @@ _run_tests_rr_auto_dock_rostest_test_aruco_images.test/fast:
 .PHONY : _run_tests_rr_auto_dock_rostest_test_aruco_images.test/fast
 
 # Convenience name for target.
-rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
-.PHONY : rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
+rr_auto_dock/CMakeFiles/clean_test_results_rr_auto_dock.dir/rule:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/clean_test_results_rr_auto_dock.dir/rule
+.PHONY : rr_auto_dock/CMakeFiles/clean_test_results_rr_auto_dock.dir/rule
 
 # Convenience name for target.
-visualization_msgs_generate_messages_nodejs: rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
+clean_test_results_rr_auto_dock: rr_auto_dock/CMakeFiles/clean_test_results_rr_auto_dock.dir/rule
 
-.PHONY : visualization_msgs_generate_messages_nodejs
+.PHONY : clean_test_results_rr_auto_dock
 
 # fast build rule for target.
-visualization_msgs_generate_messages_nodejs/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build
-.PHONY : visualization_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_cpp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make rr_auto_dock/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
-
-# Convenience name for target.
-rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-.PHONY : rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_py: rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_py
-
-# fast build rule for target.
-visualization_msgs_generate_messages_py/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make rr_auto_dock/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
-.PHONY : visualization_msgs_generate_messages_py/fast
+clean_test_results_rr_auto_dock/fast:
+	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f rr_auto_dock/CMakeFiles/clean_test_results_rr_auto_dock.dir/build.make rr_auto_dock/CMakeFiles/clean_test_results_rr_auto_dock.dir/build
+.PHONY : clean_test_results_rr_auto_dock/fast
 
 src/aruco_detect.o: src/aruco_detect.cpp.o
 
@@ -668,37 +1118,67 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/local"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
-	@echo "... create_marker"
-	@echo "... image_sub_node"
-	@echo "... image_sub_nodelet"
-	@echo "... test"
-	@echo "... run_tests_rr_auto_dock"
-	@echo "... run_tests_rr_auto_dock_rostest_test_aruco_images.test"
-	@echo "... dynamic_reconfigure_gencfg"
-	@echo "... dynamic_reconfigure_generate_messages_eus"
-	@echo "... dynamic_reconfigure_generate_messages_py"
-	@echo "... run_tests_rr_auto_dock_rostest"
-	@echo "... aruco_images_test"
-	@echo "... visualization_msgs_generate_messages_eus"
-	@echo "... rr_auto_dock_gencfg"
-	@echo "... aruco_detect"
-	@echo "... dynamic_reconfigure_generate_messages_nodejs"
-	@echo "... visualization_msgs_generate_messages_lisp"
-	@echo "... visualization_msgs_generate_messages_cpp"
-	@echo "... clean_test_results_rr_auto_dock"
-	@echo "... _run_tests_rr_auto_dock"
 	@echo "... install/strip"
-	@echo "... _run_tests_rr_auto_dock_rostest"
-	@echo "... _run_tests_rr_auto_dock_rostest_test_aruco_images.test"
+	@echo "... install/local"
+	@echo "... aruco_detect"
+	@echo "... dynamic_reconfigure_generate_messages_eus"
+	@echo "... dynamic_reconfigure_gencfg"
+	@echo "... nodelet_generate_messages_cpp"
 	@echo "... visualization_msgs_generate_messages_nodejs"
 	@echo "... list_install_components"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
-	@echo "... edit_cache"
-	@echo "... rebuild_cache"
+	@echo "... visualization_msgs_generate_messages_cpp"
+	@echo "... actionlib_generate_messages_eus"
+	@echo "... actionlib_msgs_generate_messages_cpp"
+	@echo "... visualization_msgs_generate_messages_eus"
+	@echo "... tf2_msgs_generate_messages_nodejs"
+	@echo "... tf_generate_messages_eus"
+	@echo "... actionlib_msgs_generate_messages_py"
+	@echo "... actionlib_generate_messages_cpp"
+	@echo "... actionlib_generate_messages_py"
+	@echo "... tf_generate_messages_cpp"
+	@echo "... visualization_msgs_generate_messages_lisp"
+	@echo "... rr_auto_dock_gencfg"
+	@echo "... tf_generate_messages_nodejs"
+	@echo "... actionlib_generate_messages_lisp"
 	@echo "... visualization_msgs_generate_messages_py"
 	@echo "... install"
+	@echo "... rebuild_cache"
+	@echo "... actionlib_generate_messages_nodejs"
+	@echo "... nodelet_generate_messages_eus"
+	@echo "... aruco_images_test"
+	@echo "... tf_generate_messages_lisp"
+	@echo "... edit_cache"
+	@echo "... tf2_msgs_generate_messages_lisp"
+	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... dynamic_reconfigure_generate_messages_lisp"
+	@echo "... actionlib_msgs_generate_messages_nodejs"
+	@echo "... tf_generate_messages_py"
+	@echo "... actionlib_msgs_generate_messages_lisp"
+	@echo "... actionlib_msgs_generate_messages_eus"
+	@echo "... dynamic_reconfigure_generate_messages_py"
+	@echo "... nodelet_generate_messages_lisp"
+	@echo "... nodelet_generate_messages_nodejs"
+	@echo "... run_tests_rr_auto_dock_rostest"
+	@echo "... run_tests_rr_auto_dock"
+	@echo "... nodelet_generate_messages_py"
+	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... _run_tests_rr_auto_dock"
+	@echo "... dynamic_reconfigure_generate_messages_nodejs"
+	@echo "... tf2_msgs_generate_messages_py"
+	@echo "... bond_generate_messages_cpp"
+	@echo "... bond_generate_messages_eus"
+	@echo "... bond_generate_messages_lisp"
+	@echo "... tf2_msgs_generate_messages_eus"
+	@echo "... image_sub_node"
+	@echo "... image_sub_nodelet"
+	@echo "... create_marker"
+	@echo "... bond_generate_messages_nodejs"
+	@echo "... _run_tests_rr_auto_dock_rostest"
+	@echo "... bond_generate_messages_py"
+	@echo "... run_tests_rr_auto_dock_rostest_test_aruco_images.test"
+	@echo "... _run_tests_rr_auto_dock_rostest_test_aruco_images.test"
+	@echo "... clean_test_results_rr_auto_dock"
+	@echo "... test"
 	@echo "... src/aruco_detect.o"
 	@echo "... src/aruco_detect.i"
 	@echo "... src/aruco_detect.s"
