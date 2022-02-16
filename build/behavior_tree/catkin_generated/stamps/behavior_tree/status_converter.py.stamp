@@ -33,6 +33,7 @@ class StatusConverter(object):
     status_string = "no information"
     tag_finding_status_string = "no information"
 
+
     def __init__(self):
         rospy.loginfo("status_converter is online!")
         self.pub_docking_command = rospy.Publisher("/docking_robot/docking_command", String, queue_size=1)
@@ -50,7 +51,7 @@ class StatusConverter(object):
         # rospy.loginfo("command is: " + command.data)
         if command.data == "start":
             self.docking_command_flag = True
-        elif command.data == "stop":
+        if command.data == "stop":
             self.docking_command_flag = False
         # self.pub_behaviors_status.publish(self.status_string)
             
@@ -113,20 +114,29 @@ class StatusConverter(object):
                 self.status_string = "searching tag..."
                 self.robotTurn(-self.TURN_RADIANS)
                 turning_count +=1
-        elif self.docking_command_flag == True and self.is_in_view == True:
-            self.status_string = "docking..."
+        elif self.docking_command_flag == True and self.is_in_view == True and self.docking_process_status_flag == False:
+            self.status_string = "start dock approaching ..."
             self.pub_docking_command.publish("start")
-            self.docking_command_flag = False
+            self.docking_process_status_flag = True
+            # self.docking_command_flag = False
+        elif self.docking_command_flag == True and self.docking_process_status_flag == True and self.is_in_view == True:
+            self.status_string = "docking..."
+            # pass
                 
-        elif self.docking_command_flag == False and self.is_in_view == True:
+        elif self.docking_command_flag == False and self.docking_process_status_flag == True:
             self.status_string = "stop docking"
             self.pub_docking_command.publish("stop")
-            
+            self.docking_process_status_flag == False          
                 
         elif self.docking_command_flag == False and self.is_in_view == False:
             self.status_string = "stop searching ArTag"
             self.robotTurnStop()
+            self.pub_docking_command.publish("stop")
+            self.docking_process_status_flag == False
+        else:
+            pass
         self.pub_behaviors_status.publish(self.status_string)
+        rospy.sleep(0.1)
                     
 
 

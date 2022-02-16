@@ -16,15 +16,15 @@ float maxangle {1};
 float maxorient {1};
 
 float maxdistance {3}; // 4 meters
-float maxvel {0.15};
-float minvel {0.04};
-float maxtwist1 {0.55};
-float maxtwist2 {0.7};
+float maxvel {0.2};
+float minvel {0.08};
+float maxtwist1 {0.2};
+float maxtwist2 {0.5};
 int Phimax {43};
 int Phimin{23};
 int PhiAng{37};
 int maxang{40};
-float ARdist{0.4};
+float ARdist{0.43};
 bool dockingCommand =  false;
 string running_status = "stopped";
 
@@ -42,7 +42,7 @@ void velocitiesfunction(const distanceangle::DistanceAngle station1, float twist
   
       motor.angular.z = twist*(station1.distance/maxdistance); 
   
-      ROS_INFO("linear [%f], angular [%f]", motor.linear.x, motor.angular.z);
+      // ROS_INFO("linear [%f], angular [%f]", motor.linear.x, motor.angular.z);
 
       Velocities_pub.publish(motor);
 
@@ -80,6 +80,7 @@ void docking_callback(const distanceangle::DistanceAngle station)
 
     if (station.distance > ARdist)
     {
+      ROS_INFO("distance is: %.2f", station.distance);
 
       if (station.angle < -maxangle && station.orientation < Phi)
         {      
