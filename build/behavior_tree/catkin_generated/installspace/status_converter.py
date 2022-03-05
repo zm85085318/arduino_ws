@@ -15,7 +15,7 @@ from geometry_msgs.msg import TwistStamped
 class StatusConverter(object):
     CMD_VEL_ANGULAR_RATE = 0.5 #rad/s negative is clockwise
     TURN_RADIANS = -1.0472/2
-    MIN_TURN_PERIOD = 0.1
+    MIN_TURN_PERIOD = 0.5
     MANAGER_PERIOD = 0.1
 
     cmd_vel_angular = 0
@@ -105,7 +105,7 @@ class StatusConverter(object):
 
     #=================Primary Running Function=================================
     def behaviorsRunning(self, event):
-        if self.docking_command_flag == True and self.is_in_view == False:
+        if self.docking_command_flag == True and self.docking_process_status_flag == False and self.is_in_view == False:
             turning_count = 0
             if turning_count > 100:
                 self.status_string = "Error: ArTag is invisiable"
@@ -122,6 +122,9 @@ class StatusConverter(object):
         elif self.docking_command_flag == True and self.docking_process_status_flag == True and self.is_in_view == True:
             self.status_string = "docking..."
             # pass
+        elif self.docking_command_flag == True and self.docking_process_status_flag == True and self.is_in_view == False:
+            self.pub_docking_command.publish("stop")
+            self.docking_process_status_flag = False
                 
         elif self.docking_command_flag == False and self.docking_process_status_flag == True:
             self.status_string = "stop docking"
