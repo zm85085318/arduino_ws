@@ -7,5 +7,6 @@
         "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages",
         "/opt/ros/noetic/lib/python3/dist-packages"
     ],
-    "cmake.sourceDirectory": "${workspaceFolder}/src"
+    "cmake.sourceDirectory": "${workspaceFolder}/src",
+    "restructuredtext.languageServer.disabled": true
 }
