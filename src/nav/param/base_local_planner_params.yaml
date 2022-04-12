@@ -1,27 +1,78 @@
+# TrajectoryPlannerROS:
+
+# # Robot Configuration Parameters
+#   max_vel_x: 0.5 # X 方向最大速度
+#   min_vel_x: 0.1 # X 方向最小速速
+
+#   max_vel_theta:  1.0 # 
+#   min_vel_theta: -1.0
+#   min_in_place_vel_theta: 1.0
+
+#   acc_lim_x: 1.0 # X 加速限制
+#   acc_lim_y: 0.0 # Y 加速限制
+#   acc_lim_theta: 0.6 # 角速度加速限制
+
+# # Goal Tolerance Parameters，目标公差
+#   xy_goal_tolerance: 0.10
+#   yaw_goal_tolerance: 0.707
+
+# # Differential-drive robot configuration
+# # 是否是全向移动机器人
+#   holonomic_robot: false
+
+# # Forward Simulation Parameters，前进模拟参数
+#   sim_time: 0.8
+#   vx_samples: 18
+#   vtheta_samples: 20
+#   sim_granularity: 0.05
+
+
+#   controller_frequency: 3.0 #控制器的频率,当用move_base时，可以只设置controller_frequency参数，可以放心的忽略它
+# recovery_behavior_enabled: false
+# clearing_rotation_allowed: false
+ 
 TrajectoryPlannerROS:
-
-# Robot Configuration Parameters
-  max_vel_x: 0.5 # X 方向最大速度
-  min_vel_x: 0.1 # X 方向最小速速
-
-  max_vel_theta:  1.0 # 
-  min_vel_theta: -1.0
-  min_in_place_vel_theta: 1.0
-
-  acc_lim_x: 1.0 # X 加速限制
-  acc_lim_y: 0.0 # Y 加速限制
-  acc_lim_theta: 0.6 # 角速度加速限制
-
-# Goal Tolerance Parameters，目标公差
-  xy_goal_tolerance: 0.10
-  yaw_goal_tolerance: 0.707
-
-# Differential-drive robot configuration
-# 是否是全向移动机器人
-  holonomic_robot: false
-
-# Forward Simulation Parameters，前进模拟参数
-  sim_time: 0.8
-  vx_samples: 18
-  vtheta_samples: 20
-  sim_granularity: 0.05
+   max_vel_x: 3 #方向最大速度的绝对值
+   min_vel_x: 1 #x方向最小值绝对值,如果为负值表示可以后退
+   max_vel_y: 3.0 # y方向最大速度的绝对值
+   min_vel_y: 1.0 #方向最小速度的绝对值.
+   max_vel_theta: 1.0 #基座允许的最大角速度，单位 radians/sec 
+   min_vel_theta: 0.3 #基座允许的最小角速度，单位 radians/sec 
+   min_in_place_vel_theta: 0.4 #原地旋转时，基座允许的最小角速度，单位 radians/sec
+   escape_vel: -0.1 #表示机器人的逃离速度，即背向相反方向行走速度，单位为 meters/sec,该值必需设为负值，但若设置为正值，机器人会在执行逃离操作时向前移动。
+   acc_lim_x: 3 #方向的加速度绝对值
+   acc_lim_y: 0.0  # y方向的加速度绝对值,该值只有全向移动的机器人才需配置
+   acc_lim_theta: 1.2 #旋转加速度的绝对值.
+ 
+   holonomic_robot: false
+   yaw_goal_tolerance: 1 # about 6 degrees 表示当到达目标时控制器的偏航/旋转误差
+   xy_goal_tolerance: 0.1  # 5 cm 到到达目标时，控制器在X Y的位置误差
+   #latch_xy_goal_tolerance如果目标误差被锁定，若机器人达到目标XY位置，它将旋转到位，即使误差没有达到，也会做旋转
+   latch_xy_goal_tolerance: false  
+  #  pdist_scale: 0.8 #控制器距离给定的路径有多近的加权值
+   path_distance_bias: 0.8
+  #  gdist_scale: 0.4 #控制器试图达到局部目标，或者是控制速度的加权值
+   goal_distance_bias: 0.6
+   meter_scoring: true 
+   #假设goal_distance and path_distance以米为单位被表示，gdist_scale和pdist_scale参数是否呈现
+   
+ 
+   heading_lookahead: 0.325 #在原地旋转轨迹得分不同时，单位米中向前走多远
+   heading_scoring: false #是否是基于机器人朝向路径还是它的距离来自路径的得分
+   heading_scoring_timestep: 0.8 #当用机器人heading to the path进行模拟路径时的得分
+   occdist_scale: 0.05 #控制器避障的好坏的加权值
+   oscillation_reset_dist: 0.05 #
+   publish_cost_grid_pc: false #当规划时，规划器是否发布成本网格。
+   #当为true时，sensor_msgs/PointCloud2 在/cost_cloud的topic上可用。
+   #将得分参数考虑，每个点云表示成本网格并且具有每个单独的得分函数单元，以及对每个单元的总成本。
+   
+   prune_plan: true #当机器人沿着路径走时，是否要耗尽路径。如果为true，机器人移动过的1米时，点将会在计划中消失
+ 
+   sim_time: 1.0 #轨迹模拟时间
+   sim_granularity: 0.05 #步长,轨迹上采样点之间的距离,轨迹上点的密集程度
+   angular_sim_granularity: 0.1 #给定轨迹两点之间的间隔角度
+   vx_samples: 15 #x方向速度空间的采样点数
+   vy_samples: 0  #y方向速度空间采样点数.
+   vtheta_samples: 20 #旋转方向的速度空间采样点数
+   dwa: true  #是否用DWA模式
+   simple_attractor: false

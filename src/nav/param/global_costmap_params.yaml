@@ -4,12 +4,18 @@ global_costmap:
   # 以此实现坐标变换
   
   #膨胀半径，扩展在碰撞区域以外的代价区域，使得机器人规划路径避开障碍物
-  inflation_radius: 0.3
+  inflation_radius: 0.5
   #代价比例系数，越大则代价值越小
   cost_scaling_factor: 10.0
 
   update_frequency: 1.0 #代价地图更新频率
   publish_frequency: 1.0 #代价地图的发布频率
   transform_tolerance: 1.5 #等待坐标变换发布信息的超时时间
+  resolution: 0.03
 
-  static_map: true # 是否使用一个地图或者地图服务器来初始化全局代价地图，如果不使用静态地图，这个参数为false.
+  # static_map: true # 是否使用一个地图或者地图服务器来初始化全局代价地图，如果不使用静态地图，这个参数为false.
+
+  plugins:
+     - {name: static_layer,            type: "costmap_2d::StaticLayer"}
+     - {name: obstacle_layer,          type: "costmap_2d::VoxelLayer"}
+     - {name: inflation_layer,         type: "costmap_2d::InflationLayer"}
