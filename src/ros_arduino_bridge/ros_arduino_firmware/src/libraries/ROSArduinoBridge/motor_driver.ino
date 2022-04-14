@@ -113,7 +113,6 @@ void initMotorController() {
 //Setting single motor's speed
 void setMotorSpeed(int i, int spd) {
   unsigned char reverse = 0;
-
   if (spd < 0)
   {
     spd = -spd;
@@ -124,29 +123,28 @@ void setMotorSpeed(int i, int spd) {
 
   if (i == LEFT) {
     if (reverse == 0) {
-      digitalWrite(LEFT_DIR, LOW);
+      digitalWrite(LEFT_DIR, HIGH);
     }
     else if (reverse == 1) {
-      digitalWrite(LEFT_DIR, HIGH);
+      digitalWrite(LEFT_DIR, LOW);
     }
     analogWrite(LEFT_PWM, spd);
   }
   else if (i == RIGHT) {
     if (reverse == 0) {
-      digitalWrite(RIGHT_DIR, LOW);
+      digitalWrite(RIGHT_DIR, HIGH);
     }
     else if (reverse == 1) {
-      digitalWrite(RIGHT_DIR, HIGH);
+      digitalWrite(RIGHT_DIR, LOW);
     }
     analogWrite(RIGHT_PWM, spd);
   }
-
   else { /*if (i == BACK) //no need for condition*/
     if (reverse == 0) {
-      digitalWrite(BACK_DIR, LOW);
+      digitalWrite(BACK_DIR, HIGH);
     }
     else if (reverse == 1) {
-      digitalWrite(BACK_DIR, HIGH);
+      digitalWrite(BACK_DIR, LOW);
     }
     analogWrite(BACK_PWM, spd);
   }

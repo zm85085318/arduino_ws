@@ -9,6 +9,7 @@
   #define LEFT_MOTOR_FORWARD   10
   #define RIGHT_MOTOR_ENABLE 12
   #define LEFT_MOTOR_ENABLE 13
+
 #elif defined OMNI3WD_MOTOR_DRIVER
 //  #define LEFT_DIR 6
 //  #define LEFT_PWM 11
@@ -16,7 +17,6 @@
 //  #define RIGHT_PWM 10
 //  #define BACK_DIR 8
 //  #define BACK_PWM 9
-
   #define LEFT_DIR 2
   #define LEFT_PWM 3
   #define RIGHT_DIR 11

@@ -35,8 +35,8 @@ SetPointInfo leftPID, rightPID, backPID;
 /**
  * PID param setup
  */
-int Kp = 8;
-int Kd = 2;
+int Kp = 20;
+int Kd = 12;
 int Ki = 0;
 int Ko = 50;
 
@@ -44,19 +44,19 @@ int Ko = 50;
  * Setting PID separately
  */
 int Kp_b = 1000;
-int Kd_b = 1200;
-int Ki_b = 0;
-int Ko_b = 500;
+int Kd_b = 2;
+int Ki_b = 1;
+int Ko_b = 5000;
 
 int Kp_l = 1000;
-int Kd_l = 1200;
-int Ki_l = 0;
-int Ko_l = 500;
+int Kd_l = 2;
+int Ki_l = 1;
+int Ko_l = 5000;
 
 int Kp_r = 1000;
-int Kd_r = 1200;
-int Ki_r = 0;
-int Ko_r = 500;
+int Kd_r = 2;
+int Ki_r = 1;
+int Ko_r = 5000;
 
 
 
