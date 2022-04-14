@@ -14,13 +14,21 @@
 #define RIGHT_ENC_PIN_B PC5   //pin A5
 
 #elif defined ARDUINO_MY_COUNTER
+//
+//#define LEFT_A 2
+//#define LEFT_B 5
+//#define RIGHT_A 3
+//#define RIGHT_B 15
+//#define BACK_A 18
+//#define BACK_B 19
 
-#define LEFT_A 2
+#define LEFT_A 4
 #define LEFT_B 5
-#define RIGHT_A 3
+#define RIGHT_A 14
 #define RIGHT_B 15
-#define BACK_A 18
-#define BACK_B 19
+#define BACK_A 6
+#define BACK_B 7
+
 /**
    Function
 */
