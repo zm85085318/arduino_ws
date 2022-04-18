@@ -271,22 +271,22 @@ class BaseController:
             # right = th * self.wheel_track  * self.gear_reduction / 2.0
             # left = -right
             # back = right
-            right = th * self.wheel_track
+            right = -th * self.wheel_track
             left = right
             back = right
         elif th == 0:
             # Pure forward/backward motion
-            left =  x * (-0.866)
-            right = x * 0.866
+            left =  x * 0.866
+            right = x * -0.866
             back = 0
         else:
             # Rotation about a point in space
             # left = x - th * self.wheel_track  * self.gear_reduction / 2.0
             # right = x + th * self.wheel_track  * self.gear_reduction / 2.0
             # back = 0
-            left =  -0.866 * x + self.wheel_track * th
-            right = 0.866 * x + self.wheel_track * th
-            back = self.wheel_track * th  
+            left =  0.866 * x + self.wheel_track * th
+            right = -0.866 * x + self.wheel_track * th
+            back = -self.wheel_track * th  
         
 
         self.v_des_left = int(left * self.ticks_per_meter / self.arduino.PID_RATE)

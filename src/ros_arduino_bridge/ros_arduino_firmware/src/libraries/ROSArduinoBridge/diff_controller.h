@@ -43,20 +43,20 @@ int Ko = 50;
 /**
  * Setting PID separately
  */
-int Kp_b = 1000;
-int Kd_b = 2;
-int Ki_b = 1;
-int Ko_b = 5000;
+int Kp_b = 27;
+int Kd_b = 69;
+int Ki_b = 0;
+int Ko_b = 500;
 
-int Kp_l = 1000;
-int Kd_l = 2;
-int Ki_l = 1;
-int Ko_l = 5000;
+int Kp_l = 20;
+int Kd_l = 35;
+int Ki_l = 0;
+int Ko_l = 500;
 
-int Kp_r = 1000;
-int Kd_r = 2;
-int Ki_r = 1;
-int Ko_r = 5000;
+int Kp_r = 25;
+int Kd_r = 30;
+int Ki_r = 0;
+int Ko_r = 500;
 
 
 

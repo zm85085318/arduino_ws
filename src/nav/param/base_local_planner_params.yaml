@@ -32,16 +32,16 @@
 # clearing_rotation_allowed: false
  
 TrajectoryPlannerROS:
-   max_vel_x: 3 #方向最大速度的绝对值
-   min_vel_x: 1 #x方向最小值绝对值,如果为负值表示可以后退
-   max_vel_y: 3.0 # y方向最大速度的绝对值
-   min_vel_y: 1.0 #方向最小速度的绝对值.
-   max_vel_theta: 1.0 #基座允许的最大角速度，单位 radians/sec 
-   min_vel_theta: 0.3 #基座允许的最小角速度，单位 radians/sec 
+   max_vel_x: 0.5 #方向最大速度的绝对值
+   min_vel_x: 0.1 #x方向最小值绝对值,如果为负值表示可以后退
+   # max_vel_y: 0.0 # y方向最大速度的绝对值
+   # min_vel_y: 0.0 #方向最小速度的绝对值.
+   max_vel_theta: 1 #基座允许的最大角速度，单位 radians/sec 
+   min_vel_theta: 0.1 #基座允许的最小角速度，单位 radians/sec 
    min_in_place_vel_theta: 0.4 #原地旋转时，基座允许的最小角速度，单位 radians/sec
    escape_vel: -0.1 #表示机器人的逃离速度，即背向相反方向行走速度，单位为 meters/sec,该值必需设为负值，但若设置为正值，机器人会在执行逃离操作时向前移动。
-   acc_lim_x: 3 #方向的加速度绝对值
-   acc_lim_y: 0.0  # y方向的加速度绝对值,该值只有全向移动的机器人才需配置
+   acc_lim_x: 1.0 #方向的加速度绝对值
+   # acc_lim_y: 0.0  # y方向的加速度绝对值,该值只有全向移动的机器人才需配置
    acc_lim_theta: 1.2 #旋转加速度的绝对值.
  
    holonomic_robot: false

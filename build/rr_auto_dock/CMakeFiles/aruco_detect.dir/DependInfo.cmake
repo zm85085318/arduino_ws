@@ -17,11 +17,10 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/home/robot/Documents/arduino_ws/devel/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"
-  "/home/robot/Documents/arduino_ws/src/rr_auto_dock/BEFORE"
-  "/home/robot/Documents/arduino_ws/devel/include"
   "/usr/include/opencv4"
   )
 
