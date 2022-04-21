@@ -1,10 +1,10 @@
 <robot name="mycar" xmlns:xacro="http://wiki.ros.org/xacro">
 
-    <xacro:property name="support_radius" value="0.01" />
-    <xacro:property name="support_length" value="0.14" />
+    <xacro:property name="support_radius" value="0.05" />
+    <xacro:property name="support_length" value="0.03" />
 
-    <xacro:property name="laser_radius" value="0.08" />
-    <xacro:property name="laser_length" value="0.03" />
+    <xacro:property name="laser_radius" value="0.035" />
+    <xacro:property name="laser_length" value="0.025" />
 
     <xacro:property name="joint_support_x" value="0" />
     <xacro:property name="joint_support_y" value="0" />
@@ -36,7 +36,7 @@
             <geometry>
                 <cylinder radius="${laser_radius}" length="${laser_length}" />
             </geometry>
-            <material name="black">
+            <material name="red">
                 <color rgba="0 0 0 0.5" />
             </material>
         </visual>

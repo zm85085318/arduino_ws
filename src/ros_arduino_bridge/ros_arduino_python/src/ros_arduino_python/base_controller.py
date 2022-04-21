@@ -135,9 +135,9 @@ class BaseController:
             # Read the encoders
             try:
                 values = self.arduino.get_encoder_counts()
-                left_enc = -values[0]
-                right_enc = values[1]
-                back_enc = values[2]
+                left_enc = values[0]
+                right_enc = -values[1]
+                back_enc = -values[2]
             except:
                 self.bad_encoder_count += 1
                 rospy.logerr("Encoder exception count: " + str(self.bad_encoder_count))
@@ -165,19 +165,10 @@ class BaseController:
             Odometer function part
             '''
             dxy_ave = 0.57735 * (dright - dleft)
-            # dth = (dright - dleft) / self.wheel_track
-            #print("dxy_ave is: ")
-            #print(dxy_ave)
-            # dth = dback / self.wheel_track
+            print("dxy_ave", dxy_ave)
             dth = (dright + dleft + dback) / (3 * self.wheel_track)
-            # print('dleft, dright, dback is :')
-            # print(dleft)
-            # print(dright)
-            # print(dback)
             vxy = dxy_ave / dt
             vth = dth / dt
-            # print("vth is: ")
-            # print(vth)
                 
             if (dxy_ave != 0):
                 dx = cos(dth) * dxy_ave
@@ -284,9 +275,9 @@ class BaseController:
             # left = x - th * self.wheel_track  * self.gear_reduction / 2.0
             # right = x + th * self.wheel_track  * self.gear_reduction / 2.0
             # back = 0
-            left =  0.866 * x + self.wheel_track * th
-            right = -0.866 * x + self.wheel_track * th
-            back = -self.wheel_track * th  
+            left =  0.866 * x + self.wheel_track * -th
+            right = -0.866 * x + self.wheel_track * -th
+            back = self.wheel_track * th  
         
 
         self.v_des_left = int(left * self.ticks_per_meter / self.arduino.PID_RATE)

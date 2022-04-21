@@ -18,9 +18,11 @@ base_frame: base_footprint
 
 # === Robot drivetrain parameters
 wheel_diameter: 0.1
-# wheel_track: 0.2969
-wheel_track: 0.11
-encoder_resolution: 24 # CPR 13 * 74.8 *2 reducting rate
+
+#How to calculate 'wheel_track'? For a 3WD base, it is the distance from one wheel to the center of the base.
+wheel_track: 0.12
+
+encoder_resolution: 24 # CPR 12 * 64 *2 reducting rate
 gear_reduction: 64
 #motors_reversed: True
 
