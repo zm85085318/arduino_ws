@@ -43,21 +43,22 @@ int Ko = 50;
 /**
  * Setting PID separately
  */
-int Kp_b = 27;
-int Kd_b = 69;
+int Kp_b = 6;
+int Kd_b = 1;
 int Ki_b = 0;
-int Ko_b = 500;
+int Ko_b = 50;
 
-int Kp_l = 20;
-int Kd_l = 35;
+int Kp_l = 6;
+int Kd_l = 1;
 int Ki_l = 0;
-int Ko_l = 500;
+int Ko_l = 50;
 
-int Kp_r = 25;
-int Kd_r = 30;
+int Kp_r = 6;
+int Kd_r = 1;
 int Ki_r = 0;
-int Ko_r = 500;
-
+int Ko_r = 50;
+bool tru = true;
+bool fal = false;
 
 
 unsigned char moving = 0; // is the base in motion?
@@ -132,7 +133,7 @@ void doPID(SetPointInfo * p) {
   p->PrevInput = input;
 }
 
-void doPID_param(SetPointInfo * p, int t_Kp, int t_Ki, int t_Kd, int t_Ko) {
+void doPID_param(SetPointInfo * p, int t_Kp, int t_Ki, int t_Kd, int t_Ko, bool flag) {
   long Perror;
   long output;
   int input;
@@ -140,7 +141,10 @@ void doPID_param(SetPointInfo * p, int t_Kp, int t_Ki, int t_Kd, int t_Ko) {
   Perror = p->TargetTicksPerFrame - (p->Encoder - p->PrevEnc);
   input = p->Encoder - p->PrevEnc;
 //  Perror = p->TargetTicksPerFrame - input;
-//  Serial.println(input);
+//  if(flag == true){
+//    Serial.print(input);
+//  }
+ 
 
 
   /*
@@ -192,12 +196,18 @@ void updatePID() {
   }
 
   /* Compute PID update for each motor */
-  //doPID(&rightPID);
-  //doPID(&leftPID);
-  //doPID(&backPID);
-  doPID_param(&rightPID, Kp_r, Ki_r, Kd_r, Ko_r);
-  doPID_param(&leftPID, Kp_l, Ki_l, Kd_l, Ko_l);
-  doPID_param(&backPID, Kp_b, Ki_b, Kd_b, Ko_b);
+//  doPID(&rightPID);
+//  doPID(&leftPID);
+//  doPID(&backPID);
+//  Serial.print("right:");
+  doPID_param(&rightPID, Kp_r, Ki_r, Kd_r, Ko_r, tru);
+//  Serial.print(",");
+//  Serial.print("left:");
+  doPID_param(&leftPID, Kp_l, Ki_l, Kd_l, Ko_l, tru);
+//  Serial.print(",");
+//  Serial.print("back:");
+  doPID_param(&backPID, Kp_b, Ki_b, Kd_b, Ko_b, tru);
+//  Serial.println("");
   
   /* Set the motor speeds accordingly */
   //  setMotorSpeeds(leftPID.output, rightPID.output);

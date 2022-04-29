@@ -11,7 +11,7 @@
 
 
     <xacro:property name="base_radius" value="0.18" />
-    <xacro:property name="base_length" value="0.22" />
+    <xacro:property name="base_length" value="0.21" />
     <xacro:property name="lidi" value="0.02" />
     <xacro:property name="base_joint_z" value="${base_length / 2 + lidi}" />
     <link name="base_link">

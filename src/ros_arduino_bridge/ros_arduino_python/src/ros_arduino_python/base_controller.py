@@ -165,7 +165,6 @@ class BaseController:
             Odometer function part
             '''
             dxy_ave = 0.57735 * (dright - dleft)
-            print("dxy_ave", dxy_ave)
             dth = (dright + dleft + dback) / (3 * self.wheel_track)
             vxy = dxy_ave / dt
             vth = dth / dt
@@ -277,7 +276,7 @@ class BaseController:
             # back = 0
             left =  0.866 * x + self.wheel_track * -th
             right = -0.866 * x + self.wheel_track * -th
-            back = self.wheel_track * th  
+            back = self.wheel_track * -th  
         
 
         self.v_des_left = int(left * self.ticks_per_meter / self.arduino.PID_RATE)

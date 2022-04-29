@@ -38,7 +38,7 @@ shutdown_costmaps: false
 
  
 
-controller_frequency: 30.0
+controller_frequency: 20.0
 
 controller_patience: 3.0
 

@@ -1,47 +1,14 @@
-# TrajectoryPlannerROS:
-
-# # Robot Configuration Parameters
-#   max_vel_x: 0.5 # X 方向最大速度
-#   min_vel_x: 0.1 # X 方向最小速速
-
-#   max_vel_theta:  1.0 # 
-#   min_vel_theta: -1.0
-#   min_in_place_vel_theta: 1.0
-
-#   acc_lim_x: 1.0 # X 加速限制
-#   acc_lim_y: 0.0 # Y 加速限制
-#   acc_lim_theta: 0.6 # 角速度加速限制
-
-# # Goal Tolerance Parameters，目标公差
-#   xy_goal_tolerance: 0.10
-#   yaw_goal_tolerance: 0.707
-
-# # Differential-drive robot configuration
-# # 是否是全向移动机器人
-#   holonomic_robot: false
-
-# # Forward Simulation Parameters，前进模拟参数
-#   sim_time: 0.8
-#   vx_samples: 18
-#   vtheta_samples: 20
-#   sim_granularity: 0.05
-
-
-#   controller_frequency: 3.0 #控制器的频率,当用move_base时，可以只设置controller_frequency参数，可以放心的忽略它
-# recovery_behavior_enabled: false
-# clearing_rotation_allowed: false
- 
 TrajectoryPlannerROS:
-   max_vel_x: 0.5 #方向最大速度的绝对值
-   min_vel_x: 0.1 #x方向最小值绝对值,如果为负值表示可以后退
-   # max_vel_y: 0.0 # y方向最大速度的绝对值
-   # min_vel_y: 0.0 #方向最小速度的绝对值.
-   max_vel_theta: 1 #基座允许的最大角速度，单位 radians/sec 
-   min_vel_theta: 0.1 #基座允许的最小角速度，单位 radians/sec 
-   min_in_place_vel_theta: 0.4 #原地旋转时，基座允许的最小角速度，单位 radians/sec
+   max_vel_x: 0.8 #方向最大速度的绝对值
+   min_vel_x: -0.8 #x方向最小值绝对值,如果为负值表示可以后退
+   max_vel_y: 3.0 # y方向最大速度的绝对值
+   min_vel_y: 1.0 #方向最小速度的绝对值.
+   max_vel_theta: 1.0 #基座允许的最大角速度，单位 radians/sec 
+   min_vel_theta: 0.3 #基座允许的最小角速度，单位 radians/sec 
+   min_in_place_vel_theta: 0.5 #原地旋转时，基座允许的最小角速度，单位 radians/sec
    escape_vel: -0.1 #表示机器人的逃离速度，即背向相反方向行走速度，单位为 meters/sec,该值必需设为负值，但若设置为正值，机器人会在执行逃离操作时向前移动。
    acc_lim_x: 1.0 #方向的加速度绝对值
-   # acc_lim_y: 0.0  # y方向的加速度绝对值,该值只有全向移动的机器人才需配置
+   acc_lim_y: 0.0  # y方向的加速度绝对值,该值只有全向移动的机器人才需配置
    acc_lim_theta: 1.2 #旋转加速度的绝对值.
  
    holonomic_robot: false
@@ -50,9 +17,9 @@ TrajectoryPlannerROS:
    #latch_xy_goal_tolerance如果目标误差被锁定，若机器人达到目标XY位置，它将旋转到位，即使误差没有达到，也会做旋转
    latch_xy_goal_tolerance: false  
   #  pdist_scale: 0.8 #控制器距离给定的路径有多近的加权值
-   path_distance_bias: 0.8
+   path_distance_bias: 64
   #  gdist_scale: 0.4 #控制器试图达到局部目标，或者是控制速度的加权值
-   goal_distance_bias: 0.6
+   goal_distance_bias: 24
    meter_scoring: true 
    #假设goal_distance and path_distance以米为单位被表示，gdist_scale和pdist_scale参数是否呈现
    
@@ -68,8 +35,8 @@ TrajectoryPlannerROS:
    
    prune_plan: true #当机器人沿着路径走时，是否要耗尽路径。如果为true，机器人移动过的1米时，点将会在计划中消失
  
-   sim_time: 1.0 #轨迹模拟时间
-   sim_granularity: 0.05 #步长,轨迹上采样点之间的距离,轨迹上点的密集程度
+   sim_time: 1.5 #轨迹模拟时间
+   sim_granularity: 0.01 #步长,轨迹上采样点之间的距离,轨迹上点的密集程度
    angular_sim_granularity: 0.1 #给定轨迹两点之间的间隔角度
    vx_samples: 15 #x方向速度空间的采样点数
    vy_samples: 0  #y方向速度空间采样点数.
