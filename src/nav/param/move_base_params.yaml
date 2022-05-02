@@ -44,7 +44,7 @@ controller_patience: 3.0
 
  
 
-planner_frequency: 1.0
+planner_frequency: 15.0
 
 planner_patience: 15.0
 
@@ -56,6 +56,6 @@ oscillation_distance: 0.3
 
  
 
-base_local_planner: "dwa_local_planner/DWAPlannerROS"
+# base_local_planner: "dwa_local_planner/DWAPlannerROS"
 
 base_global_planner: "global_planner/GlobalPlanner"

@@ -22,8 +22,8 @@ wheel_diameter: 0.1
 #How to calculate 'wheel_track'? For a 3WD base, it is the distance from one wheel to the center of the base.
 wheel_track: 0.12
 
-encoder_resolution: 24 # CPR 12 * 64 *2 reducting rate
-gear_reduction: 64
+encoder_resolution: 24 # CPR 12 * 2 
+gear_reduction: 64 #reducting rate
 #motors_reversed: True
 
 # === PID parameters
