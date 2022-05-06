@@ -1,0 +1,8 @@
+prefix=/home/robot/Documents/arduino_ws/devel
+
+Name: rviz_imu_plugin
+Description: Description of rviz_imu_plugin
+Version: 1.1.8
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rviz

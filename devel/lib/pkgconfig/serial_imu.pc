@@ -1,0 +1,8 @@
+prefix=/home/robot/Documents/arduino_ws/devel
+
+Name: serial_imu
+Description: Description of serial_imu
+Version: 0.0.0
+Cflags: -I/home/robot/Documents/arduino_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy serial std_msgs message_runtime

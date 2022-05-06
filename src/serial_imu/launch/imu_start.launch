@@ -1,0 +1,3 @@
+<launch>
+	<node pkg="serial_imu" name="IMU229" type="serial_imu" />
+</launch>
