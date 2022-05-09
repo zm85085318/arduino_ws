@@ -1,0 +1,29 @@
+<robot name="mycar" xmlns:xacro="http://wiki.ros.org/xacro">
+
+    <xacro:property name="imu_length" value="0.05" /> 
+    <xacro:property name="imu_width" value="0.025" /> 
+    <xacro:property name="imu_height" value="0.01" /> 
+    <xacro:property name="joint_imu_x" value="0" />
+    <xacro:property name="joint_imu_y" value="0" />
+    <xacro:property name="joint_imu_z" value="${(base_length / 2) + (imu_height / 2)}" />
+
+    <link name="imu_raw">
+        <visual>
+            <geometry>
+                <box size="${imu_length} ${imu_width} ${imu_height}" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="blue">
+                <color rgba="0 0 0 0.5" />
+            </material>
+        </visual>
+    </link>
+
+    <joint name="imu2base" type="fixed">
+        <parent link="base_link" />
+        <child link="imu_raw" />
+        <!-- <origin xyz="${joint_camera_x} ${joint_camera_y} ${joint_camera_z}" rpy="-1.309 0 -1.57" /> -->
+        <origin xyz="${joint_imu_x} ${joint_imu_y} ${joint_imu_z}" rpy="0 0 0" />
+    </joint>
+
+</robot>

@@ -2,6 +2,7 @@
 
     <xacro:include filename="car_base.urdf.xacro" />
     <xacro:include filename="car_camera.urdf.xacro" />
+    <xacro:include filename="car_imu.urdf.xacro" />
     <xacro:include filename="car_laser.urdf.xacro" />
 
 </robot>

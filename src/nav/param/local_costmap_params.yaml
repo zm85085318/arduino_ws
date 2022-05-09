@@ -4,11 +4,11 @@ local_costmap:
   robot_base_frame: base_footprint #机器人坐标系
 
   #膨胀半径，扩展在碰撞区域以外的代价区域，使得机器人规划路径避开障碍物
-  inflation_radius: 0.2
+  inflation_radius: 0.15
   #代价比例系数，越大则代价值越小
   cost_scaling_factor: 5.0
 
-  update_frequency: 10.0 #代价地图更新频率
+  update_frequency: 20.0 #代价地图更新频率
   publish_frequency: 20.0 #代价地图的发布频率
   transform_tolerance: 1.5 #等待坐标变换发布信息的超时时间
   # track_unknown_space: false

@@ -1,6 +1,6 @@
 TrajectoryPlannerROS:
-   max_vel_x: 0.8 #方向最大速度的绝对值
-   min_vel_x: -0.8 #x方向最小值绝对值,如果为负值表示可以后退
+   max_vel_x: 0.5 #方向最大速度的绝对值
+   min_vel_x: -0.5 #x方向最小值绝对值,如果为负值表示可以后退
    max_vel_y: 3.0 # y方向最大速度的绝对值
    min_vel_y: 1.0 #方向最小速度的绝对值.
    max_vel_theta: 1.0 #基座允许的最大角速度，单位 radians/sec 
@@ -17,7 +17,7 @@ TrajectoryPlannerROS:
    #latch_xy_goal_tolerance如果目标误差被锁定，若机器人达到目标XY位置，它将旋转到位，即使误差没有达到，也会做旋转
    latch_xy_goal_tolerance: false  
   #  pdist_scale: 0.8 #控制器距离给定的路径有多近的加权值
-   path_distance_bias: 64
+   path_distance_bias: 32
   #  gdist_scale: 0.4 #控制器试图达到局部目标，或者是控制速度的加权值
    goal_distance_bias: 24
    meter_scoring: true 
@@ -35,11 +35,11 @@ TrajectoryPlannerROS:
    
    prune_plan: true #当机器人沿着路径走时，是否要耗尽路径。如果为true，机器人移动过的1米时，点将会在计划中消失
  
-   sim_time: 1.5 #轨迹模拟时间
+   sim_time: 2.5 #轨迹模拟时间
    sim_granularity: 0.02 #步长,轨迹上采样点之间的距离,轨迹上点的密集程度
    angular_sim_granularity: 0.1 #给定轨迹两点之间的间隔角度
    vx_samples: 15 #x方向速度空间的采样点数
-   vy_samples: 0  #y方向速度空间采样点数.
+   vy_samples: 1  #y方向速度空间采样点数.
    vtheta_samples: 20 #旋转方向的速度空间采样点数
    dwa: true  #是否用DWA模式
    simple_attractor: false

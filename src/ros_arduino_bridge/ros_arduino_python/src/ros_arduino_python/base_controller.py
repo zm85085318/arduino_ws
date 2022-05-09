@@ -100,6 +100,7 @@ class BaseController:
         self.arduino.reset_encoders()
         
         # Set up the odometry broadcaster
+        # self.odomPub = rospy.Publisher('arduino/odom_encoders', Odometry, queue_size=5)
         self.odomPub = rospy.Publisher('odom', Odometry, queue_size=5)
         self.odomBroadcaster = TransformBroadcaster()
         

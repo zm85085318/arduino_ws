@@ -1,6 +1,6 @@
 GlobalPlanner:
 
-  allow_unknown: false
+  allow_unknown: true
 
   default_tolerance: 0.2
 
