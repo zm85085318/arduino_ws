@@ -7,7 +7,7 @@
     <xacro:property name="joint_imu_y" value="0" />
     <xacro:property name="joint_imu_z" value="${(base_length / 2) + (imu_height / 2)}" />
 
-    <link name="imu_raw">
+    <link name="imu_link">
         <visual>
             <geometry>
                 <box size="${imu_length} ${imu_width} ${imu_height}" />
@@ -21,7 +21,7 @@
 
     <joint name="imu2base" type="fixed">
         <parent link="base_link" />
-        <child link="imu_raw" />
+        <child link="imu_link" />
         <!-- <origin xyz="${joint_camera_x} ${joint_camera_y} ${joint_camera_z}" rpy="-1.309 0 -1.57" /> -->
         <origin xyz="${joint_imu_x} ${joint_imu_y} ${joint_imu_z}" rpy="0 0 0" />
     </joint>

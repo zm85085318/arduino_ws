@@ -71,7 +71,7 @@ int main(int argc, char** argv)
 	ros::init(argc, argv, "serial_imu");
 	ros::NodeHandle n;
 
-    IMU_pub = n.advertise<sensor_msgs::Imu>("/imu_raw", 20);
+    IMU_pub = n.advertise<sensor_msgs::Imu>("/imu", 20);
 
 	serial::Timeout to = serial::Timeout::simpleTimeout(100);
 

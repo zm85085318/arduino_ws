@@ -101,7 +101,7 @@ class BaseController:
         
         # Set up the odometry broadcaster
         # self.odomPub = rospy.Publisher('arduino/odom_encoders', Odometry, queue_size=5)
-        self.odomPub = rospy.Publisher('odom', Odometry, queue_size=5)
+        self.odomPub = rospy.Publisher('arduino/odom', Odometry, queue_size=5)
         self.odomBroadcaster = TransformBroadcaster()
         
         rospy.loginfo("Started base controller for a base of " + str(self.wheel_track) + "m wide with " + str(self.encoder_resolution) + " ticks per rev")
