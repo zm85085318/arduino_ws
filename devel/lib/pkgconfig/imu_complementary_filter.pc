@@ -2,7 +2,7 @@ prefix=/home/robot/Documents/arduino_ws/devel
 
 Name: imu_complementary_filter
 Description: Description of imu_complementary_filter
-Version: 1.1.8
-Cflags: -I/home/robot/Documents/arduino_ws/src/imu_tool/imu_complementary_filter/include
+Version: 1.2.4
+Cflags: -I/home/robot/Documents/arduino_ws/src/imu_complementary_filter/include
 Libs: -L${prefix}/lib -lcomplementary_filter
-Requires: message_filters roscpp sensor_msgs std_msgs tf
+Requires: geometry_msgs message_filters roscpp sensor_msgs std_msgs tf

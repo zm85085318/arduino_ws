@@ -1,4 +1,4 @@
-<robot name="mycar" xmlns:xacro="http://wiki.ros.org/xacro">
+<robot name="imu" xmlns:xacro="http://wiki.ros.org/xacro">
 
     <xacro:property name="imu_length" value="0.05" /> 
     <xacro:property name="imu_width" value="0.025" /> 

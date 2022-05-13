@@ -67,7 +67,7 @@ set(imu_complementary_filter_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(imu_complementary_filter_SOURCE_PREFIX /home/robot/Documents/arduino_ws/src/imu_tool/imu_complementary_filter)
+  set(imu_complementary_filter_SOURCE_PREFIX /home/robot/Documents/arduino_ws/src/imu_complementary_filter)
   set(imu_complementary_filter_DEVEL_PREFIX /home/robot/Documents/arduino_ws/devel)
   set(imu_complementary_filter_INSTALL_PREFIX "")
   set(imu_complementary_filter_PREFIX ${imu_complementary_filter_DEVEL_PREFIX})
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(imu_complementary_filter_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/robot/Documents/arduino_ws/src/imu_tool/imu_complementary_filter/include " STREQUAL " ")
+if(NOT "/home/robot/Documents/arduino_ws/src/imu_complementary_filter/include " STREQUAL " ")
   set(imu_complementary_filter_INCLUDE_DIRS "")
-  set(_include_dirs "/home/robot/Documents/arduino_ws/src/imu_tool/imu_complementary_filter/include")
+  set(_include_dirs "/home/robot/Documents/arduino_ws/src/imu_complementary_filter/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://www.mdpi.com/1424-8220/15/8/19302 " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/robot/Documents/arduino_ws/src/imu_tool/imu_complementary_filter/i
         message(FATAL_ERROR "Project 'imu_complementary_filter' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'imu_complementary_filter' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/robot/Documents/arduino_ws/src/imu_tool/imu_complementary_filter/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'imu_complementary_filter' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/robot/Documents/arduino_ws/src/imu_complementary_filter/${idir}'.  ${_report}")
     endif()
     _list_append_unique(imu_complementary_filter_INCLUDE_DIRS ${include})
   endforeach()
@@ -185,7 +185,7 @@ foreach(t ${imu_complementary_filter_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "message_filters;roscpp;sensor_msgs;std_msgs;tf")
+set(depends "geometry_msgs;message_filters;roscpp;sensor_msgs;std_msgs;tf")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

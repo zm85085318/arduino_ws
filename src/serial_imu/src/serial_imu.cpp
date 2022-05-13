@@ -46,7 +46,8 @@ void callback(const ros::TimerEvent& event)
 		if(num > 0)
 		{
 			imu_data.header.stamp = ros::Time::now();
-			imu_data.header.frame_id = "base_footprint";
+			// imu_data.header.frame_id = "base_footprint";
+			imu_data.header.frame_id = "imu_link";
 
 			for (int i = 0; i < num; i++)
 			{
@@ -71,7 +72,7 @@ int main(int argc, char** argv)
 	ros::init(argc, argv, "serial_imu");
 	ros::NodeHandle n;
 
-    IMU_pub = n.advertise<sensor_msgs::Imu>("/imu", 20);
+    IMU_pub = n.advertise<sensor_msgs::Imu>("imu_raw", 20);
 
 	serial::Timeout to = serial::Timeout::simpleTimeout(100);
 
