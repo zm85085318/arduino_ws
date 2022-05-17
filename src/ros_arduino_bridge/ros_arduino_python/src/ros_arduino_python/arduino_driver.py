@@ -111,7 +111,6 @@ class Arduino:
         c = ''
         value = ''
         attempts = 0
-        # time.sleep(1)
         while c != '\r':
             c = self.port.read(1).decode("utf8")
             value += c
@@ -274,8 +273,6 @@ class Arduino:
             return None
 
     def get_encoder_counts(self):
-        self.port.reset_input_buffer()
-        time.sleep(1)
         values = self.execute_array('e')
         values = list(values)
         if len(values) != 3:

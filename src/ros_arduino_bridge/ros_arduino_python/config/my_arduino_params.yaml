@@ -7,11 +7,11 @@ port: "/dev/MyArduino"
 baud: 115200
 timeout: 0.1
 
-rate: 50
-sensorstate_rate: 50
+rate: 30
+sensorstate_rate: 30
 
 use_base_controller: True
-base_controller_rate: 50
+base_controller_rate: 30
 
 # For a robot that uses base_footprint, change base_frame to base_footprint
 base_frame: base_footprint
@@ -27,11 +27,11 @@ gear_reduction: 64 #reducting rate
 #motors_reversed: True
 
 # === PID parameters
-Kp: 25
-Kd: 30
-Ki: 0
-Ko: 500
-accel_limit: 1.0
+Kp: 7
+Kd: 1
+Ki: 1
+Ko: 50
+accel_limit: 2.0
 
 # === Sensor definitions.  Examples only - edit for your robot.
 #     Sensor type can be one of the follow (case sensitive!):

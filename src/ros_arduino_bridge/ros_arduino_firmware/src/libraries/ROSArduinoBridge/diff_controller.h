@@ -35,9 +35,9 @@ SetPointInfo leftPID, rightPID, backPID;
 /**
  * PID param setup
  */
-int Kp = 20;
-int Kd = 12;
-int Ki = 0;
+int Kp = 7;
+int Kd = 1;
+int Ki = 1;
 int Ko = 50;
 
 /**
@@ -196,17 +196,17 @@ void updatePID() {
   }
 
   /* Compute PID update for each motor */
-//  doPID(&rightPID);
-//  doPID(&leftPID);
-//  doPID(&backPID);
+  doPID(&rightPID);
+  doPID(&leftPID);
+  doPID(&backPID);
 //  Serial.print("right:");
-  doPID_param(&rightPID, Kp_r, Ki_r, Kd_r, Ko_r, tru);
+//  doPID_param(&rightPID, Kp_r, Ki_r, Kd_r, Ko_r, tru);
 //  Serial.print(",");
 //  Serial.print("left:");
-  doPID_param(&leftPID, Kp_l, Ki_l, Kd_l, Ko_l, tru);
+//  doPID_param(&leftPID, Kp_l, Ki_l, Kd_l, Ko_l, tru);
 //  Serial.print(",");
 //  Serial.print("back:");
-  doPID_param(&backPID, Kp_b, Ki_b, Kd_b, Ko_b, tru);
+//  doPID_param(&backPID, Kp_b, Ki_b, Kd_b, Ko_b, tru);
 //  Serial.println("");
   
   /* Set the motor speeds accordingly */

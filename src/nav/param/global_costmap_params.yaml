@@ -4,7 +4,7 @@ global_costmap:
   # 以此实现坐标变换
 
   #膨胀半径，扩展在碰撞区域以外的代价区域，使得机器人规划路径避开障碍物
-  inflation_radius: 0.15
+  inflation_radius: 0.17
 
   #代价比例系数，越大则代价值越小
   cost_scaling_factor: 5.0
