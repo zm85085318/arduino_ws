@@ -165,6 +165,7 @@ include_directories(
 catkin_install_python(PROGRAMS
   scripts/voltage_translate.py
   scripts/status_converter.py
+  scripts/light_translate.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

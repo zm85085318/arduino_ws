@@ -76,6 +76,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/robot/Documents/arduino_ws/src/CMakeLists.txt"
   "/home/robot/Documents/arduino_ws/src/behavior_tree/CMakeLists.txt"
   "/home/robot/Documents/arduino_ws/src/behavior_tree/package.xml"
+  "/home/robot/Documents/arduino_ws/src/behavior_tree/scripts/light_translate.py"
   "/home/robot/Documents/arduino_ws/src/behavior_tree/scripts/status_converter.py"
   "/home/robot/Documents/arduino_ws/src/behavior_tree/scripts/voltage_translate.py"
   "/home/robot/Documents/arduino_ws/src/distanceangle/CMakeLists.txt"
