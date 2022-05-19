@@ -7,6 +7,10 @@ from behavior_tree.msg import Analog
 class LightTranslate(object):
     
     def __init__(self):
+        self.left_acc = 0
+        self.right_acc = 0.2
+        self.back_acc = 0.1
+
         rospy.loginfo("light_translater is online!")
         self.pub_left_light = rospy.Publisher("/behaviors_tree/left_light_strength", Float32, queue_size=1)
         self.pub_right_light = rospy.Publisher("/behaviors_tree/right_light_strength", Float32, queue_size=1)
@@ -23,7 +27,9 @@ class LightTranslate(object):
         temp3 = int(temp5/100)
         temp2 = int((temp5%100)/10)
         temp4 = float(temp5%10)
-        final_value = temp3 * 10 + temp2 + (0.1 * temp4)
+        raw_result = temp3 * 10 + temp2 + (0.1 * temp4)
+        processed_result = raw_result + self.left_acc
+        final_value = 25 - processed_result
         self.pub_left_light.publish(final_value)
     
     def rightLightCallback(self, battery_raw):
@@ -33,7 +39,9 @@ class LightTranslate(object):
         temp3 = int(temp5/100)
         temp2 = int((temp5%100)/10)
         temp4 = float(temp5%10)
-        final_value = temp3 * 10 + temp2 + (0.1 * temp4)
+        raw_result = temp3 * 10 + temp2 + (0.1 * temp4)
+        processed_result = raw_result + self.right_acc
+        final_value = 25 - processed_result
         self.pub_right_light.publish(final_value)
 
     def backLightCallback(self, battery_raw):
@@ -43,7 +51,9 @@ class LightTranslate(object):
         temp3 = int(temp5/100)
         temp2 = int((temp5%100)/10)
         temp4 = float(temp5%10)
-        final_value = temp3 * 10 + temp2 + (0.1 * temp4)
+        raw_result = temp3 * 10 + temp2 + (0.1 * temp4)
+        processed_result = raw_result + self.back_acc
+        final_value = 25 - processed_result
         self.pub_back_light.publish(final_value)
 
 def translaterLightStrength():

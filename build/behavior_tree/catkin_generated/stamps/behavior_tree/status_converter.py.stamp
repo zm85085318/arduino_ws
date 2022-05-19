@@ -13,10 +13,12 @@ from geometry_msgs.msg import TwistStamped
 
 
 class StatusConverter(object):
-    CMD_VEL_ANGULAR_RATE = 0.5 #rad/s negative is clockwise
+    CMD_VEL_ANGULAR_RATE = 0.35 #rad/s negative is clockwise
     TURN_RADIANS = -1.0472/2
-    MIN_TURN_PERIOD = 0.1
+    MIN_TURN_PERIOD = 0.3
+    TURN_TIME_INTERVAL = 1
     MANAGER_PERIOD = 0.1
+    LIGHT_SENSORS_ACCURATE = 0.5
 
     cmd_vel_angular = 0
     cmd_vel_msg = TwistStamped()
@@ -28,6 +30,10 @@ class StatusConverter(object):
     docking_command_flag = False
     docking_process_status_flag = False
     light_pursuit_command_flag = False
+
+    left_light_strength = 0
+    right_light_strength = 0
+    back_light_strength = 0
 
     last_dock_aruco_tf = Transform()
     dock_aruco_tf = Transform()
@@ -45,7 +51,11 @@ class StatusConverter(object):
         self.sub_aruco_detect = rospy.Subscriber("/fiducial_transforms",FiducialTransformArray, self.arucoDetectCallback, queue_size=1)
         self.sub_docking_command = rospy.Subscriber("/behaviors_tree/docking_command", String, self.dockingCommandCallback ,queue_size=1)
         self.sub_docking_process_status = rospy.Subscriber("/docking_robot/running_status", String, self.dockingProcessStatusCallback, queue_size=1)
-        self.light_pursuit_command = rospy.SubscribeListener("/behaviors_tree/light_pursuit_command", String, self.lightPursuitCallback, queue_size=1)
+        self.light_pursuit_command = rospy.Subscriber("/behaviors_tree/light_pursuit_command", String, self.lightPursuitCallback, queue_size=1)
+
+        self.sub_left_light = rospy.Subscriber("/behaviors_tree/left_light_strength", Float32, self.leftLightStrengthCallback, queue_size=1)
+        self.sub_right_light = rospy.Subscriber("/behaviors_tree/right_light_strength", Float32, self.rightLightStrengthCallback, queue_size=1)
+        self.sub_back_light = rospy.Subscriber("/behaviors_tree/back_light_strength", Float32, self.backLightStrengthCallback, queue_size=1)
         
         self.behaviors_running_timer = rospy.Timer(rospy.Duration(self.MANAGER_PERIOD), self.behaviorsRunning, oneshot=False)
 
@@ -81,8 +91,17 @@ class StatusConverter(object):
             self.light_pursuit_command_flag = True
         elif command.data == "stop":
             self.light_pursuit_command_flag = False
+    
+    def leftLightStrengthCallback(self, value):
+        self.left_light_strength = value.data
+    
+    def rightLightStrengthCallback(self, value):
+        self.right_light_strength = value.data
 
-    #================About docking and tag_searching===================================
+    def backLightStrengthCallback(self, value):
+        self.right_light_strength = value.data
+
+    #================About docking and tag searching===================================
     #TODO: Charging ststus detection/Auto stop
 
     def dockingExecutive(self):
@@ -152,28 +171,46 @@ class StatusConverter(object):
         self.pub_cmd_vel.publish(self.cmd_vel_msg.twist)
 
     #==============================About Turning Towards To The Light Source============================
-    def robotLeftTurn(self, radians):
-        turn_period = abs(radians/self.CMD_VEL_ANGULAR_RATE)
+    def robotLeftTurn(self):
+        turn_period = abs(self.TURN_TIME_INTERVAL/self.CMD_VEL_ANGULAR_RATE)
         if turn_period < self.MIN_TURN_PERIOD:
             turn_period = self.MIN_TURN_PERIOD
-        self.turn_timer = rospy.Timer(rospy.Duration(turn_period), self.robotTurnTimerCalllback, oneshot=True)
-        rospy.loginfo("Turn Left for %f", turn_period)
+        # self.turn_timer = rospy.Timer(rospy.Duration(turn_period), self.robotTurnTimerCalllback, oneshot=True)
+        # rospy.loginfo("Turn Left for %f", turn_period)
         self.cmd_vel_angular = self.CMD_VEL_ANGULAR_RATE
         self.cmd_vel_msg.twist.angular.z = self.cmd_vel_angular
         self.pub_cmd_vel.publish(self.cmd_vel_msg.twist)
     
-    def robotRightTurn(self, radians):
-        turn_period = abs(radians/self.CMD_VEL_ANGULAR_RATE)
+    def robotRightTurn(self):
+        turn_period = abs(self.TURN_TIME_INTERVAL/self.CMD_VEL_ANGULAR_RATE)
         if turn_period < self.MIN_TURN_PERIOD:
             turn_period = self.MIN_TURN_PERIOD
-        self.turn_timer = rospy.Timer(rospy.Duration(turn_period), self.robotTurnTimerCalllback, oneshot=True)
-        rospy.loginfo("Turn Right for %f", turn_period)
+        # self.turn_timer = rospy.Timer(rospy.Duration(turn_period), self.robotTurnTimerCalllback, oneshot=True)
+        # rospy.loginfo("Turn Right for %f", turn_period)
         self.cmd_vel_angular = -self.CMD_VEL_ANGULAR_RATE
         self.cmd_vel_msg.twist.angular.z = self.cmd_vel_angular
         self.pub_cmd_vel.publish(self.cmd_vel_msg.twist)
 
-    def lightPursuitExecutive():
-        pass
+    def lightPursuitExecutive(self):
+        if self.back_light_strength - self.right_light_strength > self.LIGHT_SENSORS_ACCURATE and self.left_light_strength - self.right_light_strength > self.LIGHT_SENSORS_ACCURATE:
+            self.robotLeftTurn()
+        elif self.back_light_strength - self.left_light_strength > self.LIGHT_SENSORS_ACCURATE and self.right_light_strength - self.left_light_strength > self.LIGHT_SENSORS_ACCURATE:
+            self.robotRightTurn()
+        elif self.left_light_strength - self.back_light_strength > self.LIGHT_SENSORS_ACCURATE and self.right_light_strength - self.back_light_strength > self.LIGHT_SENSORS_ACCURATE:
+            if self.left_light_strength - self.right_light_strength > self.LIGHT_SENSORS_ACCURATE:
+                self.robotLeftTurn()
+            elif self.right_light_strength - self.left_light_strength > self.LIGHT_SENSORS_ACCURATE:
+                self.robotRightTurn()
+        else:
+            self.cmd_vel_msg.twist.linear.x = 0
+            self.cmd_vel_msg.twist.angular.z = 0
+            self.light_pursuit_command_flag = False
+            rospy.logwarn("Stop towarding!!")
+        rospy.sleep(1)
+    
+    def TurningTimerCalllback(self, event):
+        rospy.loginfo("Turning ended")
+        self.robotTurnStop()
 
     #=================Primary Running Function=================================
     def behaviorsRunning(self, event):
@@ -183,11 +220,6 @@ class StatusConverter(object):
             self.stopDockingExecutive()
         if self.light_pursuit_command_flag == True:
             self.lightPursuitExecutive()
-
-        
-        
-                    
-
 
 
 def statusConverterMain():

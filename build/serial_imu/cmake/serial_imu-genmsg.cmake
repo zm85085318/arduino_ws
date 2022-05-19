@@ -19,12 +19,12 @@ add_custom_target(serial_imu_generate_messages ALL)
 
 get_filename_component(_filename "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x91_msg.msg" NAME_WE)
 add_custom_target(_serial_imu_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "serial_imu" "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x91_msg.msg" "std_msgs/Header:serial_imu/Imu_data_package"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "serial_imu" "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x91_msg.msg" "serial_imu/Imu_data_package:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x62_msg.msg" NAME_WE)
 add_custom_target(_serial_imu_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "serial_imu" "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x62_msg.msg" "std_msgs/Header:serial_imu/Imu_data_package"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "serial_imu" "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x62_msg.msg" "serial_imu/Imu_data_package:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg" NAME_WE)
@@ -41,13 +41,13 @@ add_custom_target(_serial_imu_generate_messages_check_deps_${_filename}
 _generate_msg_cpp(serial_imu
   "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x91_msg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg"
+  "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/serial_imu
 )
 _generate_msg_cpp(serial_imu
   "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x62_msg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg"
+  "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/serial_imu
 )
 _generate_msg_cpp(serial_imu
@@ -90,13 +90,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS serial_imu_generate_messages_cpp)
 _generate_msg_eus(serial_imu
   "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x91_msg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg"
+  "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/serial_imu
 )
 _generate_msg_eus(serial_imu
   "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x62_msg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg"
+  "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/serial_imu
 )
 _generate_msg_eus(serial_imu
@@ -139,13 +139,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS serial_imu_generate_messages_eus)
 _generate_msg_lisp(serial_imu
   "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x91_msg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg"
+  "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/serial_imu
 )
 _generate_msg_lisp(serial_imu
   "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x62_msg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg"
+  "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/serial_imu
 )
 _generate_msg_lisp(serial_imu
@@ -188,13 +188,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS serial_imu_generate_messages_lisp)
 _generate_msg_nodejs(serial_imu
   "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x91_msg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg"
+  "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/serial_imu
 )
 _generate_msg_nodejs(serial_imu
   "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x62_msg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg"
+  "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/serial_imu
 )
 _generate_msg_nodejs(serial_imu
@@ -237,13 +237,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS serial_imu_generate_messages_nodejs
 _generate_msg_py(serial_imu
   "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x91_msg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg"
+  "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/serial_imu
 )
 _generate_msg_py(serial_imu
   "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x62_msg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg"
+  "/home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/serial_imu
 )
 _generate_msg_py(serial_imu

@@ -13,12 +13,12 @@ from geometry_msgs.msg import TwistStamped
 
 
 class StatusConverter(object):
-    CMD_VEL_ANGULAR_RATE = 0.5 #rad/s negative is clockwise
+    CMD_VEL_ANGULAR_RATE = 0.35 #rad/s negative is clockwise
     TURN_RADIANS = -1.0472/2
     MIN_TURN_PERIOD = 0.3
-    TURN_TIME_INTERVAL = 3
+    TURN_TIME_INTERVAL = 1
     MANAGER_PERIOD = 0.1
-    LIGHT_SENSORS_ACCURATE = 0.3
+    LIGHT_SENSORS_ACCURATE = 0.5
 
     cmd_vel_angular = 0
     cmd_vel_msg = TwistStamped()
@@ -175,8 +175,8 @@ class StatusConverter(object):
         turn_period = abs(self.TURN_TIME_INTERVAL/self.CMD_VEL_ANGULAR_RATE)
         if turn_period < self.MIN_TURN_PERIOD:
             turn_period = self.MIN_TURN_PERIOD
-        self.turn_timer = rospy.Timer(rospy.Duration(turn_period), self.robotTurnTimerCalllback, oneshot=True)
-        rospy.loginfo("Turn Left for %f", turn_period)
+        # self.turn_timer = rospy.Timer(rospy.Duration(turn_period), self.robotTurnTimerCalllback, oneshot=True)
+        # rospy.loginfo("Turn Left for %f", turn_period)
         self.cmd_vel_angular = self.CMD_VEL_ANGULAR_RATE
         self.cmd_vel_msg.twist.angular.z = self.cmd_vel_angular
         self.pub_cmd_vel.publish(self.cmd_vel_msg.twist)
@@ -185,8 +185,8 @@ class StatusConverter(object):
         turn_period = abs(self.TURN_TIME_INTERVAL/self.CMD_VEL_ANGULAR_RATE)
         if turn_period < self.MIN_TURN_PERIOD:
             turn_period = self.MIN_TURN_PERIOD
-        self.turn_timer = rospy.Timer(rospy.Duration(turn_period), self.robotTurnTimerCalllback, oneshot=True)
-        rospy.loginfo("Turn Right for %f", turn_period)
+        # self.turn_timer = rospy.Timer(rospy.Duration(turn_period), self.robotTurnTimerCalllback, oneshot=True)
+        # rospy.loginfo("Turn Right for %f", turn_period)
         self.cmd_vel_angular = -self.CMD_VEL_ANGULAR_RATE
         self.cmd_vel_msg.twist.angular.z = self.cmd_vel_angular
         self.pub_cmd_vel.publish(self.cmd_vel_msg.twist)
@@ -201,6 +201,11 @@ class StatusConverter(object):
                 self.robotLeftTurn()
             elif self.right_light_strength - self.left_light_strength > self.LIGHT_SENSORS_ACCURATE:
                 self.robotRightTurn()
+        else:
+            self.cmd_vel_msg.twist.linear.x = 0
+            self.cmd_vel_msg.twist.angular.z = 0
+            self.light_pursuit_command_flag = False
+            rospy.logwarn("Stop towarding!!")
         rospy.sleep(1)
     
     def TurningTimerCalllback(self, event):
