@@ -35,6 +35,11 @@
   "file": "/home/robot/Documents/arduino_ws/src/dockingrobot/src/docking_modified.cpp"
 },
 {
+  "directory": "/home/robot/Documents/arduino_ws/build/behavior_tree",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"behavior_tree\\\" -I/home/robot/Documents/arduino_ws/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -o CMakeFiles/behavior_tree.dir/src/send_goal.cpp.o -c /home/robot/Documents/arduino_ws/src/behavior_tree/src/send_goal.cpp",
+  "file": "/home/robot/Documents/arduino_ws/src/behavior_tree/src/send_goal.cpp"
+},
+{
   "directory": "/home/robot/Documents/arduino_ws/build/rplidar_ros",
   "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/include -I/home/robot/Documents/arduino_ws/src/rplidar_ros/./sdk/src -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o -c /home/robot/Documents/arduino_ws/src/rplidar_ros/src/client.cpp",
   "file": "/home/robot/Documents/arduino_ws/src/rplidar_ros/src/client.cpp"
