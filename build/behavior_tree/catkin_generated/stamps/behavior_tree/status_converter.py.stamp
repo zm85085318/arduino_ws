@@ -1,10 +1,10 @@
 #! /usr/bin/env python3
 
-import numpy as np
-import os
-import time
-import math
+from turtle import distance, forward
 import rospy
+import actionlib
+from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
+
 from std_msgs.msg import *
 from fiducial_msgs.msg import FiducialTransformArray
 from geometry_msgs.msg import Transform
@@ -205,12 +205,36 @@ class StatusConverter(object):
             self.cmd_vel_msg.twist.linear.x = 0
             self.cmd_vel_msg.twist.angular.z = 0
             self.light_pursuit_command_flag = False
-            rospy.logwarn("Stop towarding!!")
+            self.moveByNav(1.0, False)
         rospy.sleep(1)
     
-    def TurningTimerCalllback(self, event):
+    def turningTimerCalllback(self, event):
         rospy.loginfo("Turning ended")
         self.robotTurnStop()
+
+    #=================About Navigating to somewhere===============================
+    def moveByNav(distance=0.0, back_home_flag=True):
+        client = actionlib.SimpleActionClient("move_base")
+        client.wait_for_server()
+        goal = MoveBaseGoal()
+        if back_home_flag:
+            goal.target_pose.header.frame_id = "map"
+            goal.target_pose.pose.position.x = 0.0
+            goal.target_pose.pose.position.y = 0.0
+        else:
+            goal.target_pose.header.frame_id = 'base_footprint'
+            goal.target_pose.pose.position.x = distance
+        goal.target_pose.pose.orientation.w = 1.0
+
+        client.send_goal(goal)
+        wait = client.wait_for_result()
+        if not wait:
+            rospy.logerr("Action server not available!")
+            rospy.signal_shutdown("Action server not available!")
+        else:
+            return client.get_result()
+        
+
 
     #=================Primary Running Function=================================
     def behaviorsRunning(self, event):

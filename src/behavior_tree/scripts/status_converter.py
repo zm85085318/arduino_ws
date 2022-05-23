@@ -1,10 +1,10 @@
 #! /usr/bin/env python3
 
-import numpy as np
-import os
-import time
-import math
+from turtle import distance, forward
 import rospy
+import actionlib
+from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
+
 from std_msgs.msg import *
 from fiducial_msgs.msg import FiducialTransformArray
 from geometry_msgs.msg import Transform
@@ -34,6 +34,7 @@ class StatusConverter(object):
     left_light_strength = 0
     right_light_strength = 0
     back_light_strength = 0
+    turning_counter = 0
 
     last_dock_aruco_tf = Transform()
     dock_aruco_tf = Transform()
@@ -194,23 +195,57 @@ class StatusConverter(object):
     def lightPursuitExecutive(self):
         if self.back_light_strength - self.right_light_strength > self.LIGHT_SENSORS_ACCURATE and self.left_light_strength - self.right_light_strength > self.LIGHT_SENSORS_ACCURATE:
             self.robotLeftTurn()
+            rospy.loginfo("Case 1")
         elif self.back_light_strength - self.left_light_strength > self.LIGHT_SENSORS_ACCURATE and self.right_light_strength - self.left_light_strength > self.LIGHT_SENSORS_ACCURATE:
             self.robotRightTurn()
+            rospy.loginfo("Case 2")
         elif self.left_light_strength - self.back_light_strength > self.LIGHT_SENSORS_ACCURATE and self.right_light_strength - self.back_light_strength > self.LIGHT_SENSORS_ACCURATE:
             if self.left_light_strength - self.right_light_strength > self.LIGHT_SENSORS_ACCURATE:
                 self.robotLeftTurn()
+                rospy.loginfo("Case 3-1")
             elif self.right_light_strength - self.left_light_strength > self.LIGHT_SENSORS_ACCURATE:
                 self.robotRightTurn()
-        else:
-            self.cmd_vel_msg.twist.linear.x = 0
-            self.cmd_vel_msg.twist.angular.z = 0
-            self.light_pursuit_command_flag = False
-            rospy.logwarn("Stop towarding!!")
+                rospy.loginfo("Case 3-2")
+            else:
+                if self.turning_counter < 5:
+                    self.turning_counter += 1
+                    rospy.loginfo("case 4-1")
+                else:
+                    rospy.loginfo("Case 4-2")
+                    self.cmd_vel_msg.twist.linear.x = 0
+                    self.cmd_vel_msg.twist.angular.z = 0
+                    self.light_pursuit_command_flag = False
+                    self.moveByNav(0.4, False)
+        
         rospy.sleep(1)
     
-    def TurningTimerCalllback(self, event):
+    def turningTimerCalllback(self, event):
         rospy.loginfo("Turning ended")
         self.robotTurnStop()
+
+    #=================About Navigating to somewhere===============================
+    def moveByNav(self, distance=0.0, back_home_flag=True):
+        client = actionlib.SimpleActionClient("move_base", MoveBaseAction)
+        client.wait_for_server()
+        goal = MoveBaseGoal()
+        if back_home_flag:
+            goal.target_pose.header.frame_id = "map"
+            goal.target_pose.pose.position.x = 0.0
+            goal.target_pose.pose.position.y = 0.0
+        else:
+            goal.target_pose.header.frame_id = 'base_footprint'
+            goal.target_pose.pose.position.x = distance
+        goal.target_pose.pose.orientation.w = 1.0
+
+        client.send_goal(goal)
+        wait = client.wait_for_result()
+        if not wait:
+            rospy.logerr("Action server not available!")
+            rospy.signal_shutdown("Action server not available!")
+        else:
+            return client.get_result()
+        
+
 
     #=================Primary Running Function=================================
     def behaviorsRunning(self, event):
