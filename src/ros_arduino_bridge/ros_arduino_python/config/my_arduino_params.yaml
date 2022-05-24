@@ -27,9 +27,9 @@ gear_reduction: 64 #reducting rate
 #motors_reversed: True
 
 # === PID parameters
-Kp: 7
-Kd: 1
-Ki: 1
+Kp: 28
+Kd: 23
+Ki: 0
 Ko: 50
 accel_limit: 2.0
 

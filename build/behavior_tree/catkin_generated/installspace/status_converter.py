@@ -34,6 +34,7 @@ class StatusConverter(object):
     left_light_strength = 0
     right_light_strength = 0
     back_light_strength = 0
+    turning_counter = 0
 
     last_dock_aruco_tf = Transform()
     dock_aruco_tf = Transform()
@@ -46,7 +47,9 @@ class StatusConverter(object):
         self.pub_docking_command = rospy.Publisher("/docking_robot/docking_command", String, queue_size=1)
         self.pub_behaviors_status = rospy.Publisher("/behaviors_tree/behaviors_status", String, queue_size=1)
         self.pub_tag_finding_status = rospy.Publisher("/behaviors_tree/tag_finding_status", String, queue_size=1)
-        self.pub_cmd_vel = rospy.Publisher('cmd_vel', Twist, queue_size=1)
+
+        # TODO: Problems happened at the following line
+        self.pub_cmd_vel = rospy.Publisher('cmd_vel', Twist, queue_size=10)
         
         self.sub_aruco_detect = rospy.Subscriber("/fiducial_transforms",FiducialTransformArray, self.arucoDetectCallback, queue_size=1)
         self.sub_docking_command = rospy.Subscriber("/behaviors_tree/docking_command", String, self.dockingCommandCallback ,queue_size=1)
@@ -139,7 +142,7 @@ class StatusConverter(object):
                 
         elif self.is_in_view == False:
             self.status_string = "stop searching ArTag"
-            self.robotTurnStop()
+            # self.robotTurnStop()
             self.pub_docking_command.publish("stop")
             self.docking_process_status_flag == False
         self.pub_behaviors_status.publish(self.status_string)
@@ -161,7 +164,7 @@ class StatusConverter(object):
 
     def robotTurnTimerCalllback(self, event):
         rospy.loginfo("openrover_turn_timer_cb: Turning ended")
-        self.robotTurnStop()
+        # self.robotTurnStop()
         self.is_turning = False
         self.is_in_action = False
     
@@ -175,7 +178,7 @@ class StatusConverter(object):
         turn_period = abs(self.TURN_TIME_INTERVAL/self.CMD_VEL_ANGULAR_RATE)
         if turn_period < self.MIN_TURN_PERIOD:
             turn_period = self.MIN_TURN_PERIOD
-        # self.turn_timer = rospy.Timer(rospy.Duration(turn_period), self.robotTurnTimerCalllback, oneshot=True)
+        self.turn_timer = rospy.Timer(rospy.Duration(turn_period), self.turningTimerCalllback, oneshot=True)
         # rospy.loginfo("Turn Left for %f", turn_period)
         self.cmd_vel_angular = self.CMD_VEL_ANGULAR_RATE
         self.cmd_vel_msg.twist.angular.z = self.cmd_vel_angular
@@ -185,36 +188,46 @@ class StatusConverter(object):
         turn_period = abs(self.TURN_TIME_INTERVAL/self.CMD_VEL_ANGULAR_RATE)
         if turn_period < self.MIN_TURN_PERIOD:
             turn_period = self.MIN_TURN_PERIOD
-        # self.turn_timer = rospy.Timer(rospy.Duration(turn_period), self.robotTurnTimerCalllback, oneshot=True)
+        self.turn_timer = rospy.Timer(rospy.Duration(turn_period), self.turningTimerCalllback, oneshot=True)
         # rospy.loginfo("Turn Right for %f", turn_period)
         self.cmd_vel_angular = -self.CMD_VEL_ANGULAR_RATE
         self.cmd_vel_msg.twist.angular.z = self.cmd_vel_angular
         self.pub_cmd_vel.publish(self.cmd_vel_msg.twist)
 
     def lightPursuitExecutive(self):
-        if self.back_light_strength - self.right_light_strength > self.LIGHT_SENSORS_ACCURATE and self.left_light_strength - self.right_light_strength > self.LIGHT_SENSORS_ACCURATE:
-            self.robotLeftTurn()
-        elif self.back_light_strength - self.left_light_strength > self.LIGHT_SENSORS_ACCURATE and self.right_light_strength - self.left_light_strength > self.LIGHT_SENSORS_ACCURATE:
-            self.robotRightTurn()
-        elif self.left_light_strength - self.back_light_strength > self.LIGHT_SENSORS_ACCURATE and self.right_light_strength - self.back_light_strength > self.LIGHT_SENSORS_ACCURATE:
-            if self.left_light_strength - self.right_light_strength > self.LIGHT_SENSORS_ACCURATE:
-                self.robotLeftTurn()
-            elif self.right_light_strength - self.left_light_strength > self.LIGHT_SENSORS_ACCURATE:
-                self.robotRightTurn()
-        else:
-            self.cmd_vel_msg.twist.linear.x = 0
-            self.cmd_vel_msg.twist.angular.z = 0
-            self.light_pursuit_command_flag = False
-            self.moveByNav(1.0, False)
-        rospy.sleep(1)
+        # if self.back_light_strength - self.right_light_strength > self.LIGHT_SENSORS_ACCURATE and self.left_light_strength - self.right_light_strength > self.LIGHT_SENSORS_ACCURATE:
+        #     self.robotLeftTurn()
+        #     rospy.loginfo("Case 1")
+        # elif self.back_light_strength - self.left_light_strength > self.LIGHT_SENSORS_ACCURATE and self.right_light_strength - self.left_light_strength > self.LIGHT_SENSORS_ACCURATE:
+        #     self.robotRightTurn()
+        #     rospy.loginfo("Case 2")
+        # elif self.left_light_strength - self.back_light_strength > self.LIGHT_SENSORS_ACCURATE and self.right_light_strength - self.back_light_strength > self.LIGHT_SENSORS_ACCURATE:
+        #     if self.left_light_strength - self.right_light_strength > self.LIGHT_SENSORS_ACCURATE:
+        #         self.robotLeftTurn()
+        #         rospy.loginfo("Case 3-1")
+        #     elif self.right_light_strength - self.left_light_strength > self.LIGHT_SENSORS_ACCURATE:
+        #         self.robotRightTurn()
+        #         rospy.loginfo("Case 3-2")
+        #     else:
+        #         if self.turning_counter < 5:
+        #             self.turning_counter += 1
+        #             rospy.loginfo("case 4-1")
+        #         else:
+        #             rospy.loginfo("Case 4-2")
+        #             self.cmd_vel_msg.twist.linear.x = 0
+        #             self.cmd_vel_msg.twist.angular.z = 0
+        #             self.light_pursuit_command_flag = False
+        self.moveByNav(back_home_flag=True)
+        
+        # rospy.sleep(1)
     
     def turningTimerCalllback(self, event):
         rospy.loginfo("Turning ended")
-        self.robotTurnStop()
+        # self.robotTurnStop()
 
     #=================About Navigating to somewhere===============================
-    def moveByNav(distance=0.0, back_home_flag=True):
-        client = actionlib.SimpleActionClient("move_base")
+    def moveByNav(self, distance=0.0, back_home_flag=True):
+        client = actionlib.SimpleActionClient("move_base", MoveBaseAction)
         client.wait_for_server()
         goal = MoveBaseGoal()
         if back_home_flag:

@@ -7,8 +7,8 @@ port: "/dev/MySensorsBase"
 baud: 115200
 timeout: 0.1
 
-rate: 30
-sensorstate_rate: 30
+rate: 20
+sensorstate_rate: 20
 
 use_base_controller: False
 

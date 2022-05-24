@@ -35,7 +35,7 @@ SetPointInfo leftPID, rightPID, backPID;
 /**
  * PID param setup
  */
-int Kp = 7;
+int Kp = 6;
 int Kd = 1;
 int Ki = 1;
 int Ko = 50;
