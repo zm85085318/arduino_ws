@@ -34,5 +34,5 @@ sensors: {
   left_light_raw:        {pin: 16, type: Analog, rate: 1},
   right_light_raw:       {pin: 17, type: Analog, rate: 1},
   back_light_raw:        {pin: 18, type: Analog, rate: 1},
-  arduino_led:          {pin: 13, type: Digital, rate: 5, direction: output}
+  arduino_led:          {pin: 13, type: Digital, rate: 3, direction: output}
 }

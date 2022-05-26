@@ -19,6 +19,7 @@ class StatusConverter(object):
     TURN_TIME_INTERVAL = 1
     MANAGER_PERIOD = 0.1
     LIGHT_SENSORS_ACCURATE = 0.5
+    STEP_LENGTH = 0.5
 
     cmd_vel_angular = 0
     cmd_vel_msg = TwistStamped()
@@ -30,6 +31,7 @@ class StatusConverter(object):
     docking_command_flag = False
     docking_process_status_flag = False
     light_pursuit_command_flag = False
+    stop_flag = False
 
     left_light_strength = 0
     right_light_strength = 0
@@ -90,10 +92,12 @@ class StatusConverter(object):
             self.docking_process_status_flag = False
     
     def lightPursuitCallback(self, command):
-        if command.data == "start":
+        if command.data == "go":
             self.light_pursuit_command_flag = True
         elif command.data == "stop":
             self.light_pursuit_command_flag = False
+        elif command.data == "back":
+            self.backToOrigin()
     
     def leftLightStrengthCallback(self, value):
         self.left_light_strength = value.data
@@ -142,7 +146,7 @@ class StatusConverter(object):
                 
         elif self.is_in_view == False:
             self.status_string = "stop searching ArTag"
-            # self.robotTurnStop()
+            self.robotTurnStop()
             self.pub_docking_command.publish("stop")
             self.docking_process_status_flag == False
         self.pub_behaviors_status.publish(self.status_string)
@@ -164,7 +168,7 @@ class StatusConverter(object):
 
     def robotTurnTimerCalllback(self, event):
         rospy.loginfo("openrover_turn_timer_cb: Turning ended")
-        # self.robotTurnStop()
+        self.robotTurnStop()
         self.is_turning = False
         self.is_in_action = False
     
@@ -194,6 +198,10 @@ class StatusConverter(object):
         self.cmd_vel_msg.twist.angular.z = self.cmd_vel_angular
         self.pub_cmd_vel.publish(self.cmd_vel_msg.twist)
 
+    # TODO: We need to make a cycle for checking if light strength is enough/ Or we've reached the edge of wall.
+    # TODO: In this cycle, we need to consider two features, the First is "power supply ability", and the Second is "the available running space"
+    # TODO: The best situation is, robot can reached to the desired place, where there is enough light strength;
+    # TODO: The not-that-much-best situation is, robot meets the wall edge before reached to the desired place(require path planing checking ability)
     def lightPursuitExecutive(self):
         # if self.back_light_strength - self.right_light_strength > self.LIGHT_SENSORS_ACCURATE and self.left_light_strength - self.right_light_strength > self.LIGHT_SENSORS_ACCURATE:
         #     self.robotLeftTurn()
@@ -217,13 +225,16 @@ class StatusConverter(object):
         #             self.cmd_vel_msg.twist.linear.x = 0
         #             self.cmd_vel_msg.twist.angular.z = 0
         #             self.light_pursuit_command_flag = False
+        print_result = self.moveByNav(distance=self.STEP_LENGTH,back_home_flag=False)
+        rospy.loginfo(print_result)
+        rospy.sleep(1)
+    
+    def backToOrigin(self):
         self.moveByNav(back_home_flag=True)
-        
-        # rospy.sleep(1)
     
     def turningTimerCalllback(self, event):
         rospy.loginfo("Turning ended")
-        # self.robotTurnStop()
+        self.robotTurnStop()
 
     #=================About Navigating to somewhere===============================
     def moveByNav(self, distance=0.0, back_home_flag=True):
@@ -240,22 +251,26 @@ class StatusConverter(object):
         goal.target_pose.pose.orientation.w = 1.0
 
         client.send_goal(goal)
-        wait = client.wait_for_result()
+        wait = client.wait_for_result(rospy.Duration(5))
         if not wait:
-            rospy.logerr("Action server not available!")
-            rospy.signal_shutdown("Action server not available!")
-        else:
-            return client.get_result()
+            client.shutdown
+            rospy.logError("Time out achieving goal")
+        
+        result = client.get_result()
+        return client.get_result()
         
 
 
     #=================Primary Running Function=================================
     def behaviorsRunning(self, event):
         if self.docking_command_flag == True:
+            self.stop_flag = True
             self.dockingExecutive()
-        else:
+        elif self.stop_flag == True:
             self.stopDockingExecutive()
+            self.stop_flag = False
         if self.light_pursuit_command_flag == True:
+            
             self.lightPursuitExecutive()
 
 
