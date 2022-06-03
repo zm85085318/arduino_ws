@@ -24,7 +24,7 @@ int Phimax {43};
 int Phimin{23};
 int PhiAng{37};
 int maxang{40};
-float ARdist{0.43};
+float ARdist{0.2};
 bool dockingCommand =  false;
 string running_status = "stopped";
 

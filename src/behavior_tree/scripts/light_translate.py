@@ -63,9 +63,6 @@ def translaterLightStrength():
         rospy.spin()
         # rate.sleep()
 
-
-
-
 if __name__ == "__main__":
     try:
         rospy.init_node("light_strength_translate")

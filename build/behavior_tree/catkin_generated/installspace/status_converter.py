@@ -198,35 +198,36 @@ class StatusConverter(object):
         self.cmd_vel_msg.twist.angular.z = self.cmd_vel_angular
         self.pub_cmd_vel.publish(self.cmd_vel_msg.twist)
 
-    # TODO: We need to make a cycle for checking if light strength is enough/ Or we've reached the edge of wall.
-    # TODO: In this cycle, we need to consider two features, the First is "power supply ability", and the Second is "the available running space"
-    # TODO: The best situation is, robot can reached to the desired place, where there is enough light strength;
-    # TODO: The not-that-much-best situation is, robot meets the wall edge before reached to the desired place(require path planing checking ability)
     def lightPursuitExecutive(self):
-        # if self.back_light_strength - self.right_light_strength > self.LIGHT_SENSORS_ACCURATE and self.left_light_strength - self.right_light_strength > self.LIGHT_SENSORS_ACCURATE:
-        #     self.robotLeftTurn()
-        #     rospy.loginfo("Case 1")
-        # elif self.back_light_strength - self.left_light_strength > self.LIGHT_SENSORS_ACCURATE and self.right_light_strength - self.left_light_strength > self.LIGHT_SENSORS_ACCURATE:
-        #     self.robotRightTurn()
-        #     rospy.loginfo("Case 2")
-        # elif self.left_light_strength - self.back_light_strength > self.LIGHT_SENSORS_ACCURATE and self.right_light_strength - self.back_light_strength > self.LIGHT_SENSORS_ACCURATE:
-        #     if self.left_light_strength - self.right_light_strength > self.LIGHT_SENSORS_ACCURATE:
-        #         self.robotLeftTurn()
-        #         rospy.loginfo("Case 3-1")
-        #     elif self.right_light_strength - self.left_light_strength > self.LIGHT_SENSORS_ACCURATE:
-        #         self.robotRightTurn()
-        #         rospy.loginfo("Case 3-2")
-        #     else:
-        #         if self.turning_counter < 5:
-        #             self.turning_counter += 1
-        #             rospy.loginfo("case 4-1")
-        #         else:
-        #             rospy.loginfo("Case 4-2")
-        #             self.cmd_vel_msg.twist.linear.x = 0
-        #             self.cmd_vel_msg.twist.angular.z = 0
-        #             self.light_pursuit_command_flag = False
-        print_result = self.moveByNav(distance=self.STEP_LENGTH,back_home_flag=False)
-        rospy.loginfo(print_result)
+        if self.left_light_strength + self.back_light_strength > 2 * self.right_light_strength:
+            self.robotLeftTurn()
+            rospy.loginfo("Case 1")
+        elif self.back_light_strength + self.right_light_strength > 2 * self.left_light_strength:
+            self.robotRightTurn()
+            rospy.loginfo("Case 2")
+        else:
+            if self.left_light_strength - self.right_light_strength > self.LIGHT_SENSORS_ACCURATE:
+                self.robotLeftTurn()
+                rospy.loginfo("Case 3-1")
+            elif self.right_light_strength - self.left_light_strength > self.LIGHT_SENSORS_ACCURATE:
+                self.robotRightTurn()
+                rospy.loginfo("Case 3-2")
+            else:
+                if self.turning_counter < 5:
+                    self.turning_counter += 1
+                    rospy.loginfo("case 4-1")
+                else:
+                    rospy.loginfo("Case 4-2")
+                    self.cmd_vel_msg.twist.linear.x = 0
+                    self.cmd_vel_msg.twist.angular.z = 0
+                    self.light_pursuit_command_flag = False
+                    exec_result = self.moveByNav(distance=self.STEP_LENGTH,back_home_flag=False)
+                    if not exec_result:
+                        exec_result = self.moveByNav(distance=self.STEP_LENGTH / 2, back_home_flag=False)
+                        if not exec_result:
+                            self.light_pursuit_command_flag = False
+                            self.turning_counter = 0
+                    rospy.loginfo(exec_result)
         rospy.sleep(1)
     
     def backToOrigin(self):
@@ -253,11 +254,11 @@ class StatusConverter(object):
         client.send_goal(goal)
         wait = client.wait_for_result(rospy.Duration(5))
         if not wait:
-            client.shutdown
-            rospy.logError("Time out achieving goal")
-        
-        result = client.get_result()
-        return client.get_result()
+            client.cancel_goal()
+            rospy.logwarn("Time out achieving goal")
+            return False
+        else:
+            return True
         
 
 
@@ -270,8 +271,17 @@ class StatusConverter(object):
             self.stopDockingExecutive()
             self.stop_flag = False
         if self.light_pursuit_command_flag == True:
-            
             self.lightPursuitExecutive()
+    
+    # TODO: We need to make a cycle for checking if light strength is enough/ Or we've reached the edge of wall.
+    # TODO: In this cycle, we need to consider two features, the First is "power supply ability", and the Second is "the available running space"
+    # TODO: The best situation is, robot can reached to the desired place, where there is enough light strength;
+    # TODO: The not-that-much-best situation is, robot meets the wall edge before reached to the desired place(require path planing checking ability)
+    # TODO: This function should be able to judge what kind of charging method should be apply, light or wireless charge?
+    
+    #--------------------------Under Construction-------------------------------------------------------
+
+    #--------------------------The End of Construction Area---------------------------------------------
 
 
 def statusConverterMain():
