@@ -1,4 +1,4 @@
-prefix=/home/robot/Documents/arduino_ws/install
+prefix=/home/lostm/文档/arduino_ws/install
 
 Name: ros_arduino_firmware
 Description: Description of ros_arduino_firmware

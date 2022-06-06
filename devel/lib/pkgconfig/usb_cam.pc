@@ -1,8 +1,8 @@
-prefix=/home/robot/Documents/arduino_ws/devel
+prefix=/home/lostm/文档/arduino_ws/devel
 
 Name: usb_cam
 Description: Description of usb_cam
 Version: 0.3.6
-Cflags: -I/home/robot/Documents/arduino_ws/src/usb_cam/include
+Cflags: -I/home/lostm/文档/arduino_ws/src/usb_cam/include
 Libs: -L${prefix}/lib -lusb_cam
 Requires: 

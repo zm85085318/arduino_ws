@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/serial_imu/msg/Imu_0x62_msg.lisp"
-  "/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/serial_imu/msg/Imu_0x91_msg.lisp"
-  "/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/serial_imu/msg/Imu_data_package.lisp"
+  "/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/serial_imu/msg/Imu_0x62_msg.lisp"
+  "/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/serial_imu/msg/Imu_0x91_msg.lisp"
+  "/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/serial_imu/msg/Imu_data_package.lisp"
   "CMakeFiles/serial_imu_generate_messages_lisp"
 )
 

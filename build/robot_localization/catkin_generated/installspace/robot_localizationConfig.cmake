@@ -67,14 +67,14 @@ set(robot_localization_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(robot_localization_SOURCE_PREFIX /home/robot/Documents/arduino_ws/src/robot_localization)
-  set(robot_localization_DEVEL_PREFIX /home/robot/Documents/arduino_ws/devel)
+  set(robot_localization_SOURCE_PREFIX /home/lostm/文档/arduino_ws/src/robot_localization)
+  set(robot_localization_DEVEL_PREFIX /home/lostm/文档/arduino_ws/devel)
   set(robot_localization_INSTALL_PREFIX "")
   set(robot_localization_PREFIX ${robot_localization_DEVEL_PREFIX})
 else()
   set(robot_localization_SOURCE_PREFIX "")
   set(robot_localization_DEVEL_PREFIX "")
-  set(robot_localization_INSTALL_PREFIX /home/robot/Documents/arduino_ws/install)
+  set(robot_localization_INSTALL_PREFIX /home/lostm/文档/arduino_ws/install)
   set(robot_localization_PREFIX ${robot_localization_INSTALL_PREFIX})
 endif()
 
@@ -116,7 +116,7 @@ if(NOT "include;/usr/include/eigen3;/usr/include " STREQUAL " ")
   endforeach()
 endif()
 
-set(libraries "ekf;ekf_localization_nodelet;filter_base;filter_utilities;navsat_transform;navsat_transform_nodelet;ros_filter;ros_filter_utilities;robot_localization_estimator;ros_robot_localization_listener;ukf;ukf_localization_nodelet;/usr/lib/aarch64-linux-gnu/libGeographic.so;yaml-cpp")
+set(libraries "ekf;ekf_localization_nodelet;filter_base;filter_utilities;navsat_transform;navsat_transform_nodelet;ros_filter;ros_filter_utilities;robot_localization_estimator;ros_robot_localization_listener;ukf;ukf_localization_nodelet;/usr/lib/x86_64-linux-gnu/libGeographic.so;yaml-cpp")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/robot/Documents/arduino_ws/install/lib;/home/robot/Documents/arduino_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/lostm/文档/arduino_ws/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

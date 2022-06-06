@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/robot_localization/navsat_conversions-test"
-  "/home/robot/Documents/arduino_ws/devel/lib/robot_localization/navsat_conversions-test.pdb"
+  "/home/lostm/文档/arduino_ws/devel/lib/robot_localization/navsat_conversions-test"
+  "/home/lostm/文档/arduino_ws/devel/lib/robot_localization/navsat_conversions-test.pdb"
   "CMakeFiles/navsat_conversions-test.dir/test/test_navsat_conversions.cpp.o"
 )
 

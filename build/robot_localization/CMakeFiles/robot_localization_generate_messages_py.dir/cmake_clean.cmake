@@ -1,12 +1,12 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/robot_localization/srv/_FromLL.py"
-  "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/robot_localization/srv/_GetState.py"
-  "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/robot_localization/srv/_SetDatum.py"
-  "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/robot_localization/srv/_SetPose.py"
-  "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/robot_localization/srv/_SetUTMZone.py"
-  "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/robot_localization/srv/_ToLL.py"
-  "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/robot_localization/srv/_ToggleFilterProcessing.py"
-  "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/robot_localization/srv/__init__.py"
+  "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/robot_localization/srv/_FromLL.py"
+  "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/robot_localization/srv/_GetState.py"
+  "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/robot_localization/srv/_SetDatum.py"
+  "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/robot_localization/srv/_SetPose.py"
+  "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/robot_localization/srv/_SetUTMZone.py"
+  "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/robot_localization/srv/_ToLL.py"
+  "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/robot_localization/srv/_ToggleFilterProcessing.py"
+  "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/robot_localization/srv/__init__.py"
   "CMakeFiles/robot_localization_generate_messages_py"
 )
 

@@ -7,4 +7,10 @@
 # new environment variables
 
 # modified environment variables
-export PATH='/opt/ros/noetic/bin:/home/robot/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/remote-cli:/home/robot/.local/bin:/home/robot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+export CMAKE_PREFIX_PATH="/home/lostm/文档/arduino_ws/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/lostm/文档/arduino_ws/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/lostm/文档/arduino_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PWD='/home/lostm/文档/arduino_ws/build'
+export PYTHONPATH="/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES='/home/lostm/文档/arduino_ws/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/lostm/文档/arduino_ws/src:$ROS_PACKAGE_PATH"

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/rr_auto_dock/create_marker"
-  "/home/robot/Documents/arduino_ws/devel/lib/rr_auto_dock/create_marker.pdb"
+  "/home/lostm/文档/arduino_ws/devel/lib/rr_auto_dock/create_marker"
+  "/home/lostm/文档/arduino_ws/devel/lib/rr_auto_dock/create_marker.pdb"
   "CMakeFiles/create_marker.dir/src/create_marker.cpp.o"
 )
 

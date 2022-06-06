@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Command.js"
-  "/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Docking.js"
+  "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Command.js"
+  "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Docking.js"
   "CMakeFiles/dockingrobot_generate_messages_nodejs"
 )
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/libukf_localization_nodelet.pdb"
-  "/home/robot/Documents/arduino_ws/devel/lib/libukf_localization_nodelet.so"
+  "/home/lostm/文档/arduino_ws/devel/lib/libukf_localization_nodelet.pdb"
+  "/home/lostm/文档/arduino_ws/devel/lib/libukf_localization_nodelet.so"
   "CMakeFiles/ukf_localization_nodelet.dir/src/ukf_localization_nodelet.cpp.o"
 )
 

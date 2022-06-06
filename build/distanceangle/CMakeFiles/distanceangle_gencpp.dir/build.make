@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robot/Documents/arduino_ws/src
+CMAKE_SOURCE_DIR = /home/lostm/文档/arduino_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robot/Documents/arduino_ws/build
+CMAKE_BINARY_DIR = /home/lostm/文档/arduino_ws/build
 
 # Utility rule file for distanceangle_gencpp.
 
@@ -63,10 +63,10 @@ distanceangle/CMakeFiles/distanceangle_gencpp.dir/build: distanceangle_gencpp
 .PHONY : distanceangle/CMakeFiles/distanceangle_gencpp.dir/build
 
 distanceangle/CMakeFiles/distanceangle_gencpp.dir/clean:
-	cd /home/robot/Documents/arduino_ws/build/distanceangle && $(CMAKE_COMMAND) -P CMakeFiles/distanceangle_gencpp.dir/cmake_clean.cmake
+	cd /home/lostm/文档/arduino_ws/build/distanceangle && $(CMAKE_COMMAND) -P CMakeFiles/distanceangle_gencpp.dir/cmake_clean.cmake
 .PHONY : distanceangle/CMakeFiles/distanceangle_gencpp.dir/clean
 
 distanceangle/CMakeFiles/distanceangle_gencpp.dir/depend:
-	cd /home/robot/Documents/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robot/Documents/arduino_ws/src /home/robot/Documents/arduino_ws/src/distanceangle /home/robot/Documents/arduino_ws/build /home/robot/Documents/arduino_ws/build/distanceangle /home/robot/Documents/arduino_ws/build/distanceangle/CMakeFiles/distanceangle_gencpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lostm/文档/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lostm/文档/arduino_ws/src /home/lostm/文档/arduino_ws/src/distanceangle /home/lostm/文档/arduino_ws/build /home/lostm/文档/arduino_ws/build/distanceangle /home/lostm/文档/arduino_ws/build/distanceangle/CMakeFiles/distanceangle_gencpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : distanceangle/CMakeFiles/distanceangle_gencpp.dir/depend
 

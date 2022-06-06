@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robot/Documents/arduino_ws/src
+CMAKE_SOURCE_DIR = /home/lostm/文档/arduino_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robot/Documents/arduino_ws/build
+CMAKE_BINARY_DIR = /home/lostm/文档/arduino_ws/build
 
 # Utility rule file for _serial_imu_generate_messages_check_deps_Imu_0x91_msg.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/robot/Documents/arduino_ws/build
 include serial_imu/CMakeFiles/_serial_imu_generate_messages_check_deps_Imu_0x91_msg.dir/progress.make
 
 serial_imu/CMakeFiles/_serial_imu_generate_messages_check_deps_Imu_0x91_msg:
-	cd /home/robot/Documents/arduino_ws/build/serial_imu && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py serial_imu /home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x91_msg.msg serial_imu/Imu_data_package:std_msgs/Header
+	cd /home/lostm/文档/arduino_ws/build/serial_imu && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py serial_imu /home/lostm/文档/arduino_ws/src/serial_imu/msg/Imu_0x91_msg.msg std_msgs/Header:serial_imu/Imu_data_package
 
 _serial_imu_generate_messages_check_deps_Imu_0x91_msg: serial_imu/CMakeFiles/_serial_imu_generate_messages_check_deps_Imu_0x91_msg
 _serial_imu_generate_messages_check_deps_Imu_0x91_msg: serial_imu/CMakeFiles/_serial_imu_generate_messages_check_deps_Imu_0x91_msg.dir/build.make
@@ -67,10 +67,10 @@ serial_imu/CMakeFiles/_serial_imu_generate_messages_check_deps_Imu_0x91_msg.dir/
 .PHONY : serial_imu/CMakeFiles/_serial_imu_generate_messages_check_deps_Imu_0x91_msg.dir/build
 
 serial_imu/CMakeFiles/_serial_imu_generate_messages_check_deps_Imu_0x91_msg.dir/clean:
-	cd /home/robot/Documents/arduino_ws/build/serial_imu && $(CMAKE_COMMAND) -P CMakeFiles/_serial_imu_generate_messages_check_deps_Imu_0x91_msg.dir/cmake_clean.cmake
+	cd /home/lostm/文档/arduino_ws/build/serial_imu && $(CMAKE_COMMAND) -P CMakeFiles/_serial_imu_generate_messages_check_deps_Imu_0x91_msg.dir/cmake_clean.cmake
 .PHONY : serial_imu/CMakeFiles/_serial_imu_generate_messages_check_deps_Imu_0x91_msg.dir/clean
 
 serial_imu/CMakeFiles/_serial_imu_generate_messages_check_deps_Imu_0x91_msg.dir/depend:
-	cd /home/robot/Documents/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robot/Documents/arduino_ws/src /home/robot/Documents/arduino_ws/src/serial_imu /home/robot/Documents/arduino_ws/build /home/robot/Documents/arduino_ws/build/serial_imu /home/robot/Documents/arduino_ws/build/serial_imu/CMakeFiles/_serial_imu_generate_messages_check_deps_Imu_0x91_msg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lostm/文档/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lostm/文档/arduino_ws/src /home/lostm/文档/arduino_ws/src/serial_imu /home/lostm/文档/arduino_ws/build /home/lostm/文档/arduino_ws/build/serial_imu /home/lostm/文档/arduino_ws/build/serial_imu/CMakeFiles/_serial_imu_generate_messages_check_deps_Imu_0x91_msg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : serial_imu/CMakeFiles/_serial_imu_generate_messages_check_deps_Imu_0x91_msg.dir/depend
 

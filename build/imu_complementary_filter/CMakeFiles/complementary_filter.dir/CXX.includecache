@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/robot/Documents/arduino_ws/src/imu_complementary_filter/include/imu_complementary_filter/complementary_filter.h
+/home/lostm/文档/arduino_ws/src/imu_complementary_filter/include/imu_complementary_filter/complementary_filter.h
 
-/home/robot/Documents/arduino_ws/src/imu_complementary_filter/include/imu_complementary_filter/complementary_filter_ros.h
+/home/lostm/文档/arduino_ws/src/imu_complementary_filter/include/imu_complementary_filter/complementary_filter_ros.h
 sensor_msgs/MagneticField.h
 -
 geometry_msgs/Vector3Stamped.h
@@ -28,11 +28,21 @@ tf/transform_datatypes.h
 tf/transform_broadcaster.h
 -
 imu_complementary_filter/complementary_filter.h
-/home/robot/Documents/arduino_ws/src/imu_complementary_filter/include/imu_complementary_filter/imu_complementary_filter/complementary_filter.h
+/home/lostm/文档/arduino_ws/src/imu_complementary_filter/include/imu_complementary_filter/imu_complementary_filter/complementary_filter.h
 
-/home/robot/Documents/arduino_ws/src/imu_complementary_filter/src/complementary_filter_ros.cpp
+/home/lostm/文档/arduino_ws/src/imu_complementary_filter/src/complementary_filter.cpp
+imu_complementary_filter/complementary_filter.h
+/home/lostm/文档/arduino_ws/src/imu_complementary_filter/src/imu_complementary_filter/complementary_filter.h
+cstdio
+-
+cmath
+-
+iostream
+-
+
+/home/lostm/文档/arduino_ws/src/imu_complementary_filter/src/complementary_filter_ros.cpp
 imu_complementary_filter/complementary_filter_ros.h
-/home/robot/Documents/arduino_ws/src/imu_complementary_filter/src/imu_complementary_filter/complementary_filter_ros.h
+/home/lostm/文档/arduino_ws/src/imu_complementary_filter/src/imu_complementary_filter/complementary_filter_ros.h
 std_msgs/Float64.h
 -
 std_msgs/Bool.h

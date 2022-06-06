@@ -1,4 +1,4 @@
-prefix=/home/robot/Documents/arduino_ws/devel
+prefix=/home/lostm/文档/arduino_ws/devel
 
 Name: mycar_start
 Description: Description of mycar_start

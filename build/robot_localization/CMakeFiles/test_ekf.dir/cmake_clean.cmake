@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/robot_localization/test_ekf"
-  "/home/robot/Documents/arduino_ws/devel/lib/robot_localization/test_ekf.pdb"
+  "/home/lostm/文档/arduino_ws/devel/lib/robot_localization/test_ekf"
+  "/home/lostm/文档/arduino_ws/devel/lib/robot_localization/test_ekf.pdb"
   "CMakeFiles/test_ekf.dir/test/test_ekf.cpp.o"
 )
 

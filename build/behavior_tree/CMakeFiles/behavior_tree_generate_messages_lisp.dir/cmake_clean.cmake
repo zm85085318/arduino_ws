@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/behavior_tree/msg/Analog.lisp"
+  "/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/behavior_tree/msg/Analog.lisp"
   "CMakeFiles/behavior_tree_generate_messages_lisp"
 )
 

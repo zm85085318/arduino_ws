@@ -1,8 +1,0 @@
-prefix=/home/robot/Documents/arduino_ws/devel
-
-Name: jetson_csi_cam
-Description: Description of jetson_csi_cam
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

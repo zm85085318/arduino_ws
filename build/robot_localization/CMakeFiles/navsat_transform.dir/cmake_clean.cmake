@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/libnavsat_transform.pdb"
-  "/home/robot/Documents/arduino_ws/devel/lib/libnavsat_transform.so"
+  "/home/lostm/文档/arduino_ws/devel/lib/libnavsat_transform.pdb"
+  "/home/lostm/文档/arduino_ws/devel/lib/libnavsat_transform.so"
   "CMakeFiles/navsat_transform.dir/src/navsat_transform.cpp.o"
 )
 

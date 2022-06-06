@@ -1,8 +1,8 @@
-# Install script for directory: /home/robot/Documents/arduino_ws/src/dockingrobot
+# Install script for directory: /home/lostm/文档/arduino_ws/src/dockingrobot
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robot/Documents/arduino_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/lostm/文档/arduino_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -39,55 +39,55 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dockingrobot/msg" TYPE FILE FILES
-    "/home/robot/Documents/arduino_ws/src/dockingrobot/msg/Docking.msg"
-    "/home/robot/Documents/arduino_ws/src/dockingrobot/msg/Command.msg"
+    "/home/lostm/文档/arduino_ws/src/dockingrobot/msg/Docking.msg"
+    "/home/lostm/文档/arduino_ws/src/dockingrobot/msg/Command.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dockingrobot/cmake" TYPE FILE FILES "/home/robot/Documents/arduino_ws/build/dockingrobot/catkin_generated/installspace/dockingrobot-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dockingrobot/cmake" TYPE FILE FILES "/home/lostm/文档/arduino_ws/build/dockingrobot/catkin_generated/installspace/dockingrobot-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/robot/Documents/arduino_ws/devel/include/dockingrobot")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/lostm/文档/arduino_ws/devel/include/dockingrobot")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/robot/Documents/arduino_ws/devel/share/roseus/ros/dockingrobot")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/lostm/文档/arduino_ws/devel/share/roseus/ros/dockingrobot")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/dockingrobot")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/dockingrobot")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/dockingrobot")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/dockingrobot")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/dockingrobot")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/dockingrobot")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/dockingrobot")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/dockingrobot")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robot/Documents/arduino_ws/build/dockingrobot/catkin_generated/installspace/dockingrobot.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/lostm/文档/arduino_ws/build/dockingrobot/catkin_generated/installspace/dockingrobot.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dockingrobot/cmake" TYPE FILE FILES "/home/robot/Documents/arduino_ws/build/dockingrobot/catkin_generated/installspace/dockingrobot-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dockingrobot/cmake" TYPE FILE FILES "/home/lostm/文档/arduino_ws/build/dockingrobot/catkin_generated/installspace/dockingrobot-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dockingrobot/cmake" TYPE FILE FILES
-    "/home/robot/Documents/arduino_ws/build/dockingrobot/catkin_generated/installspace/dockingrobotConfig.cmake"
-    "/home/robot/Documents/arduino_ws/build/dockingrobot/catkin_generated/installspace/dockingrobotConfig-version.cmake"
+    "/home/lostm/文档/arduino_ws/build/dockingrobot/catkin_generated/installspace/dockingrobotConfig.cmake"
+    "/home/lostm/文档/arduino_ws/build/dockingrobot/catkin_generated/installspace/dockingrobotConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dockingrobot" TYPE FILE FILES "/home/robot/Documents/arduino_ws/src/dockingrobot/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dockingrobot" TYPE FILE FILES "/home/lostm/文档/arduino_ws/src/dockingrobot/package.xml")
 endif()
 

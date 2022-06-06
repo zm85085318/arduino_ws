@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/dockingrobot/msg/_Command.py"
-  "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/dockingrobot/msg/_Docking.py"
-  "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/dockingrobot/msg/__init__.py"
+  "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/dockingrobot/msg/_Command.py"
+  "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/dockingrobot/msg/_Docking.py"
+  "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/dockingrobot/msg/__init__.py"
   "CMakeFiles/dockingrobot_generate_messages_py"
 )
 

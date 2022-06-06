@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/include/dockingrobot/Command.h"
-  "/home/robot/Documents/arduino_ws/devel/include/dockingrobot/Docking.h"
+  "/home/lostm/文档/arduino_ws/devel/include/dockingrobot/Command.h"
+  "/home/lostm/文档/arduino_ws/devel/include/dockingrobot/Docking.h"
   "CMakeFiles/dockingrobot_generate_messages_cpp"
 )
 

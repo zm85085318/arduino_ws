@@ -2,7 +2,7 @@
 
 message(STATUS "distanceangle: 1 messages, 0 services")
 
-set(MSG_I_FLAGS "-Idistanceangle:/home/robot/Documents/arduino_ws/src/distanceangle/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Idistanceangle:/home/lostm/文档/arduino_ws/src/distanceangle/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,9 +17,9 @@ add_custom_target(distanceangle_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/robot/Documents/arduino_ws/src/distanceangle/msg/DistanceAngle.msg" NAME_WE)
+get_filename_component(_filename "/home/lostm/文档/arduino_ws/src/distanceangle/msg/DistanceAngle.msg" NAME_WE)
 add_custom_target(_distanceangle_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "distanceangle" "/home/robot/Documents/arduino_ws/src/distanceangle/msg/DistanceAngle.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "distanceangle" "/home/lostm/文档/arduino_ws/src/distanceangle/msg/DistanceAngle.msg" ""
 )
 
 #
@@ -29,7 +29,7 @@ add_custom_target(_distanceangle_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(distanceangle
-  "/home/robot/Documents/arduino_ws/src/distanceangle/msg/DistanceAngle.msg"
+  "/home/lostm/文档/arduino_ws/src/distanceangle/msg/DistanceAngle.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/distanceangle
@@ -49,7 +49,7 @@ add_custom_target(distanceangle_generate_messages_cpp
 add_dependencies(distanceangle_generate_messages distanceangle_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/robot/Documents/arduino_ws/src/distanceangle/msg/DistanceAngle.msg" NAME_WE)
+get_filename_component(_filename "/home/lostm/文档/arduino_ws/src/distanceangle/msg/DistanceAngle.msg" NAME_WE)
 add_dependencies(distanceangle_generate_messages_cpp _distanceangle_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -62,7 +62,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS distanceangle_generate_messages_cpp
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(distanceangle
-  "/home/robot/Documents/arduino_ws/src/distanceangle/msg/DistanceAngle.msg"
+  "/home/lostm/文档/arduino_ws/src/distanceangle/msg/DistanceAngle.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/distanceangle
@@ -82,7 +82,7 @@ add_custom_target(distanceangle_generate_messages_eus
 add_dependencies(distanceangle_generate_messages distanceangle_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/robot/Documents/arduino_ws/src/distanceangle/msg/DistanceAngle.msg" NAME_WE)
+get_filename_component(_filename "/home/lostm/文档/arduino_ws/src/distanceangle/msg/DistanceAngle.msg" NAME_WE)
 add_dependencies(distanceangle_generate_messages_eus _distanceangle_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -95,7 +95,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS distanceangle_generate_messages_eus
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(distanceangle
-  "/home/robot/Documents/arduino_ws/src/distanceangle/msg/DistanceAngle.msg"
+  "/home/lostm/文档/arduino_ws/src/distanceangle/msg/DistanceAngle.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/distanceangle
@@ -115,7 +115,7 @@ add_custom_target(distanceangle_generate_messages_lisp
 add_dependencies(distanceangle_generate_messages distanceangle_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/robot/Documents/arduino_ws/src/distanceangle/msg/DistanceAngle.msg" NAME_WE)
+get_filename_component(_filename "/home/lostm/文档/arduino_ws/src/distanceangle/msg/DistanceAngle.msg" NAME_WE)
 add_dependencies(distanceangle_generate_messages_lisp _distanceangle_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -128,7 +128,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS distanceangle_generate_messages_lis
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(distanceangle
-  "/home/robot/Documents/arduino_ws/src/distanceangle/msg/DistanceAngle.msg"
+  "/home/lostm/文档/arduino_ws/src/distanceangle/msg/DistanceAngle.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/distanceangle
@@ -148,7 +148,7 @@ add_custom_target(distanceangle_generate_messages_nodejs
 add_dependencies(distanceangle_generate_messages distanceangle_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/robot/Documents/arduino_ws/src/distanceangle/msg/DistanceAngle.msg" NAME_WE)
+get_filename_component(_filename "/home/lostm/文档/arduino_ws/src/distanceangle/msg/DistanceAngle.msg" NAME_WE)
 add_dependencies(distanceangle_generate_messages_nodejs _distanceangle_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -161,7 +161,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS distanceangle_generate_messages_nod
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(distanceangle
-  "/home/robot/Documents/arduino_ws/src/distanceangle/msg/DistanceAngle.msg"
+  "/home/lostm/文档/arduino_ws/src/distanceangle/msg/DistanceAngle.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/distanceangle
@@ -181,7 +181,7 @@ add_custom_target(distanceangle_generate_messages_py
 add_dependencies(distanceangle_generate_messages distanceangle_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/robot/Documents/arduino_ws/src/distanceangle/msg/DistanceAngle.msg" NAME_WE)
+get_filename_component(_filename "/home/lostm/文档/arduino_ws/src/distanceangle/msg/DistanceAngle.msg" NAME_WE)
 add_dependencies(distanceangle_generate_messages_py _distanceangle_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

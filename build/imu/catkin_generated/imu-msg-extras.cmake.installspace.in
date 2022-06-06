@@ -1,2 +1,0 @@
-set(imu_MESSAGE_FILES "msg/Imu_0x91_msg.msg;msg/Imu_0x62_msg.msg;msg/Imu_data_package.msg")
-set(imu_SERVICE_FILES "")

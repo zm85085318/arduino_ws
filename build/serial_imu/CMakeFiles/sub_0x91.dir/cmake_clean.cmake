@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/serial_imu/sub_0x91"
-  "/home/robot/Documents/arduino_ws/devel/lib/serial_imu/sub_0x91.pdb"
+  "/home/lostm/文档/arduino_ws/devel/lib/serial_imu/sub_0x91"
+  "/home/lostm/文档/arduino_ws/devel/lib/serial_imu/sub_0x91.pdb"
   "CMakeFiles/sub_0x91.dir/src/sub_0x91.cpp.o"
 )
 

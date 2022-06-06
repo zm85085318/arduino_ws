@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/behavior_tree/msg/Analog.js"
+  "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/behavior_tree/msg/Analog.js"
   "CMakeFiles/behavior_tree_generate_messages_nodejs"
 )
 

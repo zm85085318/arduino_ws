@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/libcomplementary_filter.pdb"
-  "/home/robot/Documents/arduino_ws/devel/lib/libcomplementary_filter.so"
+  "/home/lostm/文档/arduino_ws/devel/lib/libcomplementary_filter.pdb"
+  "/home/lostm/文档/arduino_ws/devel/lib/libcomplementary_filter.so"
   "CMakeFiles/complementary_filter.dir/src/complementary_filter.cpp.o"
   "CMakeFiles/complementary_filter.dir/src/complementary_filter_ros.cpp.o"
 )

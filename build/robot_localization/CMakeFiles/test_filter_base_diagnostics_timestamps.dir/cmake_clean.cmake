@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/robot_localization/test_filter_base_diagnostics_timestamps"
-  "/home/robot/Documents/arduino_ws/devel/lib/robot_localization/test_filter_base_diagnostics_timestamps.pdb"
+  "/home/lostm/文档/arduino_ws/devel/lib/robot_localization/test_filter_base_diagnostics_timestamps"
+  "/home/lostm/文档/arduino_ws/devel/lib/robot_localization/test_filter_base_diagnostics_timestamps.pdb"
   "CMakeFiles/test_filter_base_diagnostics_timestamps.dir/test/test_filter_base_diagnostics_timestamps.cpp.o"
 )
 

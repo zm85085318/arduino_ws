@@ -43,33 +43,33 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robot/Documents/arduino_ws/src
+CMAKE_SOURCE_DIR = /home/lostm/文档/arduino_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robot/Documents/arduino_ws/build
+CMAKE_BINARY_DIR = /home/lostm/文档/arduino_ws/build
 
 # Utility rule file for dockingrobot_generate_messages_nodejs.
 
 # Include the progress variables for this target.
 include dockingrobot/CMakeFiles/dockingrobot_generate_messages_nodejs.dir/progress.make
 
-dockingrobot/CMakeFiles/dockingrobot_generate_messages_nodejs: /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Docking.js
-dockingrobot/CMakeFiles/dockingrobot_generate_messages_nodejs: /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Command.js
+dockingrobot/CMakeFiles/dockingrobot_generate_messages_nodejs: /home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Docking.js
+dockingrobot/CMakeFiles/dockingrobot_generate_messages_nodejs: /home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Command.js
 
 
-/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Docking.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Docking.js: /home/robot/Documents/arduino_ws/src/dockingrobot/msg/Docking.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from dockingrobot/Docking.msg"
-	cd /home/robot/Documents/arduino_ws/build/dockingrobot && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/robot/Documents/arduino_ws/src/dockingrobot/msg/Docking.msg -Idockingrobot:/home/robot/Documents/arduino_ws/src/dockingrobot/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dockingrobot -o /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg
+/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Docking.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Docking.js: /home/lostm/文档/arduino_ws/src/dockingrobot/msg/Docking.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from dockingrobot/Docking.msg"
+	cd /home/lostm/文档/arduino_ws/build/dockingrobot && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/lostm/文档/arduino_ws/src/dockingrobot/msg/Docking.msg -Idockingrobot:/home/lostm/文档/arduino_ws/src/dockingrobot/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dockingrobot -o /home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg
 
-/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Command.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Command.js: /home/robot/Documents/arduino_ws/src/dockingrobot/msg/Command.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from dockingrobot/Command.msg"
-	cd /home/robot/Documents/arduino_ws/build/dockingrobot && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/robot/Documents/arduino_ws/src/dockingrobot/msg/Command.msg -Idockingrobot:/home/robot/Documents/arduino_ws/src/dockingrobot/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dockingrobot -o /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg
+/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Command.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Command.js: /home/lostm/文档/arduino_ws/src/dockingrobot/msg/Command.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from dockingrobot/Command.msg"
+	cd /home/lostm/文档/arduino_ws/build/dockingrobot && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/lostm/文档/arduino_ws/src/dockingrobot/msg/Command.msg -Idockingrobot:/home/lostm/文档/arduino_ws/src/dockingrobot/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dockingrobot -o /home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg
 
 dockingrobot_generate_messages_nodejs: dockingrobot/CMakeFiles/dockingrobot_generate_messages_nodejs
-dockingrobot_generate_messages_nodejs: /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Docking.js
-dockingrobot_generate_messages_nodejs: /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Command.js
+dockingrobot_generate_messages_nodejs: /home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Docking.js
+dockingrobot_generate_messages_nodejs: /home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Command.js
 dockingrobot_generate_messages_nodejs: dockingrobot/CMakeFiles/dockingrobot_generate_messages_nodejs.dir/build.make
 
 .PHONY : dockingrobot_generate_messages_nodejs
@@ -80,10 +80,10 @@ dockingrobot/CMakeFiles/dockingrobot_generate_messages_nodejs.dir/build: docking
 .PHONY : dockingrobot/CMakeFiles/dockingrobot_generate_messages_nodejs.dir/build
 
 dockingrobot/CMakeFiles/dockingrobot_generate_messages_nodejs.dir/clean:
-	cd /home/robot/Documents/arduino_ws/build/dockingrobot && $(CMAKE_COMMAND) -P CMakeFiles/dockingrobot_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/lostm/文档/arduino_ws/build/dockingrobot && $(CMAKE_COMMAND) -P CMakeFiles/dockingrobot_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : dockingrobot/CMakeFiles/dockingrobot_generate_messages_nodejs.dir/clean
 
 dockingrobot/CMakeFiles/dockingrobot_generate_messages_nodejs.dir/depend:
-	cd /home/robot/Documents/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robot/Documents/arduino_ws/src /home/robot/Documents/arduino_ws/src/dockingrobot /home/robot/Documents/arduino_ws/build /home/robot/Documents/arduino_ws/build/dockingrobot /home/robot/Documents/arduino_ws/build/dockingrobot/CMakeFiles/dockingrobot_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lostm/文档/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lostm/文档/arduino_ws/src /home/lostm/文档/arduino_ws/src/dockingrobot /home/lostm/文档/arduino_ws/build /home/lostm/文档/arduino_ws/build/dockingrobot /home/lostm/文档/arduino_ws/build/dockingrobot/CMakeFiles/dockingrobot_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : dockingrobot/CMakeFiles/dockingrobot_generate_messages_nodejs.dir/depend
 

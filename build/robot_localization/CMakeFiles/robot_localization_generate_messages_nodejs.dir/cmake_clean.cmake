@@ -1,11 +1,11 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/robot_localization/srv/FromLL.js"
-  "/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/robot_localization/srv/GetState.js"
-  "/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/robot_localization/srv/SetDatum.js"
-  "/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/robot_localization/srv/SetPose.js"
-  "/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/robot_localization/srv/SetUTMZone.js"
-  "/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/robot_localization/srv/ToLL.js"
-  "/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/robot_localization/srv/ToggleFilterProcessing.js"
+  "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/robot_localization/srv/FromLL.js"
+  "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/robot_localization/srv/GetState.js"
+  "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/robot_localization/srv/SetDatum.js"
+  "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/robot_localization/srv/SetPose.js"
+  "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/robot_localization/srv/SetUTMZone.js"
+  "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/robot_localization/srv/ToLL.js"
+  "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/robot_localization/srv/ToggleFilterProcessing.js"
   "CMakeFiles/robot_localization_generate_messages_nodejs"
 )
 

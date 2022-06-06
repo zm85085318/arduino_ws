@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/robot/Documents/arduino_ws/devel/include/distanceangle/DistanceAngle.h
+/home/lostm/文档/arduino_ws/devel/include/distanceangle/DistanceAngle.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/robot/Documents/arduino_ws/devel/include/dockingrobot/Docking.h
+/home/lostm/文档/arduino_ws/devel/include/dockingrobot/Docking.h
 string
 -
 vector
@@ -38,13 +38,13 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/robot/Documents/arduino_ws/src/dockingrobot/src/docking.cpp
+/home/lostm/文档/arduino_ws/src/dockingrobot/src/docking.cpp
 ros/ros.h
-/home/robot/Documents/arduino_ws/src/dockingrobot/src/ros/ros.h
+/home/lostm/文档/arduino_ws/src/dockingrobot/src/ros/ros.h
 dockingrobot/Docking.h
-/home/robot/Documents/arduino_ws/src/dockingrobot/src/dockingrobot/Docking.h
+/home/lostm/文档/arduino_ws/src/dockingrobot/src/dockingrobot/Docking.h
 distanceangle/DistanceAngle.h
-/home/robot/Documents/arduino_ws/src/dockingrobot/src/distanceangle/DistanceAngle.h
+/home/lostm/文档/arduino_ws/src/dockingrobot/src/distanceangle/DistanceAngle.h
 geometry_msgs/Twist.h
 -
 math.h

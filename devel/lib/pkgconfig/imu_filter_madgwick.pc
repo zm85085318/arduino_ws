@@ -1,8 +1,0 @@
-prefix=/home/robot/Documents/arduino_ws/devel
-
-Name: imu_filter_madgwick
-Description: Description of imu_filter_madgwick
-Version: 1.1.8
-Cflags: -I/home/robot/Documents/arduino_ws/devel/include -I/usr/include
-Libs: -L${prefix}/lib -limu_filter -limu_filter_nodelet /usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0 /usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0
-Requires: roscpp sensor_msgs geometry_msgs tf2_ros tf2_geometry_msgs nodelet pluginlib message_filters dynamic_reconfigure

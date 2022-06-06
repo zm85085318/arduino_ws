@@ -3,7 +3,7 @@
 # generated from catkin/cmake/template/script.py.in
 # creates a relay to a python script source file, acting as that file.
 # The purpose is that of a symlink
-python_script = '/home/robot/Documents/arduino_ws/src/rr_auto_dock/scripts/create_markers.py'
+python_script = '/home/lostm/文档/arduino_ws/src/rr_auto_dock/scripts/create_markers.py'
 with open(python_script, 'r') as fh:
     context = {
         '__builtins__': __builtins__,

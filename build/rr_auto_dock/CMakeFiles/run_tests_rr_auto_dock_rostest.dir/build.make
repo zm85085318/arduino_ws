@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robot/Documents/arduino_ws/src
+CMAKE_SOURCE_DIR = /home/lostm/文档/arduino_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robot/Documents/arduino_ws/build
+CMAKE_BINARY_DIR = /home/lostm/文档/arduino_ws/build
 
 # Utility rule file for run_tests_rr_auto_dock_rostest.
 
@@ -63,10 +63,10 @@ rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/build: run_tests_rr_a
 .PHONY : rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/build
 
 rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/clean:
-	cd /home/robot/Documents/arduino_ws/build/rr_auto_dock && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_rr_auto_dock_rostest.dir/cmake_clean.cmake
+	cd /home/lostm/文档/arduino_ws/build/rr_auto_dock && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_rr_auto_dock_rostest.dir/cmake_clean.cmake
 .PHONY : rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/clean
 
 rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/depend:
-	cd /home/robot/Documents/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robot/Documents/arduino_ws/src /home/robot/Documents/arduino_ws/src/rr_auto_dock /home/robot/Documents/arduino_ws/build /home/robot/Documents/arduino_ws/build/rr_auto_dock /home/robot/Documents/arduino_ws/build/rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lostm/文档/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lostm/文档/arduino_ws/src /home/lostm/文档/arduino_ws/src/rr_auto_dock /home/lostm/文档/arduino_ws/build /home/lostm/文档/arduino_ws/build/rr_auto_dock /home/lostm/文档/arduino_ws/build/rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest.dir/depend
 

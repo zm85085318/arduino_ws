@@ -67,14 +67,14 @@ set(robot_localization_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(robot_localization_SOURCE_PREFIX /home/robot/Documents/arduino_ws/src/robot_localization)
-  set(robot_localization_DEVEL_PREFIX /home/robot/Documents/arduino_ws/devel)
+  set(robot_localization_SOURCE_PREFIX /home/lostm/文档/arduino_ws/src/robot_localization)
+  set(robot_localization_DEVEL_PREFIX /home/lostm/文档/arduino_ws/devel)
   set(robot_localization_INSTALL_PREFIX "")
   set(robot_localization_PREFIX ${robot_localization_DEVEL_PREFIX})
 else()
   set(robot_localization_SOURCE_PREFIX "")
   set(robot_localization_DEVEL_PREFIX "")
-  set(robot_localization_INSTALL_PREFIX /home/robot/Documents/arduino_ws/install)
+  set(robot_localization_INSTALL_PREFIX /home/lostm/文档/arduino_ws/install)
   set(robot_localization_PREFIX ${robot_localization_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(robot_localization_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/robot/Documents/arduino_ws/devel/include;/home/robot/Documents/arduino_ws/src/robot_localization/include;/usr/include/eigen3;/usr/include " STREQUAL " ")
+if(NOT "/home/lostm/文档/arduino_ws/devel/include;/home/lostm/文档/arduino_ws/src/robot_localization/include;/usr/include/eigen3;/usr/include " STREQUAL " ")
   set(robot_localization_INCLUDE_DIRS "")
-  set(_include_dirs "/home/robot/Documents/arduino_ws/devel/include;/home/robot/Documents/arduino_ws/src/robot_localization/include;/usr/include/eigen3;/usr/include")
+  set(_include_dirs "/home/lostm/文档/arduino_ws/devel/include;/home/lostm/文档/arduino_ws/src/robot_localization/include;/usr/include/eigen3;/usr/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://ros.org/wiki/robot_localization " STREQUAL " ")
@@ -110,13 +110,13 @@ if(NOT "/home/robot/Documents/arduino_ws/devel/include;/home/robot/Documents/ard
         message(FATAL_ERROR "Project 'robot_localization' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'robot_localization' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/robot/Documents/arduino_ws/src/robot_localization/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'robot_localization' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/lostm/文档/arduino_ws/src/robot_localization/${idir}'.  ${_report}")
     endif()
     _list_append_unique(robot_localization_INCLUDE_DIRS ${include})
   endforeach()
 endif()
 
-set(libraries "ekf;ekf_localization_nodelet;filter_base;filter_utilities;navsat_transform;navsat_transform_nodelet;ros_filter;ros_filter_utilities;robot_localization_estimator;ros_robot_localization_listener;ukf;ukf_localization_nodelet;/usr/lib/aarch64-linux-gnu/libGeographic.so;yaml-cpp")
+set(libraries "ekf;ekf_localization_nodelet;filter_base;filter_utilities;navsat_transform;navsat_transform_nodelet;ros_filter;ros_filter_utilities;robot_localization_estimator;ros_robot_localization_listener;ukf;ukf_localization_nodelet;/usr/lib/x86_64-linux-gnu/libGeographic.so;yaml-cpp")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/robot/Documents/arduino_ws/devel/lib;/home/robot/Documents/arduino_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/lostm/文档/arduino_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

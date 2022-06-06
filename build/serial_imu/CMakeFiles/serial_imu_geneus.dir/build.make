@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robot/Documents/arduino_ws/src
+CMAKE_SOURCE_DIR = /home/lostm/文档/arduino_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robot/Documents/arduino_ws/build
+CMAKE_BINARY_DIR = /home/lostm/文档/arduino_ws/build
 
 # Utility rule file for serial_imu_geneus.
 
@@ -63,10 +63,10 @@ serial_imu/CMakeFiles/serial_imu_geneus.dir/build: serial_imu_geneus
 .PHONY : serial_imu/CMakeFiles/serial_imu_geneus.dir/build
 
 serial_imu/CMakeFiles/serial_imu_geneus.dir/clean:
-	cd /home/robot/Documents/arduino_ws/build/serial_imu && $(CMAKE_COMMAND) -P CMakeFiles/serial_imu_geneus.dir/cmake_clean.cmake
+	cd /home/lostm/文档/arduino_ws/build/serial_imu && $(CMAKE_COMMAND) -P CMakeFiles/serial_imu_geneus.dir/cmake_clean.cmake
 .PHONY : serial_imu/CMakeFiles/serial_imu_geneus.dir/clean
 
 serial_imu/CMakeFiles/serial_imu_geneus.dir/depend:
-	cd /home/robot/Documents/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robot/Documents/arduino_ws/src /home/robot/Documents/arduino_ws/src/serial_imu /home/robot/Documents/arduino_ws/build /home/robot/Documents/arduino_ws/build/serial_imu /home/robot/Documents/arduino_ws/build/serial_imu/CMakeFiles/serial_imu_geneus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lostm/文档/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lostm/文档/arduino_ws/src /home/lostm/文档/arduino_ws/src/serial_imu /home/lostm/文档/arduino_ws/build /home/lostm/文档/arduino_ws/build/serial_imu /home/lostm/文档/arduino_ws/build/serial_imu/CMakeFiles/serial_imu_geneus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : serial_imu/CMakeFiles/serial_imu_geneus.dir/depend
 

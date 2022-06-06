@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robot/Documents/arduino_ws/src
+CMAKE_SOURCE_DIR = /home/lostm/文档/arduino_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robot/Documents/arduino_ws/build
+CMAKE_BINARY_DIR = /home/lostm/文档/arduino_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/robot/Documents/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/robot/Documents/arduino_ws/build/CMakeFiles /home/robot/Documents/arduino_ws/build/nav/CMakeFiles/progress.marks
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/Documents/arduino_ws/build/CMakeFiles 0
+	cd /home/lostm/文档/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lostm/文档/arduino_ws/build/CMakeFiles /home/lostm/文档/arduino_ws/build/nav/CMakeFiles/progress.marks
+	cd /home/lostm/文档/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lostm/文档/arduino_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav/clean
+	cd /home/lostm/文档/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav/preinstall
+	cd /home/lostm/文档/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav/preinstall
+	cd /home/lostm/文档/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/robot/Documents/arduino_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lostm/文档/arduino_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 nav/CMakeFiles/move_base_gencfg.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav/CMakeFiles/move_base_gencfg.dir/rule
+	cd /home/lostm/文档/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav/CMakeFiles/move_base_gencfg.dir/rule
 .PHONY : nav/CMakeFiles/move_base_gencfg.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ move_base_gencfg: nav/CMakeFiles/move_base_gencfg.dir/rule
 
 # fast build rule for target.
 move_base_gencfg/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f nav/CMakeFiles/move_base_gencfg.dir/build.make nav/CMakeFiles/move_base_gencfg.dir/build
+	cd /home/lostm/文档/arduino_ws/build && $(MAKE) -f nav/CMakeFiles/move_base_gencfg.dir/build.make nav/CMakeFiles/move_base_gencfg.dir/build
 .PHONY : move_base_gencfg/fast
 
 # Convenience name for target.
 nav/CMakeFiles/amcl_gencfg.dir/rule:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav/CMakeFiles/amcl_gencfg.dir/rule
+	cd /home/lostm/文档/arduino_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav/CMakeFiles/amcl_gencfg.dir/rule
 .PHONY : nav/CMakeFiles/amcl_gencfg.dir/rule
 
 # Convenience name for target.
@@ -194,7 +194,7 @@ amcl_gencfg: nav/CMakeFiles/amcl_gencfg.dir/rule
 
 # fast build rule for target.
 amcl_gencfg/fast:
-	cd /home/robot/Documents/arduino_ws/build && $(MAKE) -f nav/CMakeFiles/amcl_gencfg.dir/build.make nav/CMakeFiles/amcl_gencfg.dir/build
+	cd /home/lostm/文档/arduino_ws/build && $(MAKE) -f nav/CMakeFiles/amcl_gencfg.dir/build.make nav/CMakeFiles/amcl_gencfg.dir/build
 .PHONY : amcl_gencfg/fast
 
 # Help Target
@@ -223,6 +223,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/robot/Documents/arduino_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lostm/文档/arduino_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

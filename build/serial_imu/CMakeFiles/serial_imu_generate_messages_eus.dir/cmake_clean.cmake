@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/share/roseus/ros/serial_imu/manifest.l"
-  "/home/robot/Documents/arduino_ws/devel/share/roseus/ros/serial_imu/msg/Imu_0x62_msg.l"
-  "/home/robot/Documents/arduino_ws/devel/share/roseus/ros/serial_imu/msg/Imu_0x91_msg.l"
-  "/home/robot/Documents/arduino_ws/devel/share/roseus/ros/serial_imu/msg/Imu_data_package.l"
+  "/home/lostm/文档/arduino_ws/devel/share/roseus/ros/serial_imu/manifest.l"
+  "/home/lostm/文档/arduino_ws/devel/share/roseus/ros/serial_imu/msg/Imu_0x62_msg.l"
+  "/home/lostm/文档/arduino_ws/devel/share/roseus/ros/serial_imu/msg/Imu_0x91_msg.l"
+  "/home/lostm/文档/arduino_ws/devel/share/roseus/ros/serial_imu/msg/Imu_data_package.l"
   "CMakeFiles/serial_imu_generate_messages_eus"
 )
 

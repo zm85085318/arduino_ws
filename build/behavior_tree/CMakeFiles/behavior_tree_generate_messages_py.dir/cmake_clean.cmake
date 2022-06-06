@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/behavior_tree/msg/_Analog.py"
-  "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/behavior_tree/msg/__init__.py"
+  "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/behavior_tree/msg/_Analog.py"
+  "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/behavior_tree/msg/__init__.py"
   "CMakeFiles/behavior_tree_generate_messages_py"
 )
 

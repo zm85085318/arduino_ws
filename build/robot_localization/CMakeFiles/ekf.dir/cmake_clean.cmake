@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/libekf.pdb"
-  "/home/robot/Documents/arduino_ws/devel/lib/libekf.so"
+  "/home/lostm/文档/arduino_ws/devel/lib/libekf.pdb"
+  "/home/lostm/文档/arduino_ws/devel/lib/libekf.so"
   "CMakeFiles/ekf.dir/src/ekf.cpp.o"
 )
 

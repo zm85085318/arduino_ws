@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/serial_imu/msg/_Imu_0x62_msg.py"
-  "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/serial_imu/msg/_Imu_0x91_msg.py"
-  "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/serial_imu/msg/_Imu_data_package.py"
-  "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/serial_imu/msg/__init__.py"
+  "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/serial_imu/msg/_Imu_0x62_msg.py"
+  "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/serial_imu/msg/_Imu_0x91_msg.py"
+  "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/serial_imu/msg/_Imu_data_package.py"
+  "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/serial_imu/msg/__init__.py"
   "CMakeFiles/serial_imu_generate_messages_py"
 )
 

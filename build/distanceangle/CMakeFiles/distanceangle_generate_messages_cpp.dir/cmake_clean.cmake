@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/include/distanceangle/DistanceAngle.h"
+  "/home/lostm/文档/arduino_ws/devel/include/distanceangle/DistanceAngle.h"
   "CMakeFiles/distanceangle_generate_messages_cpp"
 )
 

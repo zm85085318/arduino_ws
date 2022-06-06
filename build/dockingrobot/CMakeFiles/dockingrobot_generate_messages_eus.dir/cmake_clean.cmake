@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/share/roseus/ros/dockingrobot/manifest.l"
-  "/home/robot/Documents/arduino_ws/devel/share/roseus/ros/dockingrobot/msg/Command.l"
-  "/home/robot/Documents/arduino_ws/devel/share/roseus/ros/dockingrobot/msg/Docking.l"
+  "/home/lostm/文档/arduino_ws/devel/share/roseus/ros/dockingrobot/manifest.l"
+  "/home/lostm/文档/arduino_ws/devel/share/roseus/ros/dockingrobot/msg/Command.l"
+  "/home/lostm/文档/arduino_ws/devel/share/roseus/ros/dockingrobot/msg/Docking.l"
   "CMakeFiles/dockingrobot_generate_messages_eus"
 )
 

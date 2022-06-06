@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/robot/Documents/arduino_ws/devel/include/serial_imu/Imu_0x62_msg.h
+/home/lostm/文档/arduino_ws/devel/include/serial_imu/Imu_0x62_msg.h
 string
 -
 vector
@@ -26,7 +26,7 @@ std_msgs/Header.h
 serial_imu/Imu_data_package.h
 -
 
-/home/robot/Documents/arduino_ws/devel/include/serial_imu/Imu_data_package.h
+/home/lostm/文档/arduino_ws/devel/include/serial_imu/Imu_data_package.h
 string
 -
 vector
@@ -42,13 +42,13 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/robot/Documents/arduino_ws/src/serial_imu/src/ch_serial.h
+/home/lostm/文档/arduino_ws/src/serial_imu/src/ch_serial.h
 stdint.h
 -
 string.h
 -
 
-/home/robot/Documents/arduino_ws/src/serial_imu/src/serial_imu_0x62.cpp
+/home/lostm/文档/arduino_ws/src/serial_imu/src/serial_imu_0x62.cpp
 ros/ros.h
 -
 serial/serial.h
@@ -68,7 +68,7 @@ stdint.h
 stdbool.h
 -
 ch_serial.h
-/home/robot/Documents/arduino_ws/src/serial_imu/src/ch_serial.h
+/home/lostm/文档/arduino_ws/src/serial_imu/src/ch_serial.h
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h

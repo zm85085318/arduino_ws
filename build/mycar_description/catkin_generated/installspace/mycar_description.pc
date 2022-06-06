@@ -1,4 +1,4 @@
-prefix=/home/robot/Documents/arduino_ws/install
+prefix=/home/lostm/文档/arduino_ws/install
 
 Name: mycar_description
 Description: Description of mycar_description

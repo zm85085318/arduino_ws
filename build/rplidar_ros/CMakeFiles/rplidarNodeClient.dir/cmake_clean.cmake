@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/rplidar_ros/rplidarNodeClient"
-  "/home/robot/Documents/arduino_ws/devel/lib/rplidar_ros/rplidarNodeClient.pdb"
+  "/home/lostm/文档/arduino_ws/devel/lib/rplidar_ros/rplidarNodeClient"
+  "/home/lostm/文档/arduino_ws/devel/lib/rplidar_ros/rplidarNodeClient.pdb"
   "CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o"
 )
 

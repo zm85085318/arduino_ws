@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/robot/Documents/arduino_ws/src/serial_imu/src/ch_serial.c" "/home/robot/Documents/arduino_ws/build/serial_imu/CMakeFiles/serial_imu_0x62.dir/src/ch_serial.c.o"
+  "/home/lostm/文档/arduino_ws/src/serial_imu/src/ch_serial.c" "/home/lostm/文档/arduino_ws/build/serial_imu/CMakeFiles/serial_imu_0x62.dir/src/ch_serial.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -18,12 +18,12 @@ set(CMAKE_TARGET_DEFINITIONS_C
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/robot/Documents/arduino_ws/devel/include"
+  "/home/lostm/文档/arduino_ws/devel/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/robot/Documents/arduino_ws/src/serial_imu/src/serial_imu_0x62.cpp" "/home/robot/Documents/arduino_ws/build/serial_imu/CMakeFiles/serial_imu_0x62.dir/src/serial_imu_0x62.cpp.o"
+  "/home/lostm/文档/arduino_ws/src/serial_imu/src/serial_imu_0x62.cpp" "/home/lostm/文档/arduino_ws/build/serial_imu/CMakeFiles/serial_imu_0x62.dir/src/serial_imu_0x62.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -36,7 +36,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/robot/Documents/arduino_ws/devel/include"
+  "/home/lostm/文档/arduino_ws/devel/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

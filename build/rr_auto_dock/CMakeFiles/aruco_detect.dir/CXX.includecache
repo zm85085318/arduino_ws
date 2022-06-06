@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/robot/Documents/arduino_ws/src/rr_auto_dock/src/aruco_detect.cpp
+/home/lostm/文档/arduino_ws/src/rr_auto_dock/src/aruco_detect.cpp
 assert.h
 -
 sys/time.h
@@ -40,15 +40,15 @@ std_msgs/Bool.h
 dynamic_reconfigure/server.h
 -
 fiducial_msgs/Fiducial.h
-/home/robot/Documents/arduino_ws/src/rr_auto_dock/src/fiducial_msgs/Fiducial.h
+/home/lostm/文档/arduino_ws/src/rr_auto_dock/src/fiducial_msgs/Fiducial.h
 fiducial_msgs/FiducialArray.h
-/home/robot/Documents/arduino_ws/src/rr_auto_dock/src/fiducial_msgs/FiducialArray.h
+/home/lostm/文档/arduino_ws/src/rr_auto_dock/src/fiducial_msgs/FiducialArray.h
 fiducial_msgs/FiducialTransform.h
-/home/robot/Documents/arduino_ws/src/rr_auto_dock/src/fiducial_msgs/FiducialTransform.h
+/home/lostm/文档/arduino_ws/src/rr_auto_dock/src/fiducial_msgs/FiducialTransform.h
 fiducial_msgs/FiducialTransformArray.h
-/home/robot/Documents/arduino_ws/src/rr_auto_dock/src/fiducial_msgs/FiducialTransformArray.h
+/home/lostm/文档/arduino_ws/src/rr_auto_dock/src/fiducial_msgs/FiducialTransformArray.h
 aruco_detect/DetectorParamsConfig.h
-/home/robot/Documents/arduino_ws/src/rr_auto_dock/src/aruco_detect/DetectorParamsConfig.h
+/home/lostm/文档/arduino_ws/src/rr_auto_dock/src/aruco_detect/DetectorParamsConfig.h
 opencv2/highgui.hpp
 -
 opencv2/aruco.hpp

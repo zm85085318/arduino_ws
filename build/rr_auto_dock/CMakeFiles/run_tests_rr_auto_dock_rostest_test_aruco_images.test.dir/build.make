@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robot/Documents/arduino_ws/src
+CMAKE_SOURCE_DIR = /home/lostm/文档/arduino_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robot/Documents/arduino_ws/build
+CMAKE_BINARY_DIR = /home/lostm/文档/arduino_ws/build
 
 # Utility rule file for run_tests_rr_auto_dock_rostest_test_aruco_images.test.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/robot/Documents/arduino_ws/build
 include rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/progress.make
 
 rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test:
-	cd /home/robot/Documents/arduino_ws/build/rr_auto_dock && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/run_tests.py /home/robot/Documents/arduino_ws/build/test_results/rr_auto_dock/rostest-test_aruco_images.xml "/usr/bin/python3 /opt/ros/noetic/share/rostest/cmake/../../../bin/rostest --pkgdir=/home/robot/Documents/arduino_ws/src/rr_auto_dock --package=rr_auto_dock --results-filename test_aruco_images.xml --results-base-dir \"/home/robot/Documents/arduino_ws/build/test_results\" /home/robot/Documents/arduino_ws/src/rr_auto_dock/test/aruco_images.test "
+	cd /home/lostm/文档/arduino_ws/build/rr_auto_dock && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/run_tests.py /home/lostm/文档/arduino_ws/build/test_results/rr_auto_dock/rostest-test_aruco_images.xml "/usr/bin/python3 /opt/ros/noetic/share/rostest/cmake/../../../bin/rostest --pkgdir=/home/lostm/文档/arduino_ws/src/rr_auto_dock --package=rr_auto_dock --results-filename test_aruco_images.xml --results-base-dir \"/home/lostm/文档/arduino_ws/build/test_results\" /home/lostm/文档/arduino_ws/src/rr_auto_dock/test/aruco_images.test "
 
 run_tests_rr_auto_dock_rostest_test_aruco_images.test: rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test
 run_tests_rr_auto_dock_rostest_test_aruco_images.test: rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/build.make
@@ -67,10 +67,10 @@ rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.di
 .PHONY : rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/build
 
 rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/clean:
-	cd /home/robot/Documents/arduino_ws/build/rr_auto_dock && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/cmake_clean.cmake
+	cd /home/lostm/文档/arduino_ws/build/rr_auto_dock && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/cmake_clean.cmake
 .PHONY : rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/clean
 
 rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/depend:
-	cd /home/robot/Documents/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robot/Documents/arduino_ws/src /home/robot/Documents/arduino_ws/src/rr_auto_dock /home/robot/Documents/arduino_ws/build /home/robot/Documents/arduino_ws/build/rr_auto_dock /home/robot/Documents/arduino_ws/build/rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lostm/文档/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lostm/文档/arduino_ws/src /home/lostm/文档/arduino_ws/src/rr_auto_dock /home/lostm/文档/arduino_ws/build /home/lostm/文档/arduino_ws/build/rr_auto_dock /home/lostm/文档/arduino_ws/build/rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rr_auto_dock/CMakeFiles/run_tests_rr_auto_dock_rostest_test_aruco_images.test.dir/depend
 

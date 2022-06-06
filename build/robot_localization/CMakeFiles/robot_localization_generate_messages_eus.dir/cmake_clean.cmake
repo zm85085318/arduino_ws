@@ -1,12 +1,12 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/share/roseus/ros/robot_localization/manifest.l"
-  "/home/robot/Documents/arduino_ws/devel/share/roseus/ros/robot_localization/srv/FromLL.l"
-  "/home/robot/Documents/arduino_ws/devel/share/roseus/ros/robot_localization/srv/GetState.l"
-  "/home/robot/Documents/arduino_ws/devel/share/roseus/ros/robot_localization/srv/SetDatum.l"
-  "/home/robot/Documents/arduino_ws/devel/share/roseus/ros/robot_localization/srv/SetPose.l"
-  "/home/robot/Documents/arduino_ws/devel/share/roseus/ros/robot_localization/srv/SetUTMZone.l"
-  "/home/robot/Documents/arduino_ws/devel/share/roseus/ros/robot_localization/srv/ToLL.l"
-  "/home/robot/Documents/arduino_ws/devel/share/roseus/ros/robot_localization/srv/ToggleFilterProcessing.l"
+  "/home/lostm/文档/arduino_ws/devel/share/roseus/ros/robot_localization/manifest.l"
+  "/home/lostm/文档/arduino_ws/devel/share/roseus/ros/robot_localization/srv/FromLL.l"
+  "/home/lostm/文档/arduino_ws/devel/share/roseus/ros/robot_localization/srv/GetState.l"
+  "/home/lostm/文档/arduino_ws/devel/share/roseus/ros/robot_localization/srv/SetDatum.l"
+  "/home/lostm/文档/arduino_ws/devel/share/roseus/ros/robot_localization/srv/SetPose.l"
+  "/home/lostm/文档/arduino_ws/devel/share/roseus/ros/robot_localization/srv/SetUTMZone.l"
+  "/home/lostm/文档/arduino_ws/devel/share/roseus/ros/robot_localization/srv/ToLL.l"
+  "/home/lostm/文档/arduino_ws/devel/share/roseus/ros/robot_localization/srv/ToggleFilterProcessing.l"
   "CMakeFiles/robot_localization_generate_messages_eus"
 )
 

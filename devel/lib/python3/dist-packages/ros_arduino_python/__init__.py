@@ -6,7 +6,7 @@ from os import path as os_path
 from pkgutil import extend_path
 from sys import path as sys_path
 
-__extended_path = '/home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_python/src'.split(';')
+__extended_path = '/home/lostm/文档/arduino_ws/src/ros_arduino_bridge/ros_arduino_python/src'.split(';')
 for p in reversed(__extended_path):
     sys_path.insert(0, p)
     del p

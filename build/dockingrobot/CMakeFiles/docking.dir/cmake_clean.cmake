@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking"
-  "/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking.pdb"
+  "/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking"
+  "/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking.pdb"
   "CMakeFiles/docking.dir/src/docking.cpp.o"
 )
 

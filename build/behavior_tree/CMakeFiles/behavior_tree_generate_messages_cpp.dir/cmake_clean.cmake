@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/include/behavior_tree/Analog.h"
+  "/home/lostm/文档/arduino_ws/devel/include/behavior_tree/Analog.h"
   "CMakeFiles/behavior_tree_generate_messages_cpp"
 )
 

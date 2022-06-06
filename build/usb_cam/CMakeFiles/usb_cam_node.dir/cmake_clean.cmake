@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/usb_cam/usb_cam_node"
-  "/home/robot/Documents/arduino_ws/devel/lib/usb_cam/usb_cam_node.pdb"
+  "/home/lostm/文档/arduino_ws/devel/lib/usb_cam/usb_cam_node"
+  "/home/lostm/文档/arduino_ws/devel/lib/usb_cam/usb_cam_node.pdb"
   "CMakeFiles/usb_cam_node.dir/nodes/usb_cam_node.cpp.o"
 )
 

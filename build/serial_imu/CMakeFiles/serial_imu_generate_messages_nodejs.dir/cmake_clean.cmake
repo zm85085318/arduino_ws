@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_0x62_msg.js"
-  "/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_0x91_msg.js"
-  "/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_data_package.js"
+  "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_0x62_msg.js"
+  "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_0x91_msg.js"
+  "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_data_package.js"
   "CMakeFiles/serial_imu_generate_messages_nodejs"
 )
 

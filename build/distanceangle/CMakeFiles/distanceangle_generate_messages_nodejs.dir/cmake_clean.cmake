@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/distanceangle/msg/DistanceAngle.js"
+  "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/distanceangle/msg/DistanceAngle.js"
   "CMakeFiles/distanceangle_generate_messages_nodejs"
 )
 

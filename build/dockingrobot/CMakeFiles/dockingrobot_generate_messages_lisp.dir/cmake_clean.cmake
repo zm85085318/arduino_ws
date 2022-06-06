@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/dockingrobot/msg/Command.lisp"
-  "/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/dockingrobot/msg/Docking.lisp"
+  "/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/dockingrobot/msg/Command.lisp"
+  "/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/dockingrobot/msg/Docking.lisp"
   "CMakeFiles/dockingrobot_generate_messages_lisp"
 )
 

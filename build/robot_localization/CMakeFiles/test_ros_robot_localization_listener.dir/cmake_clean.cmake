@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/robot_localization/test_ros_robot_localization_listener"
-  "/home/robot/Documents/arduino_ws/devel/lib/robot_localization/test_ros_robot_localization_listener.pdb"
+  "/home/lostm/文档/arduino_ws/devel/lib/robot_localization/test_ros_robot_localization_listener"
+  "/home/lostm/文档/arduino_ws/devel/lib/robot_localization/test_ros_robot_localization_listener.pdb"
   "CMakeFiles/test_ros_robot_localization_listener.dir/test/test_ros_robot_localization_listener.cpp.o"
 )
 

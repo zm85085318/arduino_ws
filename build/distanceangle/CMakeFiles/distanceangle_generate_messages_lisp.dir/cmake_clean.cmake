@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/share/common-lisp/ros/distanceangle/msg/DistanceAngle.lisp"
+  "/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/distanceangle/msg/DistanceAngle.lisp"
   "CMakeFiles/distanceangle_generate_messages_lisp"
 )
 

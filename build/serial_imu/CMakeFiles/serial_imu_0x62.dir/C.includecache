@@ -6,3 +6,15 @@
 
 #IncludeRegexTransform: 
 
+/home/lostm/文档/arduino_ws/src/serial_imu/src/ch_serial.c
+ch_serial.h
+/home/lostm/文档/arduino_ws/src/serial_imu/src/ch_serial.h
+stdio.h
+-
+
+/home/lostm/文档/arduino_ws/src/serial_imu/src/ch_serial.h
+stdint.h
+-
+string.h
+-
+

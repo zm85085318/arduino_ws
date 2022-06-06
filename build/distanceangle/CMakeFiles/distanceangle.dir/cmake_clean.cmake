@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/distanceangle/distanceangle"
-  "/home/robot/Documents/arduino_ws/devel/lib/distanceangle/distanceangle.pdb"
+  "/home/lostm/文档/arduino_ws/devel/lib/distanceangle/distanceangle"
+  "/home/lostm/文档/arduino_ws/devel/lib/distanceangle/distanceangle.pdb"
   "CMakeFiles/distanceangle.dir/src/distance_angle.cpp.o"
 )
 

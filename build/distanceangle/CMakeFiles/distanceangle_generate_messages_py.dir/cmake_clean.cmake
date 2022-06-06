@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/distanceangle/msg/_DistanceAngle.py"
-  "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/distanceangle/msg/__init__.py"
+  "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/distanceangle/msg/_DistanceAngle.py"
+  "/home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/distanceangle/msg/__init__.py"
   "CMakeFiles/distanceangle_generate_messages_py"
 )
 

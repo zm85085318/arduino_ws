@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/rr_auto_dock/aruco_detect"
-  "/home/robot/Documents/arduino_ws/devel/lib/rr_auto_dock/aruco_detect.pdb"
+  "/home/lostm/文档/arduino_ws/devel/lib/rr_auto_dock/aruco_detect"
+  "/home/lostm/文档/arduino_ws/devel/lib/rr_auto_dock/aruco_detect.pdb"
   "CMakeFiles/aruco_detect.dir/src/aruco_detect.cpp.o"
 )
 

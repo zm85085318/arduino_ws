@@ -67,14 +67,14 @@ set(rr_auto_dock_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(rr_auto_dock_SOURCE_PREFIX /home/robot/Documents/arduino_ws/src/rr_auto_dock)
-  set(rr_auto_dock_DEVEL_PREFIX /home/robot/Documents/arduino_ws/devel)
+  set(rr_auto_dock_SOURCE_PREFIX /home/lostm/文档/arduino_ws/src/rr_auto_dock)
+  set(rr_auto_dock_DEVEL_PREFIX /home/lostm/文档/arduino_ws/devel)
   set(rr_auto_dock_INSTALL_PREFIX "")
   set(rr_auto_dock_PREFIX ${rr_auto_dock_DEVEL_PREFIX})
 else()
   set(rr_auto_dock_SOURCE_PREFIX "")
   set(rr_auto_dock_DEVEL_PREFIX "")
-  set(rr_auto_dock_INSTALL_PREFIX /home/robot/Documents/arduino_ws/install)
+  set(rr_auto_dock_INSTALL_PREFIX /home/lostm/文档/arduino_ws/install)
   set(rr_auto_dock_PREFIX ${rr_auto_dock_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(rr_auto_dock_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/robot/Documents/arduino_ws/devel/include;/usr/include/opencv4 " STREQUAL " ")
+if(NOT "/home/lostm/文档/arduino_ws/devel/include;/usr/include/opencv4 " STREQUAL " ")
   set(rr_auto_dock_INCLUDE_DIRS "")
-  set(_include_dirs "/home/robot/Documents/arduino_ws/devel/include;/usr/include/opencv4")
+  set(_include_dirs "/home/lostm/文档/arduino_ws/devel/include;/usr/include/opencv4")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://ros.org/wiki/rr_auto_dock " STREQUAL " ")
@@ -110,13 +110,13 @@ if(NOT "/home/robot/Documents/arduino_ws/devel/include;/usr/include/opencv4 " ST
         message(FATAL_ERROR "Project 'rr_auto_dock' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'rr_auto_dock' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/robot/Documents/arduino_ws/src/rr_auto_dock/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'rr_auto_dock' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/lostm/文档/arduino_ws/src/rr_auto_dock/${idir}'.  ${_report}")
     endif()
     _list_append_unique(rr_auto_dock_INCLUDE_DIRS ${include})
   endforeach()
 endif()
 
-set(libraries "image_sub_nodelet;/usr/lib/aarch64-linux-gnu/libopencv_calib3d.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_core.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_dnn.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_features2d.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_flann.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_highgui.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_imgproc.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_ml.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_objdetect.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_photo.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_stitching.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_video.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_videoio.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_aruco.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_bgsegm.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_bioinspired.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_ccalib.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_datasets.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_dnn_objdetect.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_dnn_superres.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_dpm.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_face.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_freetype.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_fuzzy.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_hdf.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_hfs.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_img_hash.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_line_descriptor.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_optflow.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_phase_unwrapping.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_plot.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_quality.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_reg.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_rgbd.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_saliency.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_shape.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_stereo.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_structured_light.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_superres.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_surface_matching.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_text.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_tracking.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_videostab.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_viz.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_ximgproc.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_xobjdetect.so.4.2.0;/usr/lib/aarch64-linux-gnu/libopencv_xphoto.so.4.2.0")
+set(libraries "image_sub_nodelet;/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_core.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_dnn.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_features2d.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_flann.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_highgui.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_ml.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_photo.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_video.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_videoio.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_aruco.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_bgsegm.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_bioinspired.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_ccalib.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_datasets.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_dnn_objdetect.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_dnn_superres.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_dpm.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_face.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_freetype.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_fuzzy.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_hdf.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_hfs.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_img_hash.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_line_descriptor.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_optflow.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_phase_unwrapping.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_plot.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_quality.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_reg.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_rgbd.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_saliency.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_shape.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_stereo.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_structured_light.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_superres.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_surface_matching.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_text.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_tracking.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_videostab.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_viz.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_ximgproc.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.4.2.0;/usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.4.2.0")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/robot/Documents/arduino_ws/devel/lib;/home/robot/Documents/arduino_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/lostm/文档/arduino_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

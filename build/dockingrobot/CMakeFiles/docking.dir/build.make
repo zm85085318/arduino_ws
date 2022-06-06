@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robot/Documents/arduino_ws/src
+CMAKE_SOURCE_DIR = /home/lostm/文档/arduino_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robot/Documents/arduino_ws/build
+CMAKE_BINARY_DIR = /home/lostm/文档/arduino_ws/build
 
 # Include any dependencies generated for this target.
 include dockingrobot/CMakeFiles/docking.dir/depend.make
@@ -58,17 +58,17 @@ include dockingrobot/CMakeFiles/docking.dir/progress.make
 include dockingrobot/CMakeFiles/docking.dir/flags.make
 
 dockingrobot/CMakeFiles/docking.dir/src/docking.cpp.o: dockingrobot/CMakeFiles/docking.dir/flags.make
-dockingrobot/CMakeFiles/docking.dir/src/docking.cpp.o: /home/robot/Documents/arduino_ws/src/dockingrobot/src/docking.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object dockingrobot/CMakeFiles/docking.dir/src/docking.cpp.o"
-	cd /home/robot/Documents/arduino_ws/build/dockingrobot && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/docking.dir/src/docking.cpp.o -c /home/robot/Documents/arduino_ws/src/dockingrobot/src/docking.cpp
+dockingrobot/CMakeFiles/docking.dir/src/docking.cpp.o: /home/lostm/文档/arduino_ws/src/dockingrobot/src/docking.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object dockingrobot/CMakeFiles/docking.dir/src/docking.cpp.o"
+	cd /home/lostm/文档/arduino_ws/build/dockingrobot && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/docking.dir/src/docking.cpp.o -c /home/lostm/文档/arduino_ws/src/dockingrobot/src/docking.cpp
 
 dockingrobot/CMakeFiles/docking.dir/src/docking.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/docking.dir/src/docking.cpp.i"
-	cd /home/robot/Documents/arduino_ws/build/dockingrobot && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robot/Documents/arduino_ws/src/dockingrobot/src/docking.cpp > CMakeFiles/docking.dir/src/docking.cpp.i
+	cd /home/lostm/文档/arduino_ws/build/dockingrobot && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lostm/文档/arduino_ws/src/dockingrobot/src/docking.cpp > CMakeFiles/docking.dir/src/docking.cpp.i
 
 dockingrobot/CMakeFiles/docking.dir/src/docking.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/docking.dir/src/docking.cpp.s"
-	cd /home/robot/Documents/arduino_ws/build/dockingrobot && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robot/Documents/arduino_ws/src/dockingrobot/src/docking.cpp -o CMakeFiles/docking.dir/src/docking.cpp.s
+	cd /home/lostm/文档/arduino_ws/build/dockingrobot && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lostm/文档/arduino_ws/src/dockingrobot/src/docking.cpp -o CMakeFiles/docking.dir/src/docking.cpp.s
 
 # Object files for target docking
 docking_OBJECTS = \
@@ -77,39 +77,39 @@ docking_OBJECTS = \
 # External object files for target docking
 docking_EXTERNAL_OBJECTS =
 
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: dockingrobot/CMakeFiles/docking.dir/src/docking.cpp.o
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: dockingrobot/CMakeFiles/docking.dir/build.make
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: /opt/ros/noetic/lib/libroscpp.so
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: /usr/lib/aarch64-linux-gnu/libpthread.so
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: /usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: /opt/ros/noetic/lib/librosconsole.so
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: /opt/ros/noetic/lib/librosconsole_log4cxx.so
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: /opt/ros/noetic/lib/librosconsole_backend_interface.so
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: /usr/lib/aarch64-linux-gnu/liblog4cxx.so
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: /opt/ros/noetic/lib/libxmlrpcpp.so
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: /opt/ros/noetic/lib/libroscpp_serialization.so
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: /opt/ros/noetic/lib/librostime.so
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: /usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: /opt/ros/noetic/lib/libcpp_common.so
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: /usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: /usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4
-/home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking: dockingrobot/CMakeFiles/docking.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking"
-	cd /home/robot/Documents/arduino_ws/build/dockingrobot && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/docking.dir/link.txt --verbose=$(VERBOSE)
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: dockingrobot/CMakeFiles/docking.dir/src/docking.cpp.o
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: dockingrobot/CMakeFiles/docking.dir/build.make
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: /opt/ros/noetic/lib/libroscpp.so
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: /opt/ros/noetic/lib/librosconsole.so
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: /opt/ros/noetic/lib/librosconsole_log4cxx.so
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: /opt/ros/noetic/lib/librosconsole_backend_interface.so
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: /opt/ros/noetic/lib/libxmlrpcpp.so
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: /opt/ros/noetic/lib/libroscpp_serialization.so
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: /opt/ros/noetic/lib/librostime.so
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: /opt/ros/noetic/lib/libcpp_common.so
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking: dockingrobot/CMakeFiles/docking.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking"
+	cd /home/lostm/文档/arduino_ws/build/dockingrobot && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/docking.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-dockingrobot/CMakeFiles/docking.dir/build: /home/robot/Documents/arduino_ws/devel/lib/dockingrobot/docking
+dockingrobot/CMakeFiles/docking.dir/build: /home/lostm/文档/arduino_ws/devel/lib/dockingrobot/docking
 
 .PHONY : dockingrobot/CMakeFiles/docking.dir/build
 
 dockingrobot/CMakeFiles/docking.dir/clean:
-	cd /home/robot/Documents/arduino_ws/build/dockingrobot && $(CMAKE_COMMAND) -P CMakeFiles/docking.dir/cmake_clean.cmake
+	cd /home/lostm/文档/arduino_ws/build/dockingrobot && $(CMAKE_COMMAND) -P CMakeFiles/docking.dir/cmake_clean.cmake
 .PHONY : dockingrobot/CMakeFiles/docking.dir/clean
 
 dockingrobot/CMakeFiles/docking.dir/depend:
-	cd /home/robot/Documents/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robot/Documents/arduino_ws/src /home/robot/Documents/arduino_ws/src/dockingrobot /home/robot/Documents/arduino_ws/build /home/robot/Documents/arduino_ws/build/dockingrobot /home/robot/Documents/arduino_ws/build/dockingrobot/CMakeFiles/docking.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lostm/文档/arduino_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lostm/文档/arduino_ws/src /home/lostm/文档/arduino_ws/src/dockingrobot /home/lostm/文档/arduino_ws/build /home/lostm/文档/arduino_ws/build/dockingrobot /home/lostm/文档/arduino_ws/build/dockingrobot/CMakeFiles/docking.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : dockingrobot/CMakeFiles/docking.dir/depend
 

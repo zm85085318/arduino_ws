@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/Documents/arduino_ws/devel/lib/libros_filter.pdb"
-  "/home/robot/Documents/arduino_ws/devel/lib/libros_filter.so"
+  "/home/lostm/文档/arduino_ws/devel/lib/libros_filter.pdb"
+  "/home/lostm/文档/arduino_ws/devel/lib/libros_filter.so"
   "CMakeFiles/ros_filter.dir/src/ros_filter.cpp.o"
 )
 
