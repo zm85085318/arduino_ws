@@ -1,0 +1,8 @@
+prefix=/home/robot/Documents/arduino_ws/devel
+
+Name: ar_track_alvar_msgs
+Description: Description of ar_track_alvar_msgs
+Version: 0.7.1
+Cflags: -I/home/robot/Documents/arduino_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime std_msgs geometry_msgs
