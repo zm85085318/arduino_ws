@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/lostm/文档/arduino_ws/build
 include serial_imu/CMakeFiles/_serial_imu_generate_messages_check_deps_Imu_0x91_msg.dir/progress.make
 
 serial_imu/CMakeFiles/_serial_imu_generate_messages_check_deps_Imu_0x91_msg:
-	cd /home/lostm/文档/arduino_ws/build/serial_imu && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py serial_imu /home/lostm/文档/arduino_ws/src/serial_imu/msg/Imu_0x91_msg.msg std_msgs/Header:serial_imu/Imu_data_package
+	cd /home/lostm/文档/arduino_ws/build/serial_imu && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py serial_imu /home/lostm/文档/arduino_ws/src/serial_imu/msg/Imu_0x91_msg.msg serial_imu/Imu_data_package:std_msgs/Header
 
 _serial_imu_generate_messages_check_deps_Imu_0x91_msg: serial_imu/CMakeFiles/_serial_imu_generate_messages_check_deps_Imu_0x91_msg
 _serial_imu_generate_messages_check_deps_Imu_0x91_msg: serial_imu/CMakeFiles/_serial_imu_generate_messages_check_deps_Imu_0x91_msg.dir/build.make

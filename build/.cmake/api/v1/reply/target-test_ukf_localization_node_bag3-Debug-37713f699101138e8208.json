@@ -1,0 +1,588 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "/home/lostm/文档/arduino_ws/devel/lib/robot_localization/test_ukf_localization_node_bag3"
+		}
+	],
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"_add_rostest_google_test",
+			"add_rostest_gtest",
+			"link_directories",
+			"_catkin_add_executable_with_google_test",
+			"_catkin_add_google_test",
+			"catkin_add_gtest",
+			"target_link_libraries",
+			"add_dependencies",
+			"set_directory_properties",
+			"add_definitions",
+			"include",
+			"find_package",
+			"configure_shared_library_build_settings",
+			"include_directories",
+			"gencpp_append_include_dirs",
+			"_generate_msg_cpp",
+			"_generate_srv_cpp",
+			"generate_messages"
+		],
+		"files" : 
+		[
+			"/opt/ros/noetic/share/rostest/cmake/rostest-extras.cmake",
+			"robot_localization/CMakeLists.txt",
+			"/opt/ros/noetic/share/catkin/cmake/test/gtest.cmake",
+			"/opt/ros/noetic/share/rosconsole/cmake/rosconsole-extras.cmake",
+			"/opt/ros/noetic/share/rosconsole/cmake/rosconsoleConfig.cmake",
+			"/opt/ros/noetic/share/roscpp/cmake/roscppConfig.cmake",
+			"/opt/ros/noetic/share/diagnostic_updater/cmake/diagnostic_updaterConfig.cmake",
+			"/opt/ros/noetic/share/catkin/cmake/catkinConfig.cmake",
+			"/opt/ros/noetic/share/catkin/cmake/tools/libraries.cmake",
+			"/opt/ros/noetic/share/catkin/cmake/all.cmake",
+			"CMakeLists.txt",
+			"/opt/ros/noetic/share/gencpp/cmake/gencpp-extras.cmake",
+			"/home/lostm/文档/arduino_ws/build/robot_localization/cmake/robot_localization-genmsg.cmake",
+			"/opt/ros/noetic/share/genmsg/cmake/genmsg-extras.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 313,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 100,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 75,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 133,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 243,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 37,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 89,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 179,
+				"parent" : 7
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 76,
+				"parent" : 2
+			},
+			{
+				"command" : 8,
+				"file" : 1,
+				"line" : 317,
+				"parent" : 0
+			},
+			{
+				"command" : 9,
+				"file" : 1,
+				"line" : 55,
+				"parent" : 0
+			},
+			{
+				"command" : 10,
+				"file" : 1,
+				"line" : 57,
+				"parent" : 0
+			},
+			{
+				"command" : 12,
+				"file" : 1,
+				"line" : 9,
+				"parent" : 0
+			},
+			{
+				"file" : 7,
+				"parent" : 13
+			},
+			{
+				"command" : 12,
+				"file" : 7,
+				"line" : 76,
+				"parent" : 14
+			},
+			{
+				"file" : 6,
+				"parent" : 15
+			},
+			{
+				"command" : 12,
+				"file" : 6,
+				"line" : 197,
+				"parent" : 16
+			},
+			{
+				"file" : 5,
+				"parent" : 17
+			},
+			{
+				"command" : 12,
+				"file" : 5,
+				"line" : 197,
+				"parent" : 18
+			},
+			{
+				"file" : 4,
+				"parent" : 19
+			},
+			{
+				"command" : 11,
+				"file" : 4,
+				"line" : 222,
+				"parent" : 20
+			},
+			{
+				"file" : 3,
+				"parent" : 21
+			},
+			{
+				"command" : 10,
+				"file" : 3,
+				"line" : 12,
+				"parent" : 22
+			},
+			{
+				"file" : 10
+			},
+			{
+				"command" : 12,
+				"file" : 10,
+				"line" : 58,
+				"parent" : 24
+			},
+			{
+				"file" : 7,
+				"parent" : 25
+			},
+			{
+				"command" : 11,
+				"file" : 7,
+				"line" : 20,
+				"parent" : 26
+			},
+			{
+				"file" : 9,
+				"parent" : 27
+			},
+			{
+				"command" : 13,
+				"file" : 9,
+				"line" : 174,
+				"parent" : 28
+			},
+			{
+				"command" : 10,
+				"file" : 8,
+				"line" : 18,
+				"parent" : 29
+			},
+			{
+				"command" : 10,
+				"file" : 3,
+				"line" : 8,
+				"parent" : 22
+			},
+			{
+				"command" : 18,
+				"file" : 1,
+				"line" : 76,
+				"parent" : 0
+			},
+			{
+				"command" : 11,
+				"file" : 13,
+				"line" : 307,
+				"parent" : 32
+			},
+			{
+				"file" : 12,
+				"parent" : 33
+			},
+			{
+				"command" : 17,
+				"file" : 12,
+				"line" : 63,
+				"parent" : 34
+			},
+			{
+				"command" : 16,
+				"file" : 11,
+				"line" : 51,
+				"parent" : 35
+			},
+			{
+				"command" : 15,
+				"file" : 11,
+				"line" : 46,
+				"parent" : 36
+			},
+			{
+				"command" : 14,
+				"file" : 11,
+				"line" : 63,
+				"parent" : 37
+			},
+			{
+				"command" : 14,
+				"file" : 1,
+				"line" : 127,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g  "
+				},
+				{
+					"backtrace" : 11,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 11,
+					"fragment" : "-Werror"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-DGTEST_HAS_PTHREAD=1"
+				},
+				{
+					"fragment" : "-std=gnu++14"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 12,
+					"define" : "EIGEN_MPL2_ONLY"
+				},
+				{
+					"backtrace" : 12,
+					"define" : "EIGEN_NO_DEBUG"
+				},
+				{
+					"backtrace" : 23,
+					"define" : "ROSCONSOLE_BACKEND_LOG4CXX"
+				},
+				{
+					"backtrace" : 30,
+					"define" : "ROS_BUILD_SHARED_LIBS=1"
+				},
+				{
+					"backtrace" : 31,
+					"define" : "ROS_PACKAGE_NAME=\"robot_localization\""
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 38,
+					"path" : "/home/lostm/文档/arduino_ws/devel/include"
+				},
+				{
+					"backtrace" : 39,
+					"path" : "/home/lostm/文档/arduino_ws/src/robot_localization/include"
+				},
+				{
+					"backtrace" : 39,
+					"path" : "/opt/ros/noetic/include"
+				},
+				{
+					"backtrace" : 39,
+					"path" : "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+				},
+				{
+					"backtrace" : 39,
+					"path" : "/usr/include/eigen3"
+				},
+				{
+					"backtrace" : 9,
+					"isSystem" : true,
+					"path" : "/usr/src/googletest/googletest/include"
+				},
+				{
+					"backtrace" : 9,
+					"isSystem" : true,
+					"path" : "/usr/src/googletest/googletest"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 9,
+			"id" : "gtest::@b738d542747fbb7ea6e3"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "ukf_localization_node::@0e325f39f2372bc90e51"
+		}
+	],
+	"id" : "test_ukf_localization_node_bag3::@0e325f39f2372bc90e51",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-rdynamic",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-L/usr/usr/lib/x86_64-linux-gnu",
+				"role" : "libraryPath"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-L/home/lostm/文档/arduino_ws/build/gtest",
+				"role" : "libraryPath"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/usr/usr/lib/x86_64-linux-gnu:/home/lostm/文档/arduino_ws/build/gtest:/home/lostm/文档/arduino_ws/build/gtest/lib:/opt/ros/noetic/lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "../gtest/lib/libgtestd.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/libdiagnostic_updater.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/libeigen_conversions.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/libnodeletlib.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/libbondcpp.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-luuid",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/libclass_loader.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lPocoFoundation",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/libroslib.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/librospack.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpython3.8",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ltinyxml2",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lorocos-kdl",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lorocos-kdl",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/libtf2_ros.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/libactionlib.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/libmessage_filters.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/libroscpp.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/librosconsole.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/librosconsole_log4cxx.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/librosconsole_backend_interface.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-llog4cxx",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/libxmlrpcpp.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/libtf2.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/libroscpp_serialization.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/librostime.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/noetic/lib/libcpp_common.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "test_ukf_localization_node_bag3",
+	"nameOnDisk" : "test_ukf_localization_node_bag3",
+	"paths" : 
+	{
+		"build" : "robot_localization",
+		"source" : "robot_localization"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "robot_localization/test/test_localization_node_bag_pose_tester.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

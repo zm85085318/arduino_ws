@@ -79,7 +79,7 @@ aruco_images_test_EXTERNAL_OBJECTS =
 
 /home/lostm/文档/arduino_ws/devel/lib/rr_auto_dock/aruco_images_test: rr_auto_dock/CMakeFiles/aruco_images_test.dir/test/aruco_images_test.cpp.o
 /home/lostm/文档/arduino_ws/devel/lib/rr_auto_dock/aruco_images_test: rr_auto_dock/CMakeFiles/aruco_images_test.dir/build.make
-/home/lostm/文档/arduino_ws/devel/lib/rr_auto_dock/aruco_images_test: gtest/lib/libgtest.so
+/home/lostm/文档/arduino_ws/devel/lib/rr_auto_dock/aruco_images_test: gtest/lib/libgtestd.so
 /home/lostm/文档/arduino_ws/devel/lib/rr_auto_dock/aruco_images_test: /opt/ros/noetic/lib/libtf.so
 /home/lostm/文档/arduino_ws/devel/lib/rr_auto_dock/aruco_images_test: /usr/lib/liborocos-kdl.so
 /home/lostm/文档/arduino_ws/devel/lib/rr_auto_dock/aruco_images_test: /usr/lib/liborocos-kdl.so

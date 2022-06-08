@@ -1,0 +1,81 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"generate_dynamic_reconfigure_options"
+		],
+		"files" : 
+		[
+			"/opt/ros/noetic/share/dynamic_reconfigure/cmake/dynamic_reconfigure-macros.cmake",
+			"rr_auto_dock/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 24,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 84,
+				"parent" : 1
+			}
+		]
+	},
+	"id" : "rr_auto_dock_gencfg::@134a3c7a360615417446",
+	"name" : "rr_auto_dock_gencfg",
+	"paths" : 
+	{
+		"build" : "rr_auto_dock",
+		"source" : "rr_auto_dock"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/build/rr_auto_dock/CMakeFiles/rr_auto_dock_gencfg",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/build/rr_auto_dock/CMakeFiles/rr_auto_dock_gencfg.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/devel/include/rr_auto_dock/DetectorParamsConfig.h.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

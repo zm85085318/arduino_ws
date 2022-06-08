@@ -15,16 +15,16 @@ using namespace std;
 float maxangle {1};
 float maxorient {1};
 
-float maxdistance {3}; // 4 meters
+float maxdistance {2}; // 4 meters
 float maxvel {0.2};
 float minvel {0.08};
-float maxtwist1 {0.2};
-float maxtwist2 {0.5};
+float maxtwist1 {0.55};
+float maxtwist2 {0.7};
 int Phimax {43};
 int Phimin{23};
 int PhiAng{37};
 int maxang{40};
-float ARdist{0.2};
+float ARdist{0.21};
 bool dockingCommand =  false;
 string running_status = "stopped";
 
@@ -143,7 +143,8 @@ void docking_callback(const distanceangle::DistanceAngle station)
       
           motor.angular.z = 0.0; 
       
-          ROS_INFO("linear [%f], angular [%f]", motor.linear.x, motor.angular.z);
+          // ROS_INFO("linear [%f], angular [%f]", motor.linear.x, motor.angular.z);
+          ROS_INFO("Reached the minimum range");
 
           Velocities_pub.publish(motor);
           running_status = "minimum_range";
