@@ -1,5 +1,5 @@
 <launch>
-    <!-- <include file="$(find ros_arduino_python)/launch/arduino.launch" /> -->
+    <include file="$(find ros_arduino_python)/launch/arduino.launch" />
     <include file="$(find usb_cam)/launch/usb_cam_dock.launch" />
     <!-- <include file="$(find rplidar_ros)/launch/rplidar.launch" /> -->
     <include file="$(find mycar_description)/launch/car.launch" />

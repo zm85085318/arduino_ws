@@ -15,16 +15,16 @@ using namespace std;
 float maxangle {1};
 float maxorient {1};
 
-float maxdistance {3}; // 4 meters
-float maxvel {0.2};
+float maxdistance {0.6}; // 4 meters
+float maxvel {0.14};
 float minvel {0.08};
-float maxtwist1 {0.2};
-float maxtwist2 {0.5};
+float maxtwist1 {0.5};
+float maxtwist2 {0.7};
 int Phimax {43};
 int Phimin{23};
 int PhiAng{37};
 int maxang{40};
-float ARdist{0.2};
+float ARdist{0.21};
 bool dockingCommand =  false;
 string running_status = "stopped";
 
@@ -63,9 +63,9 @@ void docking_callback(const distanceangle::DistanceAngle station)
 
   if(dockingCommand == true)
   {
-        float Phi;
+    float Phi;
 
-        Phi = Phimin + (Phimax-Phimin)*(station.distance/maxdistance) + PhiAng*(fabs(station.angle)/maxang);
+    Phi = Phimin + (Phimax-Phimin)*(station.distance/maxdistance) + PhiAng*(fabs(station.angle)/maxang);
       
     // I have to find a orientation for the first step such that we approach at the perpendicular line with a good distance. 
         //  Phi = atan(b/c)*180/PI;  
@@ -78,80 +78,69 @@ void docking_callback(const distanceangle::DistanceAngle station)
 
     // being on the left of the camera, angle is positive and viceversa. being in clockwise orientation is positive and viceversa
 
-    if (station.distance > ARdist)
+    if(station.distance > ARdist)
     {
       ROS_INFO("distance is: %.2f", station.distance);
 
-      if (station.angle < -maxangle && station.orientation < Phi)
-        {      
+      if(station.angle < -maxangle && station.orientation < Phi)
+      {      
+        ROS_INFO("phase 1, case 1");
+        velocitiesfunction(station,maxtwist1);
+      } 
 
-          velocitiesfunction(station,maxtwist1);
-
-        } 
-
-      else if (station.angle > maxangle && station.orientation < -Phi)
-        {      
-
-            velocitiesfunction(station,maxtwist1);
-
-          } 
+      else if(station.angle > maxangle && station.orientation < -Phi)
+      {      
+        ROS_INFO("phase 1, case 2");
+        velocitiesfunction(station,maxtwist1);
+      } 
 
       else if(station.angle > maxangle && station.orientation > -Phi)
-          {
-
-            velocitiesfunction(station,-maxtwist1);
-        
-          }
+      {
+        ROS_INFO("phase 1, case 3");
+        velocitiesfunction(station,-maxtwist1);
+      }
 
       else if(station.angle < -maxangle && station.orientation > Phi)
-          {
-
-            velocitiesfunction(station,-maxtwist1);
-        
-          }
+      {
+        ROS_INFO("phase 1, case 4");
+        velocitiesfunction(station,-maxtwist1); 
+      }
 
       else if((station.angle < maxangle) && (station.angle>-maxangle))
-          {
-
-        if (station.orientation>maxorient)
-          {
-
-              velocitiesfunction(station,-maxtwist2);
-
-          } 
+      {
+        if(station.orientation>maxorient)
+        {
+          ROS_INFO("phase 2, case 1");
+          velocitiesfunction(station,-maxtwist2);
+        } 
 
         else if (station.orientation<-maxorient)
-          {
-
-              velocitiesfunction(station,maxtwist2);
-
-          }
-
-        else
-          {
-
-          velocitiesfunction(station,0);
-
-          }
+        {
+          ROS_INFO("phase 2, case 2");
+          velocitiesfunction(station,maxtwist2);
         }
-        running_status = "running";
+        else
+        {
+          ROS_INFO("final case");
+          velocitiesfunction(station,0);
+        }
+      }
+      running_status = "running";
     }
-
-      else 
+    else 
     {
-          motor.linear.x = 0.0;
+      motor.linear.x = 0.0;
       
-          motor.angular.z = 0.0; 
+      motor.angular.z = 0.0; 
       
-          ROS_INFO("linear [%f], angular [%f]", motor.linear.x, motor.angular.z);
-
-          Velocities_pub.publish(motor);
-          running_status = "minimum_range";
+      // ROS_INFO("linear [%f], angular [%f]", motor.linear.x, motor.angular.z);
+      ROS_INFO("Minimum");
+      Velocities_pub.publish(motor);
+      running_status = "minimum_range";
     }
-    
-    
   }
-  else{
+  else
+  {
     running_status = "stopped";
   }
   RunningStatus(running_status);
