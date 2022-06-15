@@ -15,7 +15,7 @@ using namespace std;
 float maxangle {1};
 float maxorient {1};
 
-float maxdistance {0.6}; // 4 meters
+float maxdistance {1.2}; // 4 meters
 float maxvel {0.14};
 float minvel {0.08};
 float maxtwist1 {0.5};
