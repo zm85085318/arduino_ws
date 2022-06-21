@@ -1,14 +1,15 @@
 <launch>
     <include file="$(find ros_arduino_python)/launch/arduino.launch" />
-    <include file="$(find usb_cam)/launch/usb_cam_dock.launch" />
+    <!-- <include file="$(find usb_cam)/launch/usb_cam_dock.launch" /> -->
     <!-- <include file="$(find rplidar_ros)/launch/rplidar.launch" /> -->
     <include file="$(find mycar_description)/launch/car.launch" />
-    <!-- <include file="$(find nav)/launch/auto_slam.launch" /> -->
-    <!-- <include file="$(find serial_imu)/launch/imu_start.launch" /> -->
+    <include file="$(find nav)/launch/auto_slam.launch" />
+    <include file="$(find serial_imu)/launch/imu_start.launch" />
     <!-- <include file="$(find imu_complementary_filter)/launch/complementary_filter.launch" /> -->
+    <include file="$(find pose_ekf)/launch/pose_ekf.launch" />
     <!-- <include file="$(find robot_localization)/launch/ekf_template.launch" /> -->
-    <include file="$(find rr_auto_dock)/launch/ar_track.launch" />
-    <include file="$(find distanceangle)/launch/distance_converter.launch" />
-    <include file="$(find dockingrobot)/launch/docking_process.launch" />
-    <include file="$(find behavior_tree)/launch/behaviors_tree.launch" />
+    <!-- <include file="$(find rr_auto_dock)/launch/ar_track.launch" /> -->
+    <!-- <include file="$(find distanceangle)/launch/distance_converter.launch" /> -->
+    <!-- <include file="$(find dockingrobot)/launch/docking_process.launch" /> -->
+    <!-- <include file="$(find behavior_tree)/launch/behaviors_tree.launch" /> -->
 </launch>

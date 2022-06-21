@@ -60,6 +60,7 @@ all: ros_arduino_bridge/ros_arduino_python/all
 all: ros_arduino_bridge/ros_arduino_msgs/all
 all: distanceangle/all
 all: dockingrobot/all
+all: pose_ekf/all
 all: behavior_tree/all
 all: rplidar_ros/all
 all: imu_complementary_filter/all
@@ -81,6 +82,7 @@ preinstall: ros_arduino_bridge/ros_arduino_python/preinstall
 preinstall: ros_arduino_bridge/ros_arduino_msgs/preinstall
 preinstall: distanceangle/preinstall
 preinstall: dockingrobot/preinstall
+preinstall: pose_ekf/preinstall
 preinstall: behavior_tree/preinstall
 preinstall: rplidar_ros/preinstall
 preinstall: imu_complementary_filter/preinstall
@@ -107,6 +109,7 @@ clean: ros_arduino_bridge/ros_arduino_python/clean
 clean: ros_arduino_bridge/ros_arduino_msgs/clean
 clean: distanceangle/clean
 clean: dockingrobot/clean
+clean: pose_ekf/clean
 clean: behavior_tree/clean
 clean: rplidar_ros/clean
 clean: imu_complementary_filter/clean
@@ -385,6 +388,24 @@ nav/clean: nav/CMakeFiles/move_base_gencfg.dir/clean
 nav/clean: nav/CMakeFiles/amcl_gencfg.dir/clean
 
 .PHONY : nav/clean
+
+#=============================================================================
+# Directory level rules for directory pose_ekf
+
+# Recursive "all" directory target.
+pose_ekf/all:
+
+.PHONY : pose_ekf/all
+
+# Recursive "preinstall" directory target.
+pose_ekf/preinstall:
+
+.PHONY : pose_ekf/preinstall
+
+# Recursive "clean" directory target.
+pose_ekf/clean:
+
+.PHONY : pose_ekf/clean
 
 #=============================================================================
 # Directory level rules for directory robot_localization

@@ -848,6 +848,12 @@ pkgcfg_lib_swscale_swscale:FILEPATH=/usr/lib/aarch64-linux-gnu/libswscale.so
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/noetic/share/pluginlib/cmake
 
+//Value Computed by CMake
+pose_ekf_BINARY_DIR:STATIC=/home/robot/Documents/arduino_ws/build/pose_ekf
+
+//Value Computed by CMake
+pose_ekf_SOURCE_DIR:STATIC=/home/robot/Documents/arduino_ws/src/pose_ekf
+
 //The directory containing a CMake configuration file for resource_retriever.
 resource_retriever_DIR:PATH=/opt/ros/noetic/share/resource_retriever/cmake
 
@@ -1205,7 +1211,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=20
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
