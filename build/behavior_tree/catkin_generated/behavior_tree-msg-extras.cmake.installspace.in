@@ -1,2 +1,2 @@
-set(behavior_tree_MESSAGE_FILES "msg/Analog.msg")
+set(behavior_tree_MESSAGE_FILES "msg/Analog.msg;msg/RobotStatusControllerAction.msg;msg/RobotStatusControllerActionGoal.msg;msg/RobotStatusControllerActionResult.msg;msg/RobotStatusControllerActionFeedback.msg;msg/RobotStatusControllerGoal.msg;msg/RobotStatusControllerResult.msg;msg/RobotStatusControllerFeedback.msg;msg/TurningAroundAction.msg;msg/TurningAroundActionGoal.msg;msg/TurningAroundActionResult.msg;msg/TurningAroundActionFeedback.msg;msg/TurningAroundGoal.msg;msg/TurningAroundResult.msg;msg/TurningAroundFeedback.msg")
 set(behavior_tree_SERVICE_FILES "")

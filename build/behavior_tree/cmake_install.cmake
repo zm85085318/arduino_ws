@@ -42,6 +42,37 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/behavior_tree/action" TYPE FILE FILES
+    "/home/robot/Documents/arduino_ws/src/behavior_tree/action/RobotStatusController.action"
+    "/home/robot/Documents/arduino_ws/src/behavior_tree/action/TurningAround.action"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/behavior_tree/msg" TYPE FILE FILES
+    "/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerAction.msg"
+    "/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerActionGoal.msg"
+    "/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerActionResult.msg"
+    "/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerActionFeedback.msg"
+    "/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerGoal.msg"
+    "/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerResult.msg"
+    "/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerFeedback.msg"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/behavior_tree/msg" TYPE FILE FILES
+    "/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundAction.msg"
+    "/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundActionGoal.msg"
+    "/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundActionResult.msg"
+    "/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundActionFeedback.msg"
+    "/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundGoal.msg"
+    "/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundResult.msg"
+    "/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundFeedback.msg"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/behavior_tree/cmake" TYPE FILE FILES "/home/robot/Documents/arduino_ws/build/behavior_tree/catkin_generated/installspace/behavior_tree-msg-paths.cmake")
 endif()
 

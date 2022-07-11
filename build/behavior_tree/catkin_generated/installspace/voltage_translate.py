@@ -8,9 +8,9 @@ class VoltageTranslate(object):
     
     def __init__(self):
         rospy.loginfo("Voltage_translater is online!")
-        self.pub_battery_voltage = rospy.Publisher("/behaviors_tree/battery_voltage", Float32, queue_size=1)
+        # self.pub_battery_voltage = rospy.Publisher("/behaviors_tree/battery_voltage", Float32, queue_size=1)
         self.pub_connecter_voltage = rospy.Publisher("/behaviors_tree/connecter_voltage", Float32, queue_size=1)
-        self.sub_battery_voltage_raw = rospy.Subscriber("/sensors_base/sensor/battery_voltage_raw", Analog, self.BatteryVoltageCallback, queue_size=1)  
+        # self.sub_battery_voltage_raw = rospy.Subscriber("/sensors_base/sensor/battery_voltage_raw", Analog, self.BatteryVoltageCallback, queue_size=1)  
         self.sub_connecter_voltage_raw = rospy.Subscriber("/sensors_base/sensor/connecter_voltage_raw", Analog, self.ConnecterVoltageCallback, queue_size=1)  
 
     def BatteryVoltageCallback(self, battery_raw):

@@ -4,6 +4,8 @@ from turtle import distance, forward
 import rospy
 import actionlib
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
+from behavior_tree.msg import RobotStatusControllerAction, RobotStatusControllerGoal
+from behavior_tree.msg import TurningAroundAction, TurningAroundGoal
 
 from std_msgs.msg import *
 from fiducial_msgs.msg import FiducialTransformArray
@@ -31,11 +33,15 @@ class StatusConverter(object):
     docking_command_flag = False
     docking_process_status_flag = False
     light_pursuit_command_flag = False
+    connecter_connected_flag = False
+    battery_fully_charged_flag = False
     stop_flag = False
 
     left_light_strength = 0
     right_light_strength = 0
     back_light_strength = 0
+    connecter_voltage = 0
+    battery_voltage = 0
     turning_counter = 0
 
     last_dock_aruco_tf = Transform()
@@ -45,6 +51,11 @@ class StatusConverter(object):
 
 
     def __init__(self):
+        # rospy.init_node("rotation_client")
+        # client = actionlib.SimpleActionClient('rotation_go', TurningAroundAction)
+        # client.wait_for_server()
+
+
         rospy.loginfo("status_converter is online!")
         self.pub_docking_command = rospy.Publisher("/docking_robot/docking_command", String, queue_size=1)
         self.pub_behaviors_status = rospy.Publisher("/behaviors_tree/behaviors_status", String, queue_size=1)
@@ -61,7 +72,8 @@ class StatusConverter(object):
         self.sub_left_light = rospy.Subscriber("/behaviors_tree/left_light_strength", Float32, self.leftLightStrengthCallback, queue_size=1)
         self.sub_right_light = rospy.Subscriber("/behaviors_tree/right_light_strength", Float32, self.rightLightStrengthCallback, queue_size=1)
         self.sub_back_light = rospy.Subscriber("/behaviors_tree/back_light_strength", Float32, self.backLightStrengthCallback, queue_size=1)
-        
+        self.sub_connecter_voltage = rospy.Subscriber("/behaviors_tree/connecter_voltage", Float32, self.connecterVoltageCallback, queue_size=1)
+        self.sub_battery_voltage = rospy.Subscriber("/behaviors_tree/battery_voltage", Float32, self.batteryVoltageCallback, queue_size=1)
         self.behaviors_running_timer = rospy.Timer(rospy.Duration(self.MANAGER_PERIOD), self.behaviorsRunning, oneshot=False)
 
     def dockingCommandCallback(self, command):
@@ -106,7 +118,21 @@ class StatusConverter(object):
         self.right_light_strength = value.data
 
     def backLightStrengthCallback(self, value):
-        self.right_light_strength = value.data
+        self.back_light_strength = value.data
+
+    def connecterVoltageCallback(self, value):
+        self.connecter_voltage = value.data
+        if self.connecter_voltage > 25:
+            self.connecter_connected_flag = True
+        else:
+            self.connecter_connected_flag = False
+    
+    def batteryVoltageCallback(self, value):
+        self.battery_voltage = value.data
+        if self.battery_voltage > 11.5:
+            self.battery_fully_charged_flag = True
+        else:
+            self.battery_fully_charged_flag = False
 
     #================About docking and tag searching===================================
     #TODO: Charging ststus detection/Auto stop
@@ -134,6 +160,8 @@ class StatusConverter(object):
         elif self.docking_process_status_flag == True and self.is_in_view == False:
             self.pub_docking_command.publish("stop")
             self.docking_process_status_flag = False
+
+        # elif self.connecter_voltage
         
         self.pub_behaviors_status.publish(self.status_string)
         rospy.sleep(0.1)
@@ -197,6 +225,11 @@ class StatusConverter(object):
         self.cmd_vel_angular = -self.CMD_VEL_ANGULAR_RATE
         self.cmd_vel_msg.twist.angular.z = self.cmd_vel_angular
         self.pub_cmd_vel.publish(self.cmd_vel_msg.twist)
+
+    '''
+        goal = TurningAroundGoal()
+        client.send_goal(goal)
+    '''
 
     def lightPursuitExecutive(self):
         if self.left_light_strength + self.back_light_strength > 2 * self.right_light_strength:

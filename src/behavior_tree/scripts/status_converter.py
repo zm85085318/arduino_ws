@@ -4,6 +4,8 @@ from turtle import distance, forward
 import rospy
 import actionlib
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
+from behavior_tree.msg import RobotStatusControllerAction, RobotStatusControllerGoal
+from behavior_tree.msg import TurningAroundAction, TurningAroundGoal
 
 from std_msgs.msg import *
 from fiducial_msgs.msg import FiducialTransformArray
@@ -20,6 +22,7 @@ class StatusConverter(object):
     MANAGER_PERIOD = 0.1
     LIGHT_SENSORS_ACCURATE = 0.5
     STEP_LENGTH = 0.5
+    UNDOCK_DISTANCE = 1.0
 
     cmd_vel_angular = 0
     cmd_vel_msg = TwistStamped()
@@ -31,11 +34,15 @@ class StatusConverter(object):
     docking_command_flag = False
     docking_process_status_flag = False
     light_pursuit_command_flag = False
+    connecter_connected_flag = False
+    battery_fully_charged_flag = False
     stop_flag = False
 
     left_light_strength = 0
     right_light_strength = 0
     back_light_strength = 0
+    connecter_voltage = 0
+    battery_voltage = 0
     turning_counter = 0
 
     last_dock_aruco_tf = Transform()
@@ -45,6 +52,11 @@ class StatusConverter(object):
 
 
     def __init__(self):
+        # rospy.init_node("rotation_client")
+        # client = actionlib.SimpleActionClient('rotation_go', TurningAroundAction)
+        # client.wait_for_server()
+
+
         rospy.loginfo("status_converter is online!")
         self.pub_docking_command = rospy.Publisher("/docking_robot/docking_command", String, queue_size=1)
         self.pub_behaviors_status = rospy.Publisher("/behaviors_tree/behaviors_status", String, queue_size=1)
@@ -61,7 +73,8 @@ class StatusConverter(object):
         self.sub_left_light = rospy.Subscriber("/behaviors_tree/left_light_strength", Float32, self.leftLightStrengthCallback, queue_size=1)
         self.sub_right_light = rospy.Subscriber("/behaviors_tree/right_light_strength", Float32, self.rightLightStrengthCallback, queue_size=1)
         self.sub_back_light = rospy.Subscriber("/behaviors_tree/back_light_strength", Float32, self.backLightStrengthCallback, queue_size=1)
-        
+        self.sub_connecter_voltage = rospy.Subscriber("/behaviors_tree/connecter_voltage", Float32, self.connecterVoltageCallback, queue_size=1)
+        self.sub_battery_voltage = rospy.Subscriber("/behaviors_tree/battery_voltage", Float32, self.batteryVoltageCallback, queue_size=1)
         self.behaviors_running_timer = rospy.Timer(rospy.Duration(self.MANAGER_PERIOD), self.behaviorsRunning, oneshot=False)
 
     def dockingCommandCallback(self, command):
@@ -106,11 +119,23 @@ class StatusConverter(object):
         self.right_light_strength = value.data
 
     def backLightStrengthCallback(self, value):
-        self.right_light_strength = value.data
+        self.back_light_strength = value.data
+
+    def connecterVoltageCallback(self, value):
+        self.connecter_voltage = value.data
+        if self.connecter_voltage > 25:
+            self.connecter_connected_flag = True
+        else:
+            self.connecter_connected_flag = False
+    
+    def batteryVoltageCallback(self, value):
+        self.battery_voltage = value.data
+        if self.battery_voltage > 11.5:
+            self.battery_fully_charged_flag = True
+        else:
+            self.battery_fully_charged_flag = False
 
     #================About docking and tag searching===================================
-    #TODO: Charging ststus detection/Auto stop
-
     def dockingExecutive(self):
         if self.docking_process_status_flag == False and self.is_in_view == False:
             turning_count = 0
@@ -134,6 +159,11 @@ class StatusConverter(object):
         elif self.docking_process_status_flag == True and self.is_in_view == False:
             self.pub_docking_command.publish("stop")
             self.docking_process_status_flag = False
+
+        elif self.connecter_connected_flag == True:
+            self.pub_docking_command.publish("stop")
+            self.docking_process_status_flag = False
+            self.status_string = "docked"
         
         self.pub_behaviors_status.publish(self.status_string)
         rospy.sleep(0.1)
@@ -171,11 +201,39 @@ class StatusConverter(object):
         self.robotTurnStop()
         self.is_turning = False
         self.is_in_action = False
+
+    def openrover_linear_timer_cb(self, event):
+        rospy.loginfo("openrover_linear_timer_cb: Stop moving forward")
+        self.is_in_action = False
+        self.robotTurnStop()
     
     def robotTurnStop(self):
         self.cmd_vel_msg.twist.linear.x = 0
         self.cmd_vel_msg.twist.angular.z = 0
         self.pub_cmd_vel.publish(self.cmd_vel_msg.twist)
+    
+    def robotForward(self, distance):
+        jog_period = abs(distance/self.CMD_VEL_LINEAR_RATE)
+        rospy.loginfo('jog_period: %f', jog_period)
+        self.linear_timer = rospy.Timer(rospy.Duration(jog_period), self.openrover_linear_timer_cb, oneshot=True)
+        if distance>0:
+            rospy.loginfo("Moving forward")
+            self.cmd_vel_linear = self.CMD_VEL_LINEAR_RATE
+        else:
+            rospy.loginfo("Moving Backward")
+            self.cmd_vel_linear = -self.CMD_VEL_LINEAR_RATE*1.5
+        self.cmd_vel_msg.twist.linear.x = self.cmd_vel_linear
+        self.pub_cmd_vel.publish(self.cmd_vel_msg.twist)
+    
+    def robotUndockExecutive(self):
+        if self.status_string == "docked":
+            rospy.loginfo("Undock turning")
+            self.robotForward(-self.UNDOCK_DISTANCE)
+            self.robotTurn(3.1)
+            self.robotTurnStop
+            self.status_string == "undocking"
+
+
 
     #==============================About Turning Towards To The Light Source============================
     def robotLeftTurn(self):
@@ -197,6 +255,11 @@ class StatusConverter(object):
         self.cmd_vel_angular = -self.CMD_VEL_ANGULAR_RATE
         self.cmd_vel_msg.twist.angular.z = self.cmd_vel_angular
         self.pub_cmd_vel.publish(self.cmd_vel_msg.twist)
+
+    '''
+        goal = TurningAroundGoal()
+        client.send_goal(goal)
+    '''
 
     def lightPursuitExecutive(self):
         if self.left_light_strength + self.back_light_strength > 2 * self.right_light_strength:

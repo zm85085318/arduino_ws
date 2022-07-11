@@ -54,6 +54,20 @@ CMAKE_BINARY_DIR = /home/robot/Documents/arduino_ws/build
 include behavior_tree/CMakeFiles/behavior_tree_generate_messages_cpp.dir/progress.make
 
 behavior_tree/CMakeFiles/behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/Analog.h
+behavior_tree/CMakeFiles/behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerAction.h
+behavior_tree/CMakeFiles/behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionGoal.h
+behavior_tree/CMakeFiles/behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionResult.h
+behavior_tree/CMakeFiles/behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionFeedback.h
+behavior_tree/CMakeFiles/behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerGoal.h
+behavior_tree/CMakeFiles/behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerResult.h
+behavior_tree/CMakeFiles/behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerFeedback.h
+behavior_tree/CMakeFiles/behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundAction.h
+behavior_tree/CMakeFiles/behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionGoal.h
+behavior_tree/CMakeFiles/behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionResult.h
+behavior_tree/CMakeFiles/behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionFeedback.h
+behavior_tree/CMakeFiles/behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundGoal.h
+behavior_tree/CMakeFiles/behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundResult.h
+behavior_tree/CMakeFiles/behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundFeedback.h
 
 
 /home/robot/Documents/arduino_ws/devel/include/behavior_tree/Analog.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
@@ -61,10 +75,148 @@ behavior_tree/CMakeFiles/behavior_tree_generate_messages_cpp: /home/robot/Docume
 /home/robot/Documents/arduino_ws/devel/include/behavior_tree/Analog.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/robot/Documents/arduino_ws/devel/include/behavior_tree/Analog.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from behavior_tree/Analog.msg"
-	cd /home/robot/Documents/arduino_ws/src/behavior_tree && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/src/behavior_tree/msg/Analog.msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/src/behavior_tree/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p behavior_tree -o /home/robot/Documents/arduino_ws/devel/include/behavior_tree -e /opt/ros/noetic/share/gencpp/cmake/..
+	cd /home/robot/Documents/arduino_ws/src/behavior_tree && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/src/behavior_tree/msg/Analog.msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/src/behavior_tree/msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p behavior_tree -o /home/robot/Documents/arduino_ws/devel/include/behavior_tree -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerAction.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerAction.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerAction.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerAction.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerActionFeedback.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerAction.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerAction.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerActionResult.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerAction.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerResult.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerAction.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerGoal.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerAction.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerFeedback.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerAction.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerActionGoal.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerAction.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from behavior_tree/RobotStatusControllerAction.msg"
+	cd /home/robot/Documents/arduino_ws/src/behavior_tree && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerAction.msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/src/behavior_tree/msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p behavior_tree -o /home/robot/Documents/arduino_ws/devel/include/behavior_tree -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionGoal.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionGoal.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerActionGoal.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionGoal.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionGoal.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionGoal.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerGoal.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionGoal.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from behavior_tree/RobotStatusControllerActionGoal.msg"
+	cd /home/robot/Documents/arduino_ws/src/behavior_tree && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerActionGoal.msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/src/behavior_tree/msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p behavior_tree -o /home/robot/Documents/arduino_ws/devel/include/behavior_tree -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionResult.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionResult.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerActionResult.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionResult.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionResult.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerResult.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionResult.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from behavior_tree/RobotStatusControllerActionResult.msg"
+	cd /home/robot/Documents/arduino_ws/src/behavior_tree && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerActionResult.msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/src/behavior_tree/msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p behavior_tree -o /home/robot/Documents/arduino_ws/devel/include/behavior_tree -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionFeedback.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionFeedback.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerActionFeedback.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionFeedback.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerFeedback.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionFeedback.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionFeedback.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from behavior_tree/RobotStatusControllerActionFeedback.msg"
+	cd /home/robot/Documents/arduino_ws/src/behavior_tree && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerActionFeedback.msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/src/behavior_tree/msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p behavior_tree -o /home/robot/Documents/arduino_ws/devel/include/behavior_tree -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerGoal.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerGoal.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerGoal.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerGoal.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from behavior_tree/RobotStatusControllerGoal.msg"
+	cd /home/robot/Documents/arduino_ws/src/behavior_tree && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerGoal.msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/src/behavior_tree/msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p behavior_tree -o /home/robot/Documents/arduino_ws/devel/include/behavior_tree -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerResult.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerResult.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerResult.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerResult.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from behavior_tree/RobotStatusControllerResult.msg"
+	cd /home/robot/Documents/arduino_ws/src/behavior_tree && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerResult.msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/src/behavior_tree/msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p behavior_tree -o /home/robot/Documents/arduino_ws/devel/include/behavior_tree -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerFeedback.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerFeedback.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerFeedback.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerFeedback.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating C++ code from behavior_tree/RobotStatusControllerFeedback.msg"
+	cd /home/robot/Documents/arduino_ws/src/behavior_tree && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/RobotStatusControllerFeedback.msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/src/behavior_tree/msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p behavior_tree -o /home/robot/Documents/arduino_ws/devel/include/behavior_tree -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundAction.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundAction.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundAction.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundAction.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundGoal.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundAction.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundActionFeedback.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundAction.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundResult.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundAction.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundAction.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundActionGoal.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundAction.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundActionResult.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundAction.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundFeedback.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundAction.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating C++ code from behavior_tree/TurningAroundAction.msg"
+	cd /home/robot/Documents/arduino_ws/src/behavior_tree && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundAction.msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/src/behavior_tree/msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p behavior_tree -o /home/robot/Documents/arduino_ws/devel/include/behavior_tree -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionGoal.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionGoal.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundActionGoal.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionGoal.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundGoal.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionGoal.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionGoal.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionGoal.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating C++ code from behavior_tree/TurningAroundActionGoal.msg"
+	cd /home/robot/Documents/arduino_ws/src/behavior_tree && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundActionGoal.msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/src/behavior_tree/msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p behavior_tree -o /home/robot/Documents/arduino_ws/devel/include/behavior_tree -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionResult.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionResult.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundActionResult.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionResult.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionResult.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundResult.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionResult.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating C++ code from behavior_tree/TurningAroundActionResult.msg"
+	cd /home/robot/Documents/arduino_ws/src/behavior_tree && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundActionResult.msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/src/behavior_tree/msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p behavior_tree -o /home/robot/Documents/arduino_ws/devel/include/behavior_tree -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionFeedback.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionFeedback.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundActionFeedback.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionFeedback.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundFeedback.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionFeedback.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionFeedback.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating C++ code from behavior_tree/TurningAroundActionFeedback.msg"
+	cd /home/robot/Documents/arduino_ws/src/behavior_tree && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundActionFeedback.msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/src/behavior_tree/msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p behavior_tree -o /home/robot/Documents/arduino_ws/devel/include/behavior_tree -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundGoal.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundGoal.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundGoal.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundGoal.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating C++ code from behavior_tree/TurningAroundGoal.msg"
+	cd /home/robot/Documents/arduino_ws/src/behavior_tree && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundGoal.msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/src/behavior_tree/msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p behavior_tree -o /home/robot/Documents/arduino_ws/devel/include/behavior_tree -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundResult.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundResult.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundResult.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundResult.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating C++ code from behavior_tree/TurningAroundResult.msg"
+	cd /home/robot/Documents/arduino_ws/src/behavior_tree && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundResult.msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/src/behavior_tree/msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p behavior_tree -o /home/robot/Documents/arduino_ws/devel/include/behavior_tree -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundFeedback.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundFeedback.h: /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundFeedback.msg
+/home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundFeedback.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Generating C++ code from behavior_tree/TurningAroundFeedback.msg"
+	cd /home/robot/Documents/arduino_ws/src/behavior_tree && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg/TurningAroundFeedback.msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/src/behavior_tree/msg -Ibehavior_tree:/home/robot/Documents/arduino_ws/devel/share/behavior_tree/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p behavior_tree -o /home/robot/Documents/arduino_ws/devel/include/behavior_tree -e /opt/ros/noetic/share/gencpp/cmake/..
 
 behavior_tree_generate_messages_cpp: behavior_tree/CMakeFiles/behavior_tree_generate_messages_cpp
 behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/Analog.h
+behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerAction.h
+behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionGoal.h
+behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionResult.h
+behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerActionFeedback.h
+behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerGoal.h
+behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerResult.h
+behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/RobotStatusControllerFeedback.h
+behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundAction.h
+behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionGoal.h
+behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionResult.h
+behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundActionFeedback.h
+behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundGoal.h
+behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundResult.h
+behavior_tree_generate_messages_cpp: /home/robot/Documents/arduino_ws/devel/include/behavior_tree/TurningAroundFeedback.h
 behavior_tree_generate_messages_cpp: behavior_tree/CMakeFiles/behavior_tree_generate_messages_cpp.dir/build.make
 
 .PHONY : behavior_tree_generate_messages_cpp
