@@ -37,6 +37,7 @@ class StatusConverter(object):
     connecter_connected_flag = False
     battery_fully_charged_flag = False
     stop_flag = False
+    global_charging_flag = False
 
     left_light_strength = 0
     right_light_strength = 0
@@ -55,6 +56,9 @@ class StatusConverter(object):
         # rospy.init_node("rotation_client")
         # client = actionlib.SimpleActionClient('rotation_go', TurningAroundAction)
         # client.wait_for_server()
+        client = actionlib.SimpleActionClient("move_base", MoveBaseAction)
+        client.wait_for_server()
+        goal = MoveBaseGoal()
 
 
         rospy.loginfo("status_converter is online!")
@@ -301,23 +305,23 @@ class StatusConverter(object):
         self.robotTurnStop()
 
     #=================About Navigating to somewhere===============================
-    def moveByNav(self, distance=0.0, back_home_flag=True):
-        client = actionlib.SimpleActionClient("move_base", MoveBaseAction)
-        client.wait_for_server()
-        goal = MoveBaseGoal()
+    def moveByNav(self, distance=0.0, pos_x = 0.0, pos_y = 0.0, back_home_flag=True):
         if back_home_flag:
-            goal.target_pose.header.frame_id = "map"
-            goal.target_pose.pose.position.x = 0.0
-            goal.target_pose.pose.position.y = 0.0
+            self.goal.target_pose.header.frame_id = "map"
+            self.goal.target_pose.pose.position.x = 0.0
+            self.goal.target_pose.pose.position.y = 0.0
         else:
-            goal.target_pose.header.frame_id = 'base_footprint'
-            goal.target_pose.pose.position.x = distance
-        goal.target_pose.pose.orientation.w = 1.0
+            # goal.target_pose.header.frame_id = 'base_footprint'
+            # goal.target_pose.pose.position.x = distance
+            self.goal.target_pose.header.frame_id = "map"
+            self.goal.target_pose.pose.position.x = pos_x
+            self.goal.target_pose.pose.position.y = pos_y
+        self.goal.target_pose.pose.orientation.w = 1.0
 
-        client.send_goal(goal)
-        wait = client.wait_for_result(rospy.Duration(5))
+        self.client.send_goal(self.goal)
+        wait = self.client.wait_for_result(rospy.Duration(5))
         if not wait:
-            client.cancel_goal()
+            self.client.cancel_goal()
             rospy.logwarn("Time out achieving goal")
             return False
         else:
@@ -343,7 +347,32 @@ class StatusConverter(object):
     # TODO: This function should be able to judge what kind of charging method should be apply, light or wireless charge?
     
     #--------------------------Under Construction-------------------------------------------------------
+    #battery monitoring
+        if self.global_charging_flag == False:
+            if self.battery_voltage < 10.5:
+                rospy.sleep(1)
+                if self.battery_voltage < 10.5:
+                    rospy.loginfo("start finding wireless charger or light")
+                    self.global_charging_flag = True
+    
+    #NAV to the charging site
+        if self.global_charging_flag == True:
+            nav_status = self.moveByNav(pos_x=1.0, pos_y=1.0, back_home_flag=False)
+    
+    #Switch to visual approach
+        if self.global_charging_flag == True and nav_status == True:
+            self.docking_command_flag = True
+            nav_status = False
+    
+    #Return to the original position
+        if self.battery_fully_charged_flag == True and self.status_string == "docked":
+            self.robotUndockExecutive()
+            nav_back_status = self.moveByNav()
+            if self.nav_back_status:
+                self.global_charging_flag = False
 
+
+    
     #--------------------------The End of Construction Area---------------------------------------------
 
 
