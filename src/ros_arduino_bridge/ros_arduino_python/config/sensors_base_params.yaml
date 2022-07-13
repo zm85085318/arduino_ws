@@ -30,7 +30,7 @@ sensors: {
   #ir_front_center:      {pin: 2, type: GP2D12, rate: 10},
   #sonar_front_center:   {pin: 5, type: Ping, rate: 10},
   connecter_voltage_raw:          {pin: 15, type: Analog, rate: 1},
-  # battery_voltage_raw:          {pin: 14, type: Analog, rate: 1},
+  battery_voltage_raw:          {pin: 14, type: Analog, rate: 1},
   left_light_raw:        {pin: 16, type: Analog, rate: 1},
   right_light_raw:       {pin: 17, type: Analog, rate: 1},
   back_light_raw:        {pin: 18, type: Analog, rate: 1},

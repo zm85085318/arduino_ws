@@ -6,3 +6,10 @@ from ._RobotStatusControllerActionResult import *
 from ._RobotStatusControllerFeedback import *
 from ._RobotStatusControllerGoal import *
 from ._RobotStatusControllerResult import *
+from ._TurningAroundAction import *
+from ._TurningAroundActionFeedback import *
+from ._TurningAroundActionGoal import *
+from ._TurningAroundActionResult import *
+from ._TurningAroundFeedback import *
+from ._TurningAroundGoal import *
+from ._TurningAroundResult import *

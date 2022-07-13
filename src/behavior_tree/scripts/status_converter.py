@@ -45,6 +45,7 @@ class StatusConverter(object):
     connecter_voltage = 0
     battery_voltage = 0
     turning_counter = 0
+    timer_counter = 0
 
     last_dock_aruco_tf = Transform()
     dock_aruco_tf = Transform()
@@ -134,10 +135,20 @@ class StatusConverter(object):
     
     def batteryVoltageCallback(self, value):
         self.battery_voltage = value.data
-        if self.battery_voltage > 11.5:
-            self.battery_fully_charged_flag = True
+        if self.battery_voltage > 13.1:
+            if self.timer_counter <= 0:
+                rospy.sleep(0.5)
+                self.timer_counter +=1
+            elif self.timer_counter == 2: 
+                self.battery_fully_charged_flag = True
+                self.timer_counter = 0
         else:
-            self.battery_fully_charged_flag = False
+            if self.timer_counter >= 0:
+                rospy.sleep(0.5)
+                self.timer_counter -= 1
+            elif self.timer_counter == -2:
+                self.battery_fully_charged_flag = False
+                self.timer_counter = 0
 
     #================About docking and tag searching===================================
     def dockingExecutive(self):
@@ -349,6 +360,7 @@ class StatusConverter(object):
     #--------------------------Under Construction-------------------------------------------------------
     #battery monitoring
         if self.global_charging_flag == False:
+            # TODO: Check if the lowest voltage is 10.5
             if self.battery_voltage < 10.5:
                 rospy.sleep(1)
                 if self.battery_voltage < 10.5:

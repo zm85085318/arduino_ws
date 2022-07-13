@@ -22,6 +22,7 @@ class StatusConverter(object):
     MANAGER_PERIOD = 0.1
     LIGHT_SENSORS_ACCURATE = 0.5
     STEP_LENGTH = 0.5
+    UNDOCK_DISTANCE = 1.0
 
     cmd_vel_angular = 0
     cmd_vel_msg = TwistStamped()
@@ -36,6 +37,7 @@ class StatusConverter(object):
     connecter_connected_flag = False
     battery_fully_charged_flag = False
     stop_flag = False
+    global_charging_flag = False
 
     left_light_strength = 0
     right_light_strength = 0
@@ -43,6 +45,7 @@ class StatusConverter(object):
     connecter_voltage = 0
     battery_voltage = 0
     turning_counter = 0
+    timer_counter = 0
 
     last_dock_aruco_tf = Transform()
     dock_aruco_tf = Transform()
@@ -54,6 +57,9 @@ class StatusConverter(object):
         # rospy.init_node("rotation_client")
         # client = actionlib.SimpleActionClient('rotation_go', TurningAroundAction)
         # client.wait_for_server()
+        client = actionlib.SimpleActionClient("move_base", MoveBaseAction)
+        client.wait_for_server()
+        goal = MoveBaseGoal()
 
 
         rospy.loginfo("status_converter is online!")
@@ -129,14 +135,22 @@ class StatusConverter(object):
     
     def batteryVoltageCallback(self, value):
         self.battery_voltage = value.data
-        if self.battery_voltage > 11.5:
-            self.battery_fully_charged_flag = True
+        if self.battery_voltage > 13.1:
+            if self.timer_counter <= 0:
+                rospy.sleep(0.5)
+                self.timer_counter +=1
+            elif self.timer_counter == 2: 
+                self.battery_fully_charged_flag = True
+                self.timer_counter = 0
         else:
-            self.battery_fully_charged_flag = False
+            if self.timer_counter >= 0:
+                rospy.sleep(0.5)
+                self.timer_counter -= 1
+            elif self.timer_counter == -2:
+                self.battery_fully_charged_flag = False
+                self.timer_counter = 0
 
     #================About docking and tag searching===================================
-    #TODO: Charging ststus detection/Auto stop
-
     def dockingExecutive(self):
         if self.docking_process_status_flag == False and self.is_in_view == False:
             turning_count = 0
@@ -161,7 +175,10 @@ class StatusConverter(object):
             self.pub_docking_command.publish("stop")
             self.docking_process_status_flag = False
 
-        # elif self.connecter_voltage
+        elif self.connecter_connected_flag == True:
+            self.pub_docking_command.publish("stop")
+            self.docking_process_status_flag = False
+            self.status_string = "docked"
         
         self.pub_behaviors_status.publish(self.status_string)
         rospy.sleep(0.1)
@@ -199,11 +216,39 @@ class StatusConverter(object):
         self.robotTurnStop()
         self.is_turning = False
         self.is_in_action = False
+
+    def openrover_linear_timer_cb(self, event):
+        rospy.loginfo("openrover_linear_timer_cb: Stop moving forward")
+        self.is_in_action = False
+        self.robotTurnStop()
     
     def robotTurnStop(self):
         self.cmd_vel_msg.twist.linear.x = 0
         self.cmd_vel_msg.twist.angular.z = 0
         self.pub_cmd_vel.publish(self.cmd_vel_msg.twist)
+    
+    def robotForward(self, distance):
+        jog_period = abs(distance/self.CMD_VEL_LINEAR_RATE)
+        rospy.loginfo('jog_period: %f', jog_period)
+        self.linear_timer = rospy.Timer(rospy.Duration(jog_period), self.openrover_linear_timer_cb, oneshot=True)
+        if distance>0:
+            rospy.loginfo("Moving forward")
+            self.cmd_vel_linear = self.CMD_VEL_LINEAR_RATE
+        else:
+            rospy.loginfo("Moving Backward")
+            self.cmd_vel_linear = -self.CMD_VEL_LINEAR_RATE*1.5
+        self.cmd_vel_msg.twist.linear.x = self.cmd_vel_linear
+        self.pub_cmd_vel.publish(self.cmd_vel_msg.twist)
+    
+    def robotUndockExecutive(self):
+        if self.status_string == "docked":
+            rospy.loginfo("Undock turning")
+            self.robotForward(-self.UNDOCK_DISTANCE)
+            self.robotTurn(3.1)
+            self.robotTurnStop
+            self.status_string == "undocking"
+
+
 
     #==============================About Turning Towards To The Light Source============================
     def robotLeftTurn(self):
@@ -271,23 +316,23 @@ class StatusConverter(object):
         self.robotTurnStop()
 
     #=================About Navigating to somewhere===============================
-    def moveByNav(self, distance=0.0, back_home_flag=True):
-        client = actionlib.SimpleActionClient("move_base", MoveBaseAction)
-        client.wait_for_server()
-        goal = MoveBaseGoal()
+    def moveByNav(self, distance=0.0, pos_x = 0.0, pos_y = 0.0, back_home_flag=True):
         if back_home_flag:
-            goal.target_pose.header.frame_id = "map"
-            goal.target_pose.pose.position.x = 0.0
-            goal.target_pose.pose.position.y = 0.0
+            self.goal.target_pose.header.frame_id = "map"
+            self.goal.target_pose.pose.position.x = 0.0
+            self.goal.target_pose.pose.position.y = 0.0
         else:
-            goal.target_pose.header.frame_id = 'base_footprint'
-            goal.target_pose.pose.position.x = distance
-        goal.target_pose.pose.orientation.w = 1.0
+            # goal.target_pose.header.frame_id = 'base_footprint'
+            # goal.target_pose.pose.position.x = distance
+            self.goal.target_pose.header.frame_id = "map"
+            self.goal.target_pose.pose.position.x = pos_x
+            self.goal.target_pose.pose.position.y = pos_y
+        self.goal.target_pose.pose.orientation.w = 1.0
 
-        client.send_goal(goal)
-        wait = client.wait_for_result(rospy.Duration(5))
+        self.client.send_goal(self.goal)
+        wait = self.client.wait_for_result(rospy.Duration(5))
         if not wait:
-            client.cancel_goal()
+            self.client.cancel_goal()
             rospy.logwarn("Time out achieving goal")
             return False
         else:
@@ -313,7 +358,33 @@ class StatusConverter(object):
     # TODO: This function should be able to judge what kind of charging method should be apply, light or wireless charge?
     
     #--------------------------Under Construction-------------------------------------------------------
+    #battery monitoring
+        if self.global_charging_flag == False:
+            # TODO: Check if the lowest voltage is 10.5
+            if self.battery_voltage < 10.5:
+                rospy.sleep(1)
+                if self.battery_voltage < 10.5:
+                    rospy.loginfo("start finding wireless charger or light")
+                    self.global_charging_flag = True
+    
+    #NAV to the charging site
+        if self.global_charging_flag == True:
+            nav_status = self.moveByNav(pos_x=1.0, pos_y=1.0, back_home_flag=False)
+    
+    #Switch to visual approach
+        if self.global_charging_flag == True and nav_status == True:
+            self.docking_command_flag = True
+            nav_status = False
+    
+    #Return to the original position
+        if self.battery_fully_charged_flag == True and self.status_string == "docked":
+            self.robotUndockExecutive()
+            nav_back_status = self.moveByNav()
+            if self.nav_back_status:
+                self.global_charging_flag = False
 
+
+    
     #--------------------------The End of Construction Area---------------------------------------------
 
 
