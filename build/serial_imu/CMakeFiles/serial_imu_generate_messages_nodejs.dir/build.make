@@ -60,15 +60,15 @@ serial_imu/CMakeFiles/serial_imu_generate_messages_nodejs: /home/robot/Documents
 
 /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_0x91_msg.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_0x91_msg.js: /home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x91_msg.msg
-/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_0x91_msg.js: /home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg
 /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_0x91_msg.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_0x91_msg.js: /home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from serial_imu/Imu_0x91_msg.msg"
 	cd /home/robot/Documents/arduino_ws/build/serial_imu && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x91_msg.msg -Iserial_imu:/home/robot/Documents/arduino_ws/src/serial_imu/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p serial_imu -o /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg
 
 /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_0x62_msg.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_0x62_msg.js: /home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x62_msg.msg
-/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_0x62_msg.js: /home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg
 /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_0x62_msg.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_0x62_msg.js: /home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from serial_imu/Imu_0x62_msg.msg"
 	cd /home/robot/Documents/arduino_ws/build/serial_imu && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x62_msg.msg -Iserial_imu:/home/robot/Documents/arduino_ws/src/serial_imu/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p serial_imu -o /home/robot/Documents/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg
 

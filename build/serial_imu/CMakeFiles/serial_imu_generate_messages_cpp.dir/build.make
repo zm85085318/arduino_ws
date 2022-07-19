@@ -60,16 +60,16 @@ serial_imu/CMakeFiles/serial_imu_generate_messages_cpp: /home/robot/Documents/ar
 
 /home/robot/Documents/arduino_ws/devel/include/serial_imu/Imu_0x91_msg.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/robot/Documents/arduino_ws/devel/include/serial_imu/Imu_0x91_msg.h: /home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x91_msg.msg
-/home/robot/Documents/arduino_ws/devel/include/serial_imu/Imu_0x91_msg.h: /home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg
 /home/robot/Documents/arduino_ws/devel/include/serial_imu/Imu_0x91_msg.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/Documents/arduino_ws/devel/include/serial_imu/Imu_0x91_msg.h: /home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg
 /home/robot/Documents/arduino_ws/devel/include/serial_imu/Imu_0x91_msg.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from serial_imu/Imu_0x91_msg.msg"
 	cd /home/robot/Documents/arduino_ws/src/serial_imu && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x91_msg.msg -Iserial_imu:/home/robot/Documents/arduino_ws/src/serial_imu/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p serial_imu -o /home/robot/Documents/arduino_ws/devel/include/serial_imu -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/robot/Documents/arduino_ws/devel/include/serial_imu/Imu_0x62_msg.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/robot/Documents/arduino_ws/devel/include/serial_imu/Imu_0x62_msg.h: /home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x62_msg.msg
-/home/robot/Documents/arduino_ws/devel/include/serial_imu/Imu_0x62_msg.h: /home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg
 /home/robot/Documents/arduino_ws/devel/include/serial_imu/Imu_0x62_msg.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/Documents/arduino_ws/devel/include/serial_imu/Imu_0x62_msg.h: /home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_data_package.msg
 /home/robot/Documents/arduino_ws/devel/include/serial_imu/Imu_0x62_msg.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/Documents/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from serial_imu/Imu_0x62_msg.msg"
 	cd /home/robot/Documents/arduino_ws/src/serial_imu && /home/robot/Documents/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/Documents/arduino_ws/src/serial_imu/msg/Imu_0x62_msg.msg -Iserial_imu:/home/robot/Documents/arduino_ws/src/serial_imu/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p serial_imu -o /home/robot/Documents/arduino_ws/devel/include/serial_imu -e /opt/ros/noetic/share/gencpp/cmake/..

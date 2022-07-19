@@ -51,15 +51,15 @@ class StatusConverter(object):
     dock_aruco_tf = Transform()
     status_string = "no information"
     tag_finding_status_string = "no information"
-
+    goal = MoveBaseGoal()
+    client = actionlib.SimpleActionClient("move_base", MoveBaseAction)
 
     def __init__(self):
         # rospy.init_node("rotation_client")
         # client = actionlib.SimpleActionClient('rotation_go', TurningAroundAction)
         # client.wait_for_server()
-        client = actionlib.SimpleActionClient("move_base", MoveBaseAction)
-        client.wait_for_server()
-        goal = MoveBaseGoal()
+        self.client.wait_for_server()
+        
 
 
         rospy.loginfo("status_converter is online!")
