@@ -1,7 +1,7 @@
 <launch>
-    <remap from="arduino/odom" to="odom_data_quat" />
-    <remap from="imu_raw" to="imu/data" />
-    <node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf">
+    <remap from="odom" to="arduino/odom" />
+    <remap from="imu_data" to="imu_raw" />
+    <node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf" output="screen">
         <param name="output_frame" value="odom"/>
         <param name="base_footprint_frame" value="base_footprint"/>
         <param name="freq" value="30.0"/>
@@ -10,7 +10,7 @@
         <param name="imu_used" value="true"/>
         <param name="vo_used" value="false"/>
         <param name="gps_used" value="false"/>
-        <param name="debug" value="false"/>
+        <param name="debug" value="true"/>
         <param name="self_diagnose" value="false"/>
   </node>
 </launch>
