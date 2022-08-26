@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libgmock.so -o ../lib/libgmock.so CMakeFiles/gmock.dir/src/gmock-all.cc.o  -Wl,-rpath,/home/lostm/文档/machine_learning/ros_yolo/build/gtest/lib ../lib/libgtest.so -lpthread 
