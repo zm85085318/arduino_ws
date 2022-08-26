@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PATH="/opt/ros/noetic/bin:$PATH"
+export PATH='/opt/ros/noetic/bin:/home/lostm/.local/bin:/home/lostm/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/lostm/.local/share/JetBrains/Toolbox/scripts:/home/lostm/.local/share/JetBrains/Toolbox/scripts'

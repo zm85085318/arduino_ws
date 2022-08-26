@@ -598,7 +598,7 @@ imu_complementary_filter_BINARY_DIR:STATIC=/home/lostm/文档/arduino_ws/build/i
 imu_complementary_filter_SOURCE_DIR:STATIC=/home/lostm/文档/arduino_ws/src/imu_complementary_filter
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/noetic/lib/librostime.so
+lib:FILEPATH=/opt/ros/noetic/lib/libxmlrpcpp.so
 
 //The directory containing a CMake configuration file for map_server.
 map_server_DIR:PATH=/opt/ros/noetic/share/map_server/cmake
@@ -1002,7 +1002,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=23
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

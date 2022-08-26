@@ -70,19 +70,19 @@ robot_localization/CMakeFiles/robot_localization_generate_messages_lisp: /home/l
 /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/SetDatum.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/SetDatum.lisp: /home/lostm/文档/arduino_ws/src/robot_localization/srv/SetDatum.srv
 /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/SetDatum.lisp: /opt/ros/noetic/share/geographic_msgs/msg/GeoPoint.msg
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/SetDatum.lisp: /opt/ros/noetic/share/geographic_msgs/msg/GeoPose.msg
 /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/SetDatum.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/SetDatum.lisp: /opt/ros/noetic/share/geographic_msgs/msg/GeoPose.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from robot_localization/SetDatum.srv"
 	cd /home/lostm/文档/arduino_ws/build/robot_localization && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/lostm/文档/arduino_ws/src/robot_localization/srv/SetDatum.srv -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p robot_localization -o /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv
 
 /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/SetPose.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/SetPose.lisp: /home/lostm/文档/arduino_ws/src/robot_localization/srv/SetPose.srv
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/SetPose.lisp: /opt/ros/noetic/share/geometry_msgs/msg/PoseWithCovariance.msg
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/SetPose.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/SetPose.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/SetPose.lisp: /opt/ros/noetic/share/geometry_msgs/msg/PoseWithCovarianceStamped.msg
+/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/SetPose.lisp: /opt/ros/noetic/share/geometry_msgs/msg/PoseWithCovariance.msg
 /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/SetPose.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/SetPose.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/SetPose.lisp: /opt/ros/noetic/share/geometry_msgs/msg/PoseWithCovarianceStamped.msg
+/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/SetPose.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from robot_localization/SetPose.srv"
 	cd /home/lostm/文档/arduino_ws/build/robot_localization && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/lostm/文档/arduino_ws/src/robot_localization/srv/SetPose.srv -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p robot_localization -o /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv
 
@@ -105,8 +105,8 @@ robot_localization/CMakeFiles/robot_localization_generate_messages_lisp: /home/l
 
 /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/ToLL.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/ToLL.lisp: /home/lostm/文档/arduino_ws/src/robot_localization/srv/ToLL.srv
-/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/ToLL.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/ToLL.lisp: /opt/ros/noetic/share/geographic_msgs/msg/GeoPoint.msg
+/home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv/ToLL.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Lisp code from robot_localization/ToLL.srv"
 	cd /home/lostm/文档/arduino_ws/build/robot_localization && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/lostm/文档/arduino_ws/src/robot_localization/srv/ToLL.srv -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p robot_localization -o /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/robot_localization/srv
 
