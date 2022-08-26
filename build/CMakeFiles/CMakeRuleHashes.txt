@@ -1,5 +1,7 @@
 # Hashes of file build rules.
 b606bf93a2c3cb6f6132736ab9c9af6b /home/lostm/文档/arduino_ws/devel/include/behavior_tree/Analog.h
+45f390140266e3f236d66fda6cd1fabe /home/lostm/文档/arduino_ws/devel/include/detection_msgs/BoundingBox.h
+2c937686677af407c8febb10bb13a2c0 /home/lostm/文档/arduino_ws/devel/include/detection_msgs/BoundingBoxes.h
 de6da7817bfc4e8db639c75f5e518599 /home/lostm/文档/arduino_ws/devel/include/distanceangle/DistanceAngle.h
 069b8b3046dc1ac82981de49023754f4 /home/lostm/文档/arduino_ws/devel/include/dockingrobot/Command.h
 77adceb548c2f9b696f21e68b4545552 /home/lostm/文档/arduino_ws/devel/include/dockingrobot/Docking.h
@@ -28,6 +30,9 @@ ec86dd01ddaa036f244ef509105d1ffa /home/lostm/文档/arduino_ws/devel/include/ros
 9ca204d947bc22c0e2c0ec9311582460 /home/lostm/文档/arduino_ws/devel/include/serial_imu/Imu_data_package.h
 6f02d60b36022802c993165ed09d0204 /home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/behavior_tree/msg/_Analog.py
 f81ecffa5fc1c603159039300923f2c5 /home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/behavior_tree/msg/__init__.py
+80db857c2122efc26326d94543cab1f9 /home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/detection_msgs/msg/_BoundingBox.py
+fb2c09e7f11e7a6da060b7b0ae78ed8a /home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/detection_msgs/msg/_BoundingBoxes.py
+1cc01ad4e30e78f9adb0b9925bf2454d /home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/detection_msgs/msg/__init__.py
 991b650db7ea4300bdc810e62a058eb2 /home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/distanceangle/msg/_DistanceAngle.py
 127d9148c49006318e65830a7251cd76 /home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/distanceangle/msg/__init__.py
 8ec6f4ab4945732e5e505a15b4d873e3 /home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/dockingrobot/msg/_Command.py
@@ -60,6 +65,8 @@ ebcb707cef8f16bb21e2f57687abdd13 /home/lostm/文档/arduino_ws/devel/lib/python3
 315295f380045146a04371b540ee593c /home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/serial_imu/msg/_Imu_data_package.py
 383a336c935af89034065f451189fec4 /home/lostm/文档/arduino_ws/devel/lib/python3/dist-packages/serial_imu/msg/__init__.py
 cdfdbeb156baf09e1dc6d35c359d2019 /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/behavior_tree/msg/Analog.lisp
+22e9af9070733e338da9fc4f95333518 /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/detection_msgs/msg/BoundingBox.lisp
+f47dad0ce67acacfb4aa095fbde61770 /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/detection_msgs/msg/BoundingBoxes.lisp
 3ff51edbcbe203b223afa5bff64e09e5 /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/distanceangle/msg/DistanceAngle.lisp
 e9d35adcef8332ee506b35fd17527be9 /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/dockingrobot/msg/Command.lisp
 1ce7c9947a75e016b904df718a10e306 /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/dockingrobot/msg/Docking.lisp
@@ -86,6 +93,8 @@ da326400c2eb0d5f826df78d9af7f828 /home/lostm/文档/arduino_ws/devel/share/commo
 164a5c0aa082183cb0ff92b7bfbf122b /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/serial_imu/msg/Imu_0x91_msg.lisp
 5e0fc748f19c623aca27b84d91ab0d1d /home/lostm/文档/arduino_ws/devel/share/common-lisp/ros/serial_imu/msg/Imu_data_package.lisp
 fe3262c4e69159678454d91e81f020de /home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/behavior_tree/msg/Analog.js
+b078901b7ff58b5fed57924f96207eac /home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/detection_msgs/msg/BoundingBox.js
+c1ecb5f32c49f0698f0aa076df781e60 /home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/detection_msgs/msg/BoundingBoxes.js
 1de8d02e95dcb4bbb706e9c153279c94 /home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/distanceangle/msg/DistanceAngle.js
 bf3cf7907c16b54adaebf38e0a465159 /home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Command.js
 3c239caf37cc73f9315f0f8a02fc2409 /home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/dockingrobot/msg/Docking.js
@@ -113,6 +122,9 @@ c440edb829bddffbfa00d82630d25347 /home/lostm/文档/arduino_ws/devel/share/genno
 5d9533670d6fff63c2a031a8d21b0d2b /home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_data_package.js
 c71981b9635211f6a1f4b7ceebb8270e /home/lostm/文档/arduino_ws/devel/share/roseus/ros/behavior_tree/manifest.l
 03ade4dd62c646a45c3ffda06e3d66e5 /home/lostm/文档/arduino_ws/devel/share/roseus/ros/behavior_tree/msg/Analog.l
+73a55b4c409bf8b4634b3359f0daa639 /home/lostm/文档/arduino_ws/devel/share/roseus/ros/detection_msgs/manifest.l
+9611e93eb7fe7286aa09779f94000a6a /home/lostm/文档/arduino_ws/devel/share/roseus/ros/detection_msgs/msg/BoundingBox.l
+43618f04d9a1105e3c04f9b16062e9d2 /home/lostm/文档/arduino_ws/devel/share/roseus/ros/detection_msgs/msg/BoundingBoxes.l
 2b12bfc84f1f5222bdbe30de9b67bb36 /home/lostm/文档/arduino_ws/devel/share/roseus/ros/distanceangle/manifest.l
 22c88b6a80e042432d880db420c7ae3f /home/lostm/文档/arduino_ws/devel/share/roseus/ros/distanceangle/msg/DistanceAngle.l
 b1be2cb80385bfe9129125cb82bee122 /home/lostm/文档/arduino_ws/devel/share/roseus/ros/dockingrobot/manifest.l
@@ -163,10 +175,10 @@ ba9204b4e4eed90112bae44760d0ed70 dockingrobot/CMakeFiles/_dockingrobot_generate_
 731f464b4a8177a9ac95a1c36f4dccb8 dockingrobot/CMakeFiles/dockingrobot_generate_messages_lisp
 731f464b4a8177a9ac95a1c36f4dccb8 dockingrobot/CMakeFiles/dockingrobot_generate_messages_nodejs
 731f464b4a8177a9ac95a1c36f4dccb8 dockingrobot/CMakeFiles/dockingrobot_generate_messages_py
-c00e19d72094624c2b008e29995547c5 robot_localization/CMakeFiles/_robot_localization_generate_messages_check_deps_FromLL
+3ed1e92052028b59f489e1e7b3dd0d6b robot_localization/CMakeFiles/_robot_localization_generate_messages_check_deps_FromLL
 b32dbdfc6801df0e9e1632043d2dcba1 robot_localization/CMakeFiles/_robot_localization_generate_messages_check_deps_GetState
-a8bd7b65f1a26b935e06c1e3e871cd32 robot_localization/CMakeFiles/_robot_localization_generate_messages_check_deps_SetDatum
-853aa20c223a93c94f9749a8017a9b2e robot_localization/CMakeFiles/_robot_localization_generate_messages_check_deps_SetPose
+5f4e528e11cad7eb2f35c21f127ee7a9 robot_localization/CMakeFiles/_robot_localization_generate_messages_check_deps_SetDatum
+a46de05f4022976ca4ecd5b3fa826a52 robot_localization/CMakeFiles/_robot_localization_generate_messages_check_deps_SetPose
 3a3ec3b1223d54ea9681530b6e619654 robot_localization/CMakeFiles/_robot_localization_generate_messages_check_deps_SetUTMZone
 15fca3f8d409f1e66c41ef66e74b9520 robot_localization/CMakeFiles/_robot_localization_generate_messages_check_deps_ToLL
 615c44237a1bf87a50baa8e455981ed9 robot_localization/CMakeFiles/_robot_localization_generate_messages_check_deps_ToggleFilterProcessing
@@ -231,6 +243,13 @@ c9925255b22375e36de47ad4c7494483 ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/
 3fba857fc8d127d5b84497a657cb5041 ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_lisp
 3fba857fc8d127d5b84497a657cb5041 ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_nodejs
 3fba857fc8d127d5b84497a657cb5041 ros_arduino_bridge/ros_arduino_msgs/CMakeFiles/ros_arduino_msgs_generate_messages_py
+1d4f8e988c1b0ec3b70344a83b980248 ros_yolo/src/detection_msgs/CMakeFiles/_detection_msgs_generate_messages_check_deps_BoundingBox
+7d06b1b21bf2f853c50fa1a2d9b9f75e ros_yolo/src/detection_msgs/CMakeFiles/_detection_msgs_generate_messages_check_deps_BoundingBoxes
+1e85ef019e5d1d14a561792993ad1fff ros_yolo/src/detection_msgs/CMakeFiles/detection_msgs_generate_messages_cpp
+1e85ef019e5d1d14a561792993ad1fff ros_yolo/src/detection_msgs/CMakeFiles/detection_msgs_generate_messages_eus
+1e85ef019e5d1d14a561792993ad1fff ros_yolo/src/detection_msgs/CMakeFiles/detection_msgs_generate_messages_lisp
+1e85ef019e5d1d14a561792993ad1fff ros_yolo/src/detection_msgs/CMakeFiles/detection_msgs_generate_messages_nodejs
+1e85ef019e5d1d14a561792993ad1fff ros_yolo/src/detection_msgs/CMakeFiles/detection_msgs_generate_messages_py
 842274e5407e7e8c0329bf2615b1ac40 rr_auto_dock/CMakeFiles/_run_tests_rr_auto_dock_rostest_test_aruco_images.test
 47e69f13fd0e97c0e81e989e147eaefd rr_auto_dock/CMakeFiles/clean_test_results_rr_auto_dock
 2fd94d0f65fac1eb3565d2f772b9c01b rr_auto_dock/CMakeFiles/rr_auto_dock_gencfg

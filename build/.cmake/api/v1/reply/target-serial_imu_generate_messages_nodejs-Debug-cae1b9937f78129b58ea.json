@@ -1,0 +1,151 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"include",
+			"generate_messages",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"/home/lostm/文档/arduino_ws/build/serial_imu/cmake/serial_imu-genmsg.cmake",
+			"/opt/ros/noetic/share/genmsg/cmake/genmsg-extras.cmake",
+			"serial_imu/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 84,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 307,
+				"parent" : 1
+			},
+			{
+				"file" : 0,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 215,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 327,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 224,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 226,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 222,
+				"parent" : 3
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "std_msgs_generate_messages_nodejs::@5ceaa332ee9efb8973f9"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "_serial_imu_generate_messages_check_deps_Imu_0x62_msg::@a360d9713d43850227d0"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "_serial_imu_generate_messages_check_deps_Imu_data_package::@a360d9713d43850227d0"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "_serial_imu_generate_messages_check_deps_Imu_0x91_msg::@a360d9713d43850227d0"
+		}
+	],
+	"id" : "serial_imu_generate_messages_nodejs::@a360d9713d43850227d0",
+	"name" : "serial_imu_generate_messages_nodejs",
+	"paths" : 
+	{
+		"build" : "serial_imu",
+		"source" : "serial_imu"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/build/serial_imu/CMakeFiles/serial_imu_generate_messages_nodejs",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/build/serial_imu/CMakeFiles/serial_imu_generate_messages_nodejs.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_0x91_msg.js.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_0x62_msg.js.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/lostm/文档/arduino_ws/devel/share/gennodejs/ros/serial_imu/msg/Imu_data_package.js.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

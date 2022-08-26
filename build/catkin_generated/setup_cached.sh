@@ -7,3 +7,4 @@
 # new environment variables
 
 # modified environment variables
+export PATH="/opt/ros/noetic/bin:$PATH"
