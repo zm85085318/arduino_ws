@@ -1,8 +1,0 @@
-prefix=/home/lostm/文档/machine_learning/ros_yolo/devel
-
-Name: detection_msgs
-Description: Description of detection_msgs
-Version: 0.0.0
-Cflags: -I/home/lostm/文档/machine_learning/ros_yolo/devel/include
-Libs: -L${prefix}/lib 
-Requires: std_msgs message_runtime
