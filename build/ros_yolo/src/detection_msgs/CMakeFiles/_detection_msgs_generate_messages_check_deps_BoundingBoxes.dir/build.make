@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/lostm/文档/arduino_ws/build
 include ros_yolo/src/detection_msgs/CMakeFiles/_detection_msgs_generate_messages_check_deps_BoundingBoxes.dir/progress.make
 
 ros_yolo/src/detection_msgs/CMakeFiles/_detection_msgs_generate_messages_check_deps_BoundingBoxes:
-	cd /home/lostm/文档/arduino_ws/build/ros_yolo/src/detection_msgs && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py detection_msgs /home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBoxes.msg std_msgs/Header:detection_msgs/BoundingBox
+	cd /home/lostm/文档/arduino_ws/build/ros_yolo/src/detection_msgs && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py detection_msgs /home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBoxes.msg detection_msgs/BoundingBox:std_msgs/Header
 
 _detection_msgs_generate_messages_check_deps_BoundingBoxes: ros_yolo/src/detection_msgs/CMakeFiles/_detection_msgs_generate_messages_check_deps_BoundingBoxes
 _detection_msgs_generate_messages_check_deps_BoundingBoxes: ros_yolo/src/detection_msgs/CMakeFiles/_detection_msgs_generate_messages_check_deps_BoundingBoxes.dir/build.make

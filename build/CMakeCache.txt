@@ -468,13 +468,13 @@ cv_bridge_tutorial_pkg_BINARY_DIR:STATIC=/home/lostm/文档/arduino_ws/build/ros
 cv_bridge_tutorial_pkg_SOURCE_DIR:STATIC=/home/lostm/文档/arduino_ws/src/ros_yolo/src/cv_bridge_tutorial_pkg
 
 //Value Computed by CMake
-detection_msgs_BINARY_DIR:STATIC=/home/lostm/文档/arduino_ws/build/ros_yolo/src/detection_msgs
+detection_msgs_BINARY_DIR:STATIC=/home/lostm/文档/arduino_ws/build/detection_msgs
 
 //The directory containing a CMake configuration file for detection_msgs.
 detection_msgs_DIR:PATH=/home/lostm/文档/machine_learning/ros_yolo/devel/share/detection_msgs/cmake
 
 //Value Computed by CMake
-detection_msgs_SOURCE_DIR:STATIC=/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs
+detection_msgs_SOURCE_DIR:STATIC=/home/lostm/文档/arduino_ws/src/detection_msgs
 
 //The directory containing a CMake configuration file for diagnostic_msgs.
 diagnostic_msgs_DIR:PATH=/opt/ros/noetic/share/diagnostic_msgs/cmake
@@ -598,7 +598,7 @@ imu_complementary_filter_BINARY_DIR:STATIC=/home/lostm/文档/arduino_ws/build/i
 imu_complementary_filter_SOURCE_DIR:STATIC=/home/lostm/文档/arduino_ws/src/imu_complementary_filter
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/noetic/lib/libxmlrpcpp.so
+lib:FILEPATH=/opt/ros/noetic/lib/librostime.so
 
 //The directory containing a CMake configuration file for map_server.
 map_server_DIR:PATH=/opt/ros/noetic/share/map_server/cmake
@@ -847,10 +847,10 @@ xacro_DIR:PATH=/opt/ros/noetic/share/xacro/cmake
 xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake
 
 //Value Computed by CMake
-yolov5_ros_BINARY_DIR:STATIC=/home/lostm/文档/arduino_ws/build/ros_yolo/src/yolov5_ros
+yolov5_ros_BINARY_DIR:STATIC=/home/lostm/文档/arduino_ws/build/yolov5_ros
 
 //Value Computed by CMake
-yolov5_ros_SOURCE_DIR:STATIC=/home/lostm/文档/arduino_ws/src/ros_yolo/src/yolov5_ros
+yolov5_ros_SOURCE_DIR:STATIC=/home/lostm/文档/arduino_ws/src/yolov5_ros
 
 
 ########################
@@ -1002,7 +1002,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=22
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

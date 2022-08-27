@@ -24,7 +24,7 @@ add_custom_target(_detection_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBoxes.msg" NAME_WE)
 add_custom_target(_detection_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "detection_msgs" "/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBoxes.msg" "std_msgs/Header:detection_msgs/BoundingBox"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "detection_msgs" "/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBoxes.msg" "detection_msgs/BoundingBox:std_msgs/Header"
 )
 
 #
@@ -42,7 +42,7 @@ _generate_msg_cpp(detection_msgs
 _generate_msg_cpp(detection_msgs
   "/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBoxes.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBox.msg"
+  "/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/detection_msgs
 )
 
@@ -83,7 +83,7 @@ _generate_msg_eus(detection_msgs
 _generate_msg_eus(detection_msgs
   "/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBoxes.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBox.msg"
+  "/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/detection_msgs
 )
 
@@ -124,7 +124,7 @@ _generate_msg_lisp(detection_msgs
 _generate_msg_lisp(detection_msgs
   "/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBoxes.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBox.msg"
+  "/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/detection_msgs
 )
 
@@ -165,7 +165,7 @@ _generate_msg_nodejs(detection_msgs
 _generate_msg_nodejs(detection_msgs
   "/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBoxes.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBox.msg"
+  "/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/detection_msgs
 )
 
@@ -206,7 +206,7 @@ _generate_msg_py(detection_msgs
 _generate_msg_py(detection_msgs
   "/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBoxes.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBox.msg"
+  "/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/detection_msgs
 )
 

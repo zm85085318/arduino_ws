@@ -65,8 +65,8 @@ ros_yolo/src/detection_msgs/CMakeFiles/detection_msgs_generate_messages_cpp: /ho
 
 /home/lostm/文档/arduino_ws/devel/include/detection_msgs/BoundingBoxes.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/lostm/文档/arduino_ws/devel/include/detection_msgs/BoundingBoxes.h: /home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBoxes.msg
-/home/lostm/文档/arduino_ws/devel/include/detection_msgs/BoundingBoxes.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/lostm/文档/arduino_ws/devel/include/detection_msgs/BoundingBoxes.h: /home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBox.msg
+/home/lostm/文档/arduino_ws/devel/include/detection_msgs/BoundingBoxes.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/lostm/文档/arduino_ws/devel/include/detection_msgs/BoundingBoxes.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lostm/文档/arduino_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from detection_msgs/BoundingBoxes.msg"
 	cd /home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs && /home/lostm/文档/arduino_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg/BoundingBoxes.msg -Idetection_msgs:/home/lostm/文档/arduino_ws/src/ros_yolo/src/detection_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p detection_msgs -o /home/lostm/文档/arduino_ws/devel/include/detection_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
