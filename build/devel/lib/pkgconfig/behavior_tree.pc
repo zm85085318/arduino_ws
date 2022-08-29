@@ -1,0 +1,8 @@
+prefix=/home/robot/Documents/arduino_ws/build/devel
+
+Name: behavior_tree
+Description: Description of behavior_tree
+Version: 0.0.0
+Cflags: -I/home/robot/Documents/arduino_ws/build/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs message_runtime move_base_msgs actionlib actionlib_msgs

@@ -68,13 +68,13 @@ set(serial_imu_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(serial_imu_SOURCE_PREFIX /home/robot/Documents/arduino_ws/src/serial_imu)
-  set(serial_imu_DEVEL_PREFIX /home/robot/Documents/arduino_ws/devel)
+  set(serial_imu_DEVEL_PREFIX /home/robot/Documents/arduino_ws/build/devel)
   set(serial_imu_INSTALL_PREFIX "")
   set(serial_imu_PREFIX ${serial_imu_DEVEL_PREFIX})
 else()
   set(serial_imu_SOURCE_PREFIX "")
   set(serial_imu_DEVEL_PREFIX "")
-  set(serial_imu_INSTALL_PREFIX /home/robot/Documents/arduino_ws/install)
+  set(serial_imu_INSTALL_PREFIX /usr/local)
   set(serial_imu_PREFIX ${serial_imu_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/robot/Documents/arduino_ws/install/lib;/home/robot/Documents/arduino_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /usr/local/lib;/home/robot/Documents/arduino_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

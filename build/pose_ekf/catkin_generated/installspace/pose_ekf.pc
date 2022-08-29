@@ -1,4 +1,4 @@
-prefix=/home/robot/Documents/arduino_ws/install
+prefix=/usr/local
 
 Name: pose_ekf
 Description: Description of pose_ekf

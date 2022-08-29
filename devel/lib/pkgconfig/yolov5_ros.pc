@@ -1,0 +1,8 @@
+prefix=/home/robot/Documents/arduino_ws/devel
+
+Name: yolov5_ros
+Description: Description of yolov5_ros
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

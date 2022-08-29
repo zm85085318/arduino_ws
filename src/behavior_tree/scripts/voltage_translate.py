@@ -20,7 +20,7 @@ class VoltageTranslate(object):
         temp3 = int(temp5/100)
         temp2 = int((temp5%100)/10)
         temp4 = float(temp5%10)
-        final_value = temp3 * 10 + temp2 + (0.1 * temp4)
+        final_value = temp3 * 10 + temp2 + (0.1 * temp4) - 0.5
         self.pub_battery_voltage.publish(final_value)
     
     def ConnecterVoltageCallback(self, connecter_raw):

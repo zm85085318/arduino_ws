@@ -31,34 +31,6 @@ from nav_msgs.msg import Odometry
 from tf.broadcaster import TransformBroadcaster
  
 """ Class to receive Twist commands and publish Odometry data """
-
-ODOM_POSE_COVARIANCE = [1e-3, 0, 0, 0, 0, 0,
-                        0, 1e-3, 0, 0, 0, 0,
-                        0, 0, 1e6, 0, 0, 0,
-                        0, 0, 0, 1e6, 0, 0,
-                        0, 0, 0, 0, 1e6, 0,
-                        0, 0, 0, 0, 0, 0, 1e3]
-ODOM_POSE_COVARIANCE2 = [1e-9, 0, 0, 0, 0, 0,
-                        0, 1e-3, 1e-9, 0, 0, 0,
-                        0, 0, 1e6, 0, 0, 0,
-                        0, 0, 0, 1e6, 0, 0,
-                        0, 0, 0, 0, 1e6, 0,
-                        0, 0, 0, 0, 0, 1e-9]
-
-ODOM_TWIST_COVARIANCE = [1e-3, 0, 0, 0, 0, 0,
-                        0, 1e-3, 0, 0, 0, 0,
-                        0, 0, 1e6, 0, 0, 0,
-                        0, 0, 0, 1e6, 0, 0,
-                        0, 0, 0, 0, 1e6, 0,
-                        0, 0, 0, 0, 0, 1e3]
-
-ODOM_TWIST_COVARIANCE2 = [1e-9, 0, 0, 0, 0, 0,
-                        0, 1e-3, 1e-9, 0, 0, 0,
-                        0, 0, 1e6, 0, 0, 0,
-                        0, 0, 0, 1e6, 0, 0,
-                        0, 0, 0, 0, 1e6, 0,
-                        0, 0, 0, 0, 0, 1e-9]
-
 class BaseController:
 
     def __init__(self, arduino, base_frame, name="base_controllers"):
@@ -214,15 +186,7 @@ class BaseController:
             quaternion.z = sin(self.th / 2.0)
             quaternion.w = cos(self.th / 2.0)
     
-            # Create the odometry transform frame broadcaster.
-            # self.odomBroadcaster.sendTransform(
-            #     (self.x, self.y, 0), 
-            #     (quaternion.x, quaternion.y, quaternion.z, quaternion.w),
-            #     rospy.Time.now(),
-            #     self.base_frame,
-            #     "odom"
-            #     )
-    
+            # Create the odometry transform frame broadcaster.    
             odom = Odometry()
             odom.header.frame_id = "odom"
             odom.child_frame_id = self.base_frame
@@ -234,14 +198,6 @@ class BaseController:
             odom.twist.twist.linear.x = vxy
             odom.twist.twist.linear.y = 0
             odom.twist.twist.angular.z = vth
-
-            # if vxy == 0 and vth ==0:
-            #     odom.pose.covariance = ODOM_POSE_COVARIANCE2
-            #     odom.twist.covariance = ODOM_TWIST_COVARIANCE2
-            # else:
-            #     odom.pose.covariance = ODOM_POSE_COVARIANCE
-            #     odom.twist.covariance = ODOM_TWIST_COVARIANCE
-
             self.odomPub.publish(odom)
             
             if now > (self.last_cmd_vel + rospy.Duration(self.timeout)):

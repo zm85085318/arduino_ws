@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robot/Documents/arduino_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,19 +38,19 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/rr_auto_dock" TYPE FILE FILES "/home/robot/Documents/arduino_ws/devel/include/rr_auto_dock/DetectorParamsConfig.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/rr_auto_dock" TYPE FILE FILES "/home/robot/Documents/arduino_ws/build/devel/include/rr_auto_dock/DetectorParamsConfig.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages/rr_auto_dock" TYPE FILE FILES "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/rr_auto_dock/__init__.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages/rr_auto_dock" TYPE FILE FILES "/home/robot/Documents/arduino_ws/build/devel/lib/python3/dist-packages/rr_auto_dock/__init__.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/rr_auto_dock/cfg")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/robot/Documents/arduino_ws/build/devel/lib/python3/dist-packages/rr_auto_dock/cfg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages/rr_auto_dock" TYPE DIRECTORY FILES "/home/robot/Documents/arduino_ws/devel/lib/python3/dist-packages/rr_auto_dock/cfg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages/rr_auto_dock" TYPE DIRECTORY FILES "/home/robot/Documents/arduino_ws/build/devel/lib/python3/dist-packages/rr_auto_dock/cfg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -90,7 +90,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rr_auto_dock/aruco_detect"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rr_auto_dock" TYPE EXECUTABLE FILES "/home/robot/Documents/arduino_ws/devel/lib/rr_auto_dock/aruco_detect")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rr_auto_dock" TYPE EXECUTABLE FILES "/home/robot/Documents/arduino_ws/build/devel/lib/rr_auto_dock/aruco_detect")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rr_auto_dock/aruco_detect" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rr_auto_dock/aruco_detect")
     file(RPATH_CHANGE
@@ -110,7 +110,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rr_auto_dock/create_marker"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rr_auto_dock" TYPE EXECUTABLE FILES "/home/robot/Documents/arduino_ws/devel/lib/rr_auto_dock/create_marker")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rr_auto_dock" TYPE EXECUTABLE FILES "/home/robot/Documents/arduino_ws/build/devel/lib/rr_auto_dock/create_marker")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rr_auto_dock/create_marker" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rr_auto_dock/create_marker")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -126,7 +126,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rr_auto_dock/image_sub_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rr_auto_dock" TYPE EXECUTABLE FILES "/home/robot/Documents/arduino_ws/devel/lib/rr_auto_dock/image_sub_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rr_auto_dock" TYPE EXECUTABLE FILES "/home/robot/Documents/arduino_ws/build/devel/lib/rr_auto_dock/image_sub_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rr_auto_dock/image_sub_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rr_auto_dock/image_sub_node")
     file(RPATH_CHANGE
@@ -146,7 +146,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libimage_sub_nodelet.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/robot/Documents/arduino_ws/devel/lib/libimage_sub_nodelet.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/robot/Documents/arduino_ws/build/devel/lib/libimage_sub_nodelet.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libimage_sub_nodelet.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libimage_sub_nodelet.so")
     file(RPATH_CHANGE
@@ -169,7 +169,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libimage_sub_nodelet.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/robot/Documents/arduino_ws/devel/lib/libimage_sub_nodelet.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/robot/Documents/arduino_ws/build/devel/lib/libimage_sub_nodelet.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libimage_sub_nodelet.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libimage_sub_nodelet.so")
     file(RPATH_CHANGE

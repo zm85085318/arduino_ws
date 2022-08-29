@@ -1,4 +1,4 @@
-prefix=/home/robot/Documents/arduino_ws/install
+prefix=/usr/local
 
 Name: behavior_tree
 Description: Description of behavior_tree

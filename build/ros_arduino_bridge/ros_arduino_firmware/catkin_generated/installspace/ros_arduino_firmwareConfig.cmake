@@ -68,13 +68,13 @@ set(ros_arduino_firmware_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(ros_arduino_firmware_SOURCE_PREFIX /home/robot/Documents/arduino_ws/src/ros_arduino_bridge/ros_arduino_firmware)
-  set(ros_arduino_firmware_DEVEL_PREFIX /home/robot/Documents/arduino_ws/devel)
+  set(ros_arduino_firmware_DEVEL_PREFIX /home/robot/Documents/arduino_ws/build/devel)
   set(ros_arduino_firmware_INSTALL_PREFIX "")
   set(ros_arduino_firmware_PREFIX ${ros_arduino_firmware_DEVEL_PREFIX})
 else()
   set(ros_arduino_firmware_SOURCE_PREFIX "")
   set(ros_arduino_firmware_DEVEL_PREFIX "")
-  set(ros_arduino_firmware_INSTALL_PREFIX /home/robot/Documents/arduino_ws/install)
+  set(ros_arduino_firmware_INSTALL_PREFIX /usr/local)
   set(ros_arduino_firmware_PREFIX ${ros_arduino_firmware_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/robot/Documents/arduino_ws/install/lib;/home/robot/Documents/arduino_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /usr/local/lib;/home/robot/Documents/arduino_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
