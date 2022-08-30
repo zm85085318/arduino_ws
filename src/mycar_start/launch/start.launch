@@ -7,8 +7,9 @@
     <!-- <include file="$(find serial_imu)/launch/imu_start.launch" /> -->
     <!-- <include file="$(find imu_complementary_filter)/launch/complementary_filter.launch" /> -->
     <!-- <include file="$(find robot_localization)/launch/ekf_template.launch" /> -->
-    <include file="$(find rr_auto_dock)/launch/ar_track.launch" />
+    <!-- <include file="$(find rr_auto_dock)/launch/ar_track.launch" />
     <include file="$(find distanceangle)/launch/distance_converter.launch" />
-    <include file="$(find dockingrobot)/launch/docking_process.launch" />
+    <include file="$(find dockingrobot)/launch/docking_process.launch" /> -->
+    <include file="$(find yolov5_ros)/launch/yolov5.launch" />
     <include file="$(find behavior_tree)/launch/behaviors_tree.launch" />
 </launch>

@@ -1,5 +1,6 @@
 <launch>
     <!-- <node pkg="behavior_tree" name="voltage_converters" type="voltage_translate.py" />    -->
-    <node pkg="behavior_tree" name="light_converter" type="light_translate.py" />   
-    <node pkg="behavior_tree" name="status_converter" type="status_converter.py" output="screen"/>   
+    <!-- <node pkg="behavior_tree" name="light_converter" type="light_translate.py" />    -->
+    <!-- <node pkg="behavior_tree" name="status_converter" type="status_converter.py" output="screen"/> -->
+    <node pkg="behavior_tree" name="result_display" type="result_display.py" output="screen"/>      
 </launch>

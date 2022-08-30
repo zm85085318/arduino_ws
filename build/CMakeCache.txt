@@ -768,6 +768,9 @@ rr_auto_dock_BINARY_DIR:STATIC=/home/lostm/文档/arduino_ws/build/rr_auto_dock
 //Value Computed by CMake
 rr_auto_dock_SOURCE_DIR:STATIC=/home/lostm/文档/arduino_ws/src/rr_auto_dock
 
+//The directory containing a CMake configuration file for sensor_msg.
+sensor_msg_DIR:PATH=sensor_msg_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/noetic/share/sensor_msgs/cmake
 

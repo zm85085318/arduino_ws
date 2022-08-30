@@ -26,7 +26,6 @@
     <arg name="publish_image"           default="true"/>
     <arg name="output_image_topic"      default="/yolov5/image_out"/>
 
-
     <node pkg="yolov5_ros" name="detect" type="detect.py" output="screen">
         <param name="weights"               value="yolov5m.pt"/>
         <param name="data"                  value="$(arg data)"/>
@@ -50,6 +49,7 @@
         <param name="publish_image"         value="$(arg publish_image)"/>
         <param name="output_image_topic"    value="$(arg output_image_topic)"/>
     </node>
+    
     <!-- <include file="$(find camera_launch)/launch/d435.launch"/> -->
 
 

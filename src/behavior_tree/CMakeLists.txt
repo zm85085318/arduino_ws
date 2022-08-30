@@ -15,6 +15,10 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
   actionlib
   move_base_msgs
+  detection_msgs
+  cv_bridge
+  image_transport
+  sensor_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -168,6 +172,7 @@ catkin_install_python(PROGRAMS
   scripts/voltage_translate.py
   scripts/status_converter.py
   scripts/light_translate.py
+  scripts/result_display.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

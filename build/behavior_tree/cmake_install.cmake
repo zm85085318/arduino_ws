@@ -100,3 +100,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/behavior_tree" TYPE PROGRAM FILES "/home/lostm/文档/arduino_ws/build/behavior_tree/catkin_generated/installspace/light_translate.py")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/behavior_tree" TYPE PROGRAM FILES "/home/lostm/文档/arduino_ws/build/behavior_tree/catkin_generated/installspace/result_display.py")
+endif()
+
