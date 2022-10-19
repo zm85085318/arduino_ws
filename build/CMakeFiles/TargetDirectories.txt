@@ -164,13 +164,6 @@
 /home/robot/Documents/arduino_ws/build/dockingrobot/CMakeFiles/dockingrobot_genlisp.dir
 /home/robot/Documents/arduino_ws/build/dockingrobot/CMakeFiles/dockingrobot_generate_messages_nodejs.dir
 /home/robot/Documents/arduino_ws/build/dockingrobot/CMakeFiles/dockingrobot_genpy.dir
-/home/robot/Documents/arduino_ws/build/pose_ekf/CMakeFiles/install/strip.dir
-/home/robot/Documents/arduino_ws/build/pose_ekf/CMakeFiles/install/local.dir
-/home/robot/Documents/arduino_ws/build/pose_ekf/CMakeFiles/install.dir
-/home/robot/Documents/arduino_ws/build/pose_ekf/CMakeFiles/list_install_components.dir
-/home/robot/Documents/arduino_ws/build/pose_ekf/CMakeFiles/rebuild_cache.dir
-/home/robot/Documents/arduino_ws/build/pose_ekf/CMakeFiles/edit_cache.dir
-/home/robot/Documents/arduino_ws/build/pose_ekf/CMakeFiles/test.dir
 /home/robot/Documents/arduino_ws/build/behavior_tree/CMakeFiles/install/local.dir
 /home/robot/Documents/arduino_ws/build/behavior_tree/CMakeFiles/install.dir
 /home/robot/Documents/arduino_ws/build/behavior_tree/CMakeFiles/rebuild_cache.dir
@@ -502,10 +495,3 @@
 /home/robot/Documents/arduino_ws/build/mycar_description/CMakeFiles/edit_cache.dir
 /home/robot/Documents/arduino_ws/build/mycar_description/CMakeFiles/test.dir
 /home/robot/Documents/arduino_ws/build/mycar_description/CMakeFiles/mycar_description_xacro_generated_to_devel_space_.dir
-/home/robot/Documents/arduino_ws/build/yolov5_ros/CMakeFiles/install/strip.dir
-/home/robot/Documents/arduino_ws/build/yolov5_ros/CMakeFiles/install/local.dir
-/home/robot/Documents/arduino_ws/build/yolov5_ros/CMakeFiles/install.dir
-/home/robot/Documents/arduino_ws/build/yolov5_ros/CMakeFiles/list_install_components.dir
-/home/robot/Documents/arduino_ws/build/yolov5_ros/CMakeFiles/rebuild_cache.dir
-/home/robot/Documents/arduino_ws/build/yolov5_ros/CMakeFiles/edit_cache.dir
-/home/robot/Documents/arduino_ws/build/yolov5_ros/CMakeFiles/test.dir

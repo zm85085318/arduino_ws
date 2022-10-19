@@ -1195,7 +1195,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "23"
+			"value" : "21"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",
@@ -3463,11 +3463,11 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "The directory containing a CMake configuration file for detection_msgs."
+					"value" : ""
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/robot/Documents/arduino_ws/build/devel/share/detection_msgs/cmake"
+			"value" : ""
 		},
 		{
 			"name" : "detection_msgs_SOURCE_DIR",
@@ -3995,7 +3995,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/opt/ros/noetic/lib/librostime.so"
+			"value" : "/opt/ros/noetic/lib/libxmlrpcpp.so"
 		},
 		{
 			"name" : "map_server_DIR",
